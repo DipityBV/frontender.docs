@@ -1,11 +1,13 @@
 template:
     url: https://github.com/CouscousPHP/Template-ReadTheDocs
 
+include:
+    - documentation
+
 exclude:
     - vendor
     - bin
     - tests
-    - README.md
 
 # scripts:
 #     before:
@@ -23,4 +25,4 @@ menu:
             relativeUrl: documentation/
         configuration:
             text: Configuration
-            relativeUrl: documentation/second.html
+            relativeUrl: second.html

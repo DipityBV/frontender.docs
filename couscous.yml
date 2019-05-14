@@ -20,7 +20,7 @@ menu:
     items:
         documentation:
             text: Index
-            relativeUrl: docs/
+            relativeUrl: documentation/
         configuration:
             text: Configuration
-            relativeUrl: second.html
+            relativeUrl: documentation/second.html

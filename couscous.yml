@@ -1,0 +1,26 @@
+template:
+    url: https://github.com/CouscousPHP/Template-ReadTheDocs
+
+exclude:
+    - vendor
+    - bin
+    - tests
+    - README.md
+
+# scripts:
+#     before:
+
+# baseUrl:
+# cname:
+
+title: Frontender Documentation
+# subTitle: This is a couscous test.
+
+menu:
+    items:
+        documentation:
+            text: Index
+            relativeUrl: docs/
+        configuration:
+            text: Configuration
+            relativeUrl: second.html

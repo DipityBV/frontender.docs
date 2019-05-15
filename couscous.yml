@@ -13,7 +13,7 @@ exclude:
 #     before:
 
 # baseUrl:
-# cname:
+cname: docs.getfrontender.com
 
 title: Frontender Documentation
 # subTitle: This is a couscous test.

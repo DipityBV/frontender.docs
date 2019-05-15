@@ -22,7 +22,7 @@ menu:
     items:
         documentation:
             text: Index
-            relativeUrl: documentation
-        configuration:
+            relativeUrl: index.html
+        secondary:
             text: Configuration
-            relativeUrl: secondary
+            relativeUrl: secondary.html

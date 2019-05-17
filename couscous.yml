@@ -26,3 +26,6 @@ menu:
         secondary:
             text: Configuration
             relativeUrl: secondary.html
+        faq:
+            text: Frequently Asked Questions
+            relativeUrl: faq.html

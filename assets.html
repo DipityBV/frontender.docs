@@ -23,8 +23,8 @@
 
             <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
                 <ul>
-                                            <li class="toctree-l1 current">
-                            <a class="reference internal current"
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
                                href="/index.html">
                                 Documentation
                             </a>
@@ -35,8 +35,8 @@
                                 Introduction
                             </a>
                         </li>
-                                            <li class="toctree-l1 ">
-                            <a class="reference internal "
+                                            <li class="toctree-l1 current">
+                            <a class="reference internal current"
                                href="/assets.html">
                                 Assets
                             </a>
@@ -105,10 +105,53 @@
                         <div class="wy-nav-content">
                 <div class="rst-content">
                     <div role="main" class="document">
-                        <h2 id="documentation">Documentation</h2>
-<p>Introduction to Frontender</p>
-<h3 id="installation">Installation</h3>
-<p>Frontender Platform is a Github repository. It is installed on a server and exposes the API to Frontender Manager and Frontender Desktop through which the space and its sites are managed.</p>
+                        <h2 id="asset-loading-snippet">Asset loading snippet</h2>
+<p>There are two alias method for loading code/ other library files.</p>
+<h3 id="script-loading">Script loading</h3>
+<p>First we will explain the script loading function.
+This can handle normal .js and .js.twig files.</p>
+<p>So basically it is possible loading a .js file with twig variables.
+Below a few examples.</p>
+<pre><code class="language-twig">{{'path_to_js_file'|addScript('position')}}
+{{'paht_to_js_twig_file'|addScript('position', {
+    various: 'config',
+    required: 'in',
+    twig: 'go',
+    in: 'here',
+    enabled: true
+}) }}</code></pre>
+<h3 id="style-loading">Style loading</h3>
+<p>Just as described with the scripts above, it is also possible to load stylesheets.</p>
+<p>Below an example</p>
+<pre><code class="language-twig">{{'path_to_css_file'|addStyle('position')}}
+{{'paht_to_css_twig_file'|addStyle('position', {
+    various: 'config',
+    required: 'in',
+    twig: 'go',
+    in: 'here',
+    enabled: true
+}) }}</code></pre>
+<h3 id="advanced-loading">Advanced loading</h3>
+<p><strong>Note!</strong> This is advanced stuff, and a lot might/ could go wrong, use with care!
+<strong>Note!</strong> All of the mentioned information is also available in the <code>addStyle</code> and <code>addScript</code>.</p>
+<p>It is also possible to load other kind of files, complete with tag data and attributes.</p>
+<p>This function is very verbose. However if the need arises it is very powerful.</p>
+<pre><code class="language-twig">{{'path_to_misc_file'|addAsset('position', {
+    attributes: {
+    {
+        all: 'items',
+        in: 'here',
+        become: 'tag',
+        arguments: true
+    },
+    config: {
+        tag: 'link'
+    },
+    other: 'config',
+    variables: 'here'
+}) }}</code></pre>
+<p>The above example will result in the following:</p>
+<pre><code class="language-html">&lt;link all="items" in="here" become="tag" arguments="1"&gt;&lt;/link&gt;</code></pre>
                     </div>
 
                     <footer>

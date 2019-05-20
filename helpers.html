@@ -23,8 +23,8 @@
 
             <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
                 <ul>
-                                            <li class="toctree-l1 current">
-                            <a class="reference internal current"
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
                                href="/index.html">
                                 Documentation
                             </a>
@@ -71,8 +71,8 @@
                                 Templates
                             </a>
                         </li>
-                                            <li class="toctree-l1 ">
-                            <a class="reference internal "
+                                            <li class="toctree-l1 current">
+                            <a class="reference internal current"
                                href="/helpers.html">
                                 Helpers
                             </a>
@@ -105,10 +105,43 @@
                         <div class="wy-nav-content">
                 <div class="rst-content">
                     <div role="main" class="document">
-                        <h2 id="documentation">Documentation</h2>
-<p>Introduction to Frontender</p>
-<h3 id="installation">Installation</h3>
-<p>Frontender Platform is a Github repository. It is installed on a server and exposes the API to Frontender Manager and Frontender Desktop through which the space and its sites are managed.</p>
+                        <h2 id="helpers">Helpers</h2>
+<h3 id="template-helper">Template helper</h3>
+<pre><code class="language-twig">{# Process any class variables from the config and return a single class string #}
+{% macro class_string(config) %}
+    {{ [
+        config.crown|t(locales) ? config.crown|t(locales),
+        config.body_class|t(locales) ? config.body_class|t(locales),
+        config.container_class|t(locales) ? config.container_class|t(locales),
+        config.divider|t(locales) ? config.divider|t(locales),
+        config.wings|t(locales) ? config.wings|t(locales),
+        config.leader|t(locales) ? config.leader|t(locales),
+        config.leader_inside|t(locales) ? config.leader_inside|t(locales),
+        config.trailer|t(locales) ? config.trailer|t(locales),
+        config.trailer_inside|t(locales) ? config.trailer_inside|t(locales),
+        config.colour_theme|t(locales) ? config.colour_theme|t(locales),
+        config.colour_background|t(locales) ? config.colour_background|t(locales)
+    ]|join(' ')|trim }}
+{% endmacro %}
+
+{# Process any class variables from the config and return class attribute #}
+{% macro class_attribute(config, class) %}
+    {% import _self as helper %}
+    {% set class = [helper.class_string(config)|trim, class|trim]|join(' ')|trim %}
+    {% if class %} class="{{ class }}"{% endif %}
+{% endmacro %}
+
+{# Alias for class_string, for backward compatibility #}
+{% macro class(config) %}
+    {% import _self as helper %}
+    {{ helper.class_string(config) }}
+{% endmacro %}
+
+{# Build container id attribute #}
+{% macro container_id_attribute(value, namespace) %}
+    {% if value %} data-{{namespace}}="{{ value|raw }}"{% endif %}
+{% endmacro %}
+</code></pre>
                     </div>
 
                     <footer>

@@ -23,8 +23,8 @@
 
             <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
                 <ul>
-                                            <li class="toctree-l1 current">
-                            <a class="reference internal current"
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
                                href="/index.html">
                                 Documentation
                             </a>
@@ -47,8 +47,8 @@
                                 Blueprints
                             </a>
                         </li>
-                                            <li class="toctree-l1 ">
-                            <a class="reference internal "
+                                            <li class="toctree-l1 current">
+                            <a class="reference internal current"
                                href="/filters.html">
                                 Filters
                             </a>
@@ -105,10 +105,19 @@
                         <div class="wy-nav-content">
                 <div class="rst-content">
                     <div role="main" class="document">
-                        <h2 id="documentation">Documentation</h2>
-<p>Introduction to Frontender</p>
-<h3 id="installation">Installation</h3>
-<p>Frontender Platform is a Github repository. It is installed on a server and exposes the API to Frontender Manager and Frontender Desktop through which the space and its sites are managed.</p>
+                        <h2 id="filters">Filters</h2>
+<h3 id="pluralize">Pluralize</h3>
+<pre><code class="language-twig">'string'|pluralize</code></pre>
+<pre><code>output: strings</code></pre>
+<h3 id="singularize">Singularize</h3>
+<pre><code class="language-twig">'strings'|singularize</code></pre>
+<pre><code>output: string</code></pre>
+<h3 id="raw">Raw</h3>
+<pre><code class="language-twig">'&lt;p&gt;strings&lt;/p&gt;'|raw</code></pre>
+<pre><code>output: &lt;p&gt;strings&lt;/p&gt;</code></pre>
+<h3 id="translate">Translate</h3>
+<pre><code class="language-twig">{{ {'en-GB': 'Red', 'fr-FR': "Rouge"}|t }}</code></pre>
+<pre><code>output: Red</code></pre>
                     </div>
 
                     <footer>

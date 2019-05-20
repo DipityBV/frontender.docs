@@ -23,8 +23,8 @@
 
             <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
                 <ul>
-                                            <li class="toctree-l1 current">
-                            <a class="reference internal current"
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
                                href="/index.html">
                                 Documentation
                             </a>
@@ -83,8 +83,8 @@
                                 Adapters
                             </a>
                         </li>
-                                            <li class="toctree-l1 ">
-                            <a class="reference internal "
+                                            <li class="toctree-l1 current">
+                            <a class="reference internal current"
                                href="/glossary.html">
                                 Glossary
                             </a>
@@ -105,10 +105,117 @@
                         <div class="wy-nav-content">
                 <div class="rst-content">
                     <div role="main" class="document">
-                        <h2 id="documentation">Documentation</h2>
-<p>Introduction to Frontender</p>
-<h3 id="installation">Installation</h3>
-<p>Frontender Platform is a Github repository. It is installed on a server and exposes the API to Frontender Manager and Frontender Desktop through which the space and its sites are managed.</p>
+                        <h2 id="glossary">Glossary</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Blueprint definition</td>
+<td>A JSON object containing the presets from which a container may be generated.</td>
+</tr>
+<tr>
+<td>Container definition</td>
+<td>A JSON object containing instructions to render a template.</td>
+</tr>
+<tr>
+<td>Control</td>
+<td>A JSON object with instructions to render a field.</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>A JSON object with rendering instructions.</td>
+</tr>
+<tr>
+<td>Dirty</td>
+<td>A changed value or set of values (definition) that have not (yet) been persisted (saved).</td>
+</tr>
+<tr>
+<td>Extension Package</td>
+<td>A collection of files needed for the import of an extension (blueprint, adapter or template).</td>
+</tr>
+<tr>
+<td>Frontend</td>
+<td>The frontend application.</td>
+</tr>
+<tr>
+<td>Frontender Desktop</td>
+<td>Frontender, the Electron desktop application (FED)</td>
+</tr>
+<tr>
+<td>Frontender Platform</td>
+<td>The frontend application, a (collection of) site(s).</td>
+</tr>
+<tr>
+<td>Locale</td>
+<td>A language scope, includes time, date and currency in the locale’s format.</td>
+</tr>
+<tr>
+<td>Lot revisions</td>
+<td>A collection of page, collection, blueprint or control definitions that have the same lot id.</td>
+</tr>
+<tr>
+<td>Page definition</td>
+<td>Like container definition, but for an entire page. This JSON object will also contain a path attribute.</td>
+</tr>
+<tr>
+<td>Path</td>
+<td>A routable path to a page (e.g. &quot;/blog&quot;).</td>
+</tr>
+<tr>
+<td>Revision</td>
+<td>A stored version of a container.</td>
+</tr>
+<tr>
+<td>Route</td>
+<td>The path to a resource as displayed in the browser's address bar.</td>
+</tr>
+<tr>
+<td>Space</td>
+<td>A collection of sites and resources. Usually, a Space represents a (paying) client. There is also a global Space (frontendermanager.com?) that is used for smaller clients, comparable to wordpress.com.</td>
+</tr>
+<tr>
+<td>Template</td>
+<td>Markup code (HTML, CSS, JavaScript).</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="terms">Terms</h2>
+<h6 id="frontender-desktop">Frontender Desktop</h6>
+<p>Frontender Desktop is the Frontend Management System. It is a desktop application (OSX, Windows and Linux) with which webviews are created, edited and managed from a WYSIWYG User Interface.</p>
+<h6 id="extensions">Extensions</h6>
+<p>Extensions are installable components. Components may be developed by Frontender or 3rd parties.
+We distinguish between three types of extensions:</p>
+<ol>
+<li>Adapters</li>
+<li>Blueprints</li>
+<li>Templates</li>
+</ol>
+<p>Extensions are considered a space asset. Extensions are managed from the Space Dashboard.
+Extensions are available to all sites in a space. We may introduce extension management in a future version of Frontender (Desktop and Platform).</p>
+<h6 id="blueprints">Blueprints</h6>
+<p>Blueprints are (JSON) definitions. These definitions contain instructions for the templates and the adapters.</p>
+<p>When blueprints are imported (uploaded into Frontender Platform) any referenced blueprints and/or assets (templates, CSS, JavaScript, media) may also be included in the extension package.</p>
+<h6 id="container-blueprints">Container blueprints</h6>
+<p>Instructions for a single container.</p>
+<h6 id="page-blueprints">Page blueprints</h6>
+<p>Instructions for a page. Technically, they are identical to a container blueprint definition as a page is in fact also a container. A page blueprint contains a collection of other containers.</p>
+<h6 id="control-blueprints">Control blueprints</h6>
+<p>A special kind of blueprint that contains instructions on how to render a field to edit the attributes (values) of a container.</p>
+<p>Controls are only used inside Frontender Desktop and are not included in the page.</p>
+<h6 id="adapters">Adapters</h6>
+<p>An adapter is a connection to an API. An adapter is an extension package of</p>
+<ul>
+<li>PHP Models, which extend/implement Frontender Platform core adapter models,</li>
+<li>Control blueprints, which are used inside container blueprints and are used to set the model states</li>
+</ul>
+<h6 id="templates">Templates</h6>
+<p>Templates are HTML instructions and may include other assets like CSS, JavaScript and Images. Templates are currently Twig files. Templates are stored in the space, but overrides on a site level may be supported in a future version.</p>
                     </div>
 
                     <footer>

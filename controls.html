@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontender Documentation</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic'
+          rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="/css/theme.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/theme-fixes.css" type="text/css"/>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+</head>
+<body class="wy-body-for-nav">
+
+    <div class="wy-grid-for-nav">
+
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+            <div class="wy-side-nav-search">
+                <a href="/" class="fa fa-home"> Frontender Documentation</a>
+            </div>
+
+            <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
+                               href="/index.html">
+                                Documentation
+                            </a>
+                        </li>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
+                               href="/introduction.html">
+                                Introduction
+                            </a>
+                        </li>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
+                               href="/assets.html">
+                                Assets
+                            </a>
+                        </li>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
+                               href="/blueprints.html">
+                                Blueprints
+                            </a>
+                        </li>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
+                               href="/filters.html">
+                                Filters
+                            </a>
+                        </li>
+                                            <li class="toctree-l1 current">
+                            <a class="reference internal current"
+                               href="/controls.html">
+                                Controls
+                            </a>
+                        </li>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
+                               href="/macros.html">
+                                Macros
+                            </a>
+                        </li>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
+                               href="/templates.html">
+                                Templates
+                            </a>
+                        </li>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
+                               href="/helpers.html">
+                                Helpers
+                            </a>
+                        </li>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
+                               href="/adapters.html">
+                                Adapters
+                            </a>
+                        </li>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
+                               href="/glossary.html">
+                                Glossary
+                            </a>
+                        </li>
+                                    </ul>
+            </div>
+            &nbsp;
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+                        <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+                <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                <a href="/">Frontender Documentation</a>
+            </nav>
+
+
+                        <div class="wy-nav-content">
+                <div class="rst-content">
+                    <div role="main" class="document">
+                        <h2 id="controls">Controls</h2>
+<p>A special kind of blueprint, only for controls. A control can reference another control.
+Frontender comes with a couple of core controls out of the box, these may be used alongside custom project controls.
+The following controls are build into Frontender:</p>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Information</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>core/boolean</td>
+<td><a href="#boolean">Boolean</a></td>
+</tr>
+<tr>
+<td>core/hidden</td>
+<td><a href="#hidden">Hidden</a></td>
+</tr>
+<tr>
+<td>core/markdown</td>
+<td><a href="#markdown">Markdown</a></td>
+</tr>
+<tr>
+<td>core/number</td>
+<td><a href="#number">Number</a></td>
+</tr>
+<tr>
+<td>core/url</td>
+<td><a href="#url">URL</a></td>
+</tr>
+<tr>
+<td>core/route</td>
+<td><a href="#route">Route</a></td>
+</tr>
+<tr>
+<td>core/list</td>
+<td><a href="#list">List</a></td>
+</tr>
+<tr>
+<td>core/textarea</td>
+<td><a href="#textarea">Textarea</a></td>
+</tr>
+<tr>
+<td>core/json</td>
+<td>JSON textarea</td>
+</tr>
+<tr>
+<td>core/abstract</td>
+<td>???</td>
+</tr>
+<tr>
+<td>core/text</td>
+<td><a href="#text">Text</a></td>
+</tr>
+<tr>
+<td>core/robots</td>
+<td>Robots text field</td>
+</tr>
+</tbody>
+</table>
+<p>Additional core controls will be added in the near future.</p>
+<h3 id="boolean">Boolean</h3>
+<p>Select list with &quot;Yes&quot; and &quot;No&quot;, default value is &quot;No&quot;(0).</p>
+<p>Example config:</p>
+<pre><code class="language-JSON">"boolean": {
+    "label": {
+        "en-GB": "Boolean example"
+    },
+    "value": 1,
+    "control": "core/boolean"
+}</code></pre>
+<h3 id="hidden">Hidden</h3>
+<p>Hidden input field (not rendered in Frontender).</p>
+<pre><code class="language-JSON">"hidden": {
+    "label": {
+        "en-GB": "Hidden example"
+    },
+    "value": {
+        "en-GB": "I'm not visible in Frontender!"
+    },
+    "control": "core/hidden"
+}</code></pre>
+<h3 id="markdown">Markdown</h3>
+<p>Allows user to use markdown inside of a text area.</p>
+<pre><code class="language-JSON">"markdown": {
+    "label": {
+        "en-GB": "Markdown example"
+    },
+    "value": {
+        "en-GB": "###Markdown heading level 3"
+    },
+    "control": "core/markdown"
+}</code></pre>
+<h3 id="number">Number</h3>
+<p>Number input field</p>
+<pre><code class="language-JSON">"number": {
+    "label": {
+        "en-GB": "Only numbers are allowed in this input"
+    },
+    "value": 4,
+    "control": "core/number"
+}</code></pre>
+<h3 id="url">URL</h3>
+<p>URL field</p>
+<pre><code class="language-JSON">"url": {
+    "label": {
+        "en-GB": "URL"
+    },
+    "value": {
+        "en-GB": "https://getfrontender.com"
+    },
+    "control": "core/url"
+}</code></pre>
+<h3 id="route">Route</h3>
+<p>Route field</p>
+<pre><code class="language-JSON">"route": {
+    "label": {
+        "en-GB": "Route"
+    },
+    "value": {
+        "en-GB": "example/route/index.php"
+    },
+    "control": "core/route"
+}</code></pre>
+<h3 id="list">List</h3>
+<p>This control allows the user to pick a value from a list of options.</p>
+<p>Example config:</p>
+<pre><code class="language-JSON">"list": {
+    "value": "",
+    "label": {
+        "en-GB": "List example"
+    },
+    "control": "core/list",
+    "options": [
+        {
+            "value": "One",
+            "label": {
+                "en-GB": "One",
+                "fr-FR": "Un"
+            }
+        },
+        {
+            "value": "Two",
+            "label": {
+                "en-GB": "Two",
+                "fr-FR": "Deux"
+            }
+        },
+        {
+            "value": "Three",
+            "label": {
+                "en-GB": "Three",
+                "fr-FR": "Trois"
+            }
+        }
+    ]
+}</code></pre>
+<h3 id="textarea">Textarea</h3>
+<p>Normal textarea</p>
+<pre><code class="language-JSON">"textarea": {
+    "label": {
+        "en-GB": "Textarea"
+    },
+    "value": {
+        "en-GB": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    "control": "core/textarea"
+}</code></pre>
+<h3 id="text">Text</h3>
+<p>Text input field</p>
+<pre><code class="language-JSON">"text": {
+    "label": {
+        "en-GB": "Text"
+    },
+    "value": {
+        "en-GB": "Value goes here..."
+    },
+    "control": "core/text"
+}</code></pre>
+<h3 id="repeatable">Repeatable</h3>
+<p>Controls can be extended with an option to make them repeatable.
+This will add a menu next to the item that allows repetition.</p>
+<p>To allow for this functionality add the following line to your control object.</p>
+<pre><code class="language-JSON">"repeatable": true,
+"at_least": 3 // This is optional, but ensures that you can only delete repetitions when it exceeds this number.
+"at_most": 7  // Also optional, it's used to enforce the maximum amount of repetitions.</code></pre>
+<p>Example config:</p>
+<pre><code class="language-JSON">"item": {
+    "value": [
+        {
+            "en-GB": "One",
+            "fr-FR": "Un"
+        },
+        {
+            "en-GB": "Two",
+            "fr-FR": "Deux"
+        },
+        {
+            "en-GB": "Three",
+            "fr-FR": "Trois"
+        }
+    ],
+    "label": {
+        "en-GB": "List item"
+    },
+    "control": "core/text",
+    "repeatable": true,
+    "at_least": 2
+}</code></pre>
+<h3 id="compound">Compound</h3>
+<p>This control allows you to include multiple controls and form them to one.</p>
+<p>Here is an example for the compound control. A compound control may only contain non-compounded fields.</p>
+<pre><code class="language-JSON">{
+    "value": {
+        "title": {},
+        "link": {}
+    },
+    "label": {
+        "en-GB": "My Compound",
+        "fr-FR": "My Compound"
+    },
+    "type": "compound",
+    "controls": {
+        "title": {
+            "control": "core/text"
+        },
+        "link": {
+            "control": "core/text"
+        }
+    }
+}</code></pre>
+<p>In this example we have added two text controls, each with their own label.
+This will also become the keys to the values.</p>
+<p><strong>Protip</strong>: Compound controls are also repeatable.</p>
+                    </div>
+
+                    <footer>
+                        <hr/>
+                                                Built with <a href="http://couscous.io/">Couscous</a> using a <a href="https://github.com/CouscousPHP/Template-ReadTheDocs">theme</a> based on <a href="https://readthedocs.org/">Read the Docs</a>.
+                    </footer>
+
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script src="/js/theme.js"></script>
+
+    <script>
+        $(function() {
+            // Syntax highlighting
+            hljs.initHighlightingOnLoad();
+        });
+    </script>
+
+</body>
+</html>

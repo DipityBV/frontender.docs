@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontender Documentation</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic'
+          rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="/css/theme.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/theme-fixes.css" type="text/css"/>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+</head>
+<body class="wy-body-for-nav">
+
+    <div class="wy-grid-for-nav">
+
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+            <div class="wy-side-nav-search">
+                <a href="/" class="fa fa-home"> Frontender Documentation</a>
+            </div>
+
+            <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
+                               href="/index.html">
+                                Documentation
+                            </a>
+                        </li>
+                                            <li class="toctree-l1 current">
+                            <a class="reference internal current"
+                               href="/introduction.html">
+                                Introduction
+                            </a>
+                        </li>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
+                               href="/assets.html">
+                                Assets
+                            </a>
+                        </li>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
+                               href="/blueprints.html">
+                                Blueprints
+                            </a>
+                        </li>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
+                               href="/filters.html">
+                                Filters
+                            </a>
+                        </li>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
+                               href="/controls.html">
+                                Controls
+                            </a>
+                        </li>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
+                               href="/macros.html">
+                                Macros
+                            </a>
+                        </li>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
+                               href="/templates.html">
+                                Templates
+                            </a>
+                        </li>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
+                               href="/helpers.html">
+                                Helpers
+                            </a>
+                        </li>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
+                               href="/adapters.html">
+                                Adapters
+                            </a>
+                        </li>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
+                               href="/glossary.html">
+                                Glossary
+                            </a>
+                        </li>
+                                    </ul>
+            </div>
+            &nbsp;
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+                        <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+                <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                <a href="/">Frontender Documentation</a>
+            </nav>
+
+
+                        <div class="wy-nav-content">
+                <div class="rst-content">
+                    <div role="main" class="document">
+                        <h2 id="frontender-introduction">Frontender introduction</h2>
+<h3 id="container-definition">Container definition</h3>
+<p>A container (definition) is a JSON object. Containers may be nested to create compound containers. A page in Frontender is a compound container.</p>
+<pre><code class="language-JSON">{
+    "name": "Name for Frontender",
+    "description": "A description of the container for Frontender",
+    "template":  "path/to/container/template.html.twig",
+    "template_config": {},
+    "containers": [],
+    "blueprint": "a3248875-d0bf-4b0b-a496-0e1f0dec1f57"
+}</code></pre>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>the name of the container definition, only visible to Frontender.</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>the description of the container definition, only visible to Frontender.</td>
+</tr>
+<tr>
+<td>Template</td>
+<td>the file path of the template, this template will be used to render the container in the frontend.</td>
+</tr>
+<tr>
+<td>Config</td>
+<td>the configuration object used by the template to render the container. This object may contain model instructions as well as configuration instructions.</td>
+</tr>
+<tr>
+<td>Containers</td>
+<td>additional containers that may be included in the template.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="blueprint-definition">Blueprint definition</h3>
+<p>A blueprint (definition) is like a container. Blueprints have controls that allow Frontender Desktop to render the configuration UI used to edit the container instructions (config). Blueprints are used as a template to create containers. They are preformatted to container useful default settings that can be overridden once they have been included onto a page.</p>
+<h3 id="page-definitions">Page definitions</h3>
+<p>A page (definition) is a (compound) container. A page commonly consists of a header, body and footer container and may look like:</p>
+<pre><code class="language-JSON">{
+    "route": "blog",
+    "name": {
+        "en-GB": "Name for Frontender"
+    },
+    "description": {
+        "en-GB": "A description of the container for Frontender"
+    },
+    "template": "path/to/page/template.html.twig",
+    "template_config": {},
+    "containers": [
+        {
+            "frontender": "1558357549",
+            "name": {
+                "en-GB": "Header container"
+            },
+            "description": {
+                "en-GB": "A description for Frontender"
+            },
+            "template": "path/to/header/template.html.twig",
+            "template_config": {},
+            "blueprint": "ea6b893c-de10-47d6-9370-1ecddf011e58",
+            "containers": []
+        },
+        {
+            "frontender": "1558357550",
+            "name": {
+                "en-GB": "Body container"
+            },
+            "description": {
+                "en-GB": "A description for Frontender"
+            },
+            "template": "path/to/body/template.html.twig",
+            "template_config": {},
+            "blueprint": "ea6b893c-de10-47d6-9370-1ecddf011e58",
+            "Containers": []
+        },
+        {
+            "frontender": "1558357551",
+            "name": {
+                "en-GB": "Footer container"
+            },
+            "description": {
+                "en-GB": "A description for Frontender"
+            },
+            "template": "path/to/footer/template.html.twig",
+            "template_config": {},
+            "containers": [],
+            "blueprint": "ea6b893c-de10-47d6-9370-1ecddf011e58"
+        }
+    ],
+    "blueprint": "a3248875-d0bf-4b0b-a496-0e1f0dec1f57",
+    "frontender": "1558357552"
+}</code></pre>
+<h3 id="page-states">Page states</h3>
+<p>A page has different states that define its access:</p>
+<h4 id="public">Public</h4>
+<p>The revision of the page that is accessible to the frontend. It is stored in the Pages.public Collection (see: Collections).</p>
+<h4 id="revision">Revision</h4>
+<p>A version of a page. It is stored in the Pages Collection (see: Collections). A revision is a complete page definition that can be loaded and previewed in Frontender Desktop and Frontender Platform(using its uuid). A revision is not publicly accessible to the frontend. A revision is defined by a date and time.</p>
+<p>Revisions are managed in Frontender.</p>
+<p>A revision of a page definition contains a MD5 hash of the page definition’s config attribute (which contains the actual container object).</p>
+<h4 id="draft">Draft</h4>
+<p>A non-persisted version of a page. The draft is the working copy of a page. A draft is persisted in some kind of memory storage and is destroyed when:</p>
+<ul>
+<li>The user navigates away without saving</li>
+<li>The application is quit without saving</li>
+<li>…</li>
+</ul>
+<p>Drafts are not accessible outside one user’s installation of Frontender. A draft is not accessible by the frontend and can not be previewed in a browser.</p>
+<p>When a user wishes to preview a draft in Frontender, it must be saved first to create a revision of it.</p>
+<p>Opening a (public) revision with Frontender Desktop will generate a draft.</p>
+<h4 id="trash">Trash</h4>
+<p>A revision lot (all revisions of a page) that have been moved to the pages.trash collection. Pages in the trash will be retrievable (in some future version of Frontender).</p>
+<h3 id="container-and-blueprint-attributes">Container and blueprint attributes</h3>
+<p>Pages, containers and blueprints are JSON objects that contain configuration on which template to render, how, and with what data.</p>
+<ul>
+<li>A <strong>blueprint contains controls</strong> (and optionally default values)</li>
+<li>A <strong>container contains values</strong> (and optionally a reference to a blueprint)</li>
+</ul>
+<p>If a blueprint attribute is not included in the container, the container will still function but its values can only be edited in Code view.</p>
+<p>Likewise, when a container contains a property that cannot be matched to a control in a referenced blueprint, its value will only be editable in the Code view.</p>
+<p>A value can be expressed as a simple value (string, number or boolean), an object with {locale}/{simple value} pairs or an array of values (see: Blueprints::Controls).</p>
+<p>When a value is a simple value, it is considered non-translatable and will be used for all locales.</p>
+<h4 id="template-path-required">Template path (required)</h4>
+<p>The template.path attribute is exposed to the frontend. It can consist of values for each of one supported locales in the frontend. It defines what template (markup) to use.</p>
+<blockquote>
+<p>In Frontender, when a container does not contain a value for template, it is invalid and a notification should be displayed upon saving the file (or while editing its JSON).
+On the frontend, when a container does not contain a value for template, it can not be rendered and will simply be ignored by the JSON parser and discarded in the rendering process.</p>
+</blockquote>
+<pre><code class="language-JSON">{
+    "template": {
+        "en-GB": "File path for en_GB, String",
+        "en-US": "File path for en_US, String"
+    }
+}</code></pre>
+<h4 id="name">Name</h4>
+<p>The name attribute is only exposed to Frontender. It can consist of values for each of one supported locale in Frontender.</p>
+<p>When name is omitted (or its value empty) the revision id is used as a fallback value.</p>
+<blockquote>
+<p>This is no longer accurate when we store files in db. We need another value for this.</p>
+</blockquote>
+<pre><code class="language-JSON">{
+    "name": {
+        "en-GB": "Name in en_GB, String",
+        "en-US": "Name in en_US, String"
+    }
+}</code></pre>
+<h4 id="description">Description</h4>
+<p>The description attribute is only exposed to Frontender. It can consist of values for each of one supported locale in Frontender.</p>
+<p>When description is omitted (or its value empty) the attribute is disregarded.</p>
+<pre><code class="language-JSON">{
+    "description": {
+        "en-GB": "Description in en_GB, String",
+        "en-US": "Description in en_US, String"
+    }
+}</code></pre>
+<h4 id="template-config">Template config</h4>
+<p>The template.config attribute holds configuration properties for rendering of the template.</p>
+<p>Settings are grouped into different sections (one level). Each group will be rendered as a tab in the Frontender Desktop UI (see Image 1: Container configuration UI).</p>
+<blockquote>
+<p>Examples below are for a frontend in Dutch and English</p>
+</blockquote>
+<pre><code class="language-JSON">{
+    "template_config": {
+        "layout": {
+            "theme": "",
+            "class": ""
+        },
+        "model": {
+            "name": "contentful/article",
+            "id": "A68B45686AGB0"
+        },
+        "labels": {
+            "headline": {
+                "nl-NL": "Jouw volgende digitale stap",
+                "en-GB": "Your next step in digital"
+            },
+            "standfirst": {
+                "nl-NL": "",
+                "en-GB": ""
+            }
+        }
+    }
+}</code></pre>
+<h4 id="blueprint">Blueprint</h4>
+<p>Blueprint is the reference to a blueprint that is to be used to render a container’s UI in Frontender Desktop (see Image 1: Container configuration UI).</p>
+<p>A blueprint holds the controls for the value(s) in a container. (see: Blueprints::Controls).</p>
+<pre><code class="language-JSON">{
+    "blueprint": "project/containers/container"
+}</code></pre>
+<h4 id="route">Route</h4>
+<p>The route attribute defines the page’s URL, e.g. its address to the browser:</p>
+<pre><code class="language-JSON">{
+    "route": {
+        "en-GB": "home",
+        "en-US": "home"
+    }
+}</code></pre>
+<h4 id="containers">Containers</h4>
+<p>Containers is an array and consists of one or more nested containers. A container containing other containers is referred to as a compound containers. A container in a container array is referred to as a nested container.</p>
+<pre><code class="language-JSON">{
+    "containers": []
+}</code></pre>
+<h4 id="revision-1">Revision</h4>
+<p>Revision contains a date (when the revision was created), a hash (of all container attributes but omitting the revision attribute) and a user object (who saved the revision). At the moment of writing this document, a revision attribute is only used on page level (root page definition container).</p>
+<pre><code class="language-JSON">{
+    "revision" : {
+        "lot": "07156454-f83b-4f8e-ba8f-46417564f409",
+        "date": "2018-04-20 00:00:00",
+        "hash": "71e089512689b9f29ba26a3d8db5aac9",
+        "user": {}
+    }
+}</code></pre>
+                    </div>
+
+                    <footer>
+                        <hr/>
+                                                Built with <a href="http://couscous.io/">Couscous</a> using a <a href="https://github.com/CouscousPHP/Template-ReadTheDocs">theme</a> based on <a href="https://readthedocs.org/">Read the Docs</a>.
+                    </footer>
+
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script src="/js/theme.js"></script>
+
+    <script>
+        $(function() {
+            // Syntax highlighting
+            hljs.initHighlightingOnLoad();
+        });
+    </script>
+
+</body>
+</html>

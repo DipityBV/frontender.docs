@@ -13,34 +13,32 @@ Blueprints are small snippets of template instructions in JSON format. Blueprint
     "fe-id": null,
     "template": "containers/[contenttype]/[containername]/[containername].html.twig",
     "name": {
-        "en-GB": "[Name for Frontender in English]",
-        "fr-FR": "[Name for Frontender in French]"
+        "en-GB": "Name for Frontender in English",
+        "fr-FR": "Name for Frontender in French"
     },
     "description": {
-        "en-GB": "[Description for Frontender in English]",
-        "fr-FR": "[Description for Frontender in French]"
+        "en-GB": "Description for Frontender in English",
+        "fr-FR": "Description for Frontender in French"
     },
     "template_config": {
         "config": {
             "label": {
-                "en-GB": "[Tab label for Frontender in English]",
-                "fr-FR": "[Tab label for Frontender in French]"
+                "en-GB": "Tab label for Frontender in English",
+                "fr-FR": "Tab label for Frontender in French"
             },
             "controls": {
                 "your_variable_name": {
-                    "hidden": "0",
-                    "access": "all",
                     "label": {
-                        "en-GB": "[Field label for Frontender in English]",
-                        "fr-FR": "[Field label for Frontender in French]"
+                        "en-GB": "Field label for Frontender in English",
+                        "fr-FR": "Field label for Frontender in French"
                     },
-                    "type": "text|list",
+                    "control": "core/text",
                     "value": ""
                 }
             }
-        },
-        "containers": []
-    }
+        }
+    },
+    "containers": []
 }
 
 ```
@@ -56,53 +54,43 @@ This is an example of a content tab to retrieve an list of impact stories from t
     },
     "controls": {
         "name": {
-            "hidden": "1",
-            "access": "developer",
             "label": {
                 "en-GB": "API Resource",
                 "fr-FR": "API Resource"
             },
-            "type": "text",
+            "control": "core/hidden",
             "value": "Channel\\Articles"
         },
         "channelId": {
-            "hidden": "0",
-            "access": "all",
             "label": {
                 "en-GB": "Channel id",
                 "fr-FR": "Channel id"
             },
-            "type": "text",
+            "control": "core/text",
             "value": "d226b59695f00554161d3014a5008b40"
         },
         "limit": {
-            "hidden": "0",
-            "access": "all",
             "label": {
                 "en-GB": "Limit",
                 "fr-FR": "Limit"
             },
-            "type": "text",
+            "control": "core/text",
             "value": "4"
         },
         "limit": {
-            "hidden": "0",
-            "access": "all",
             "label": {
                 "en-GB": "Limit",
                 "fr-FR": "Limit"
             },
-            "type": "text",
+            "control": "core/text",
             "value": "4"
         },
         "articleType": {
-            "hidden": "0",
-            "access": "all",
             "label": {
                 "en-GB": "Article type",
                 "fr-FR": "Article type"
             },
-            "type": "text",
+            "control": "core/text",
             "value": "impact"
         }
     }
@@ -114,7 +102,7 @@ This is an example of a content tab to retrieve an list of impact stories from t
 
 ### Default properties
 ```json
-"fe-id": null,
+"frontender": null,
 "name": {
     "en-GB": "",
     "fr-FR": ""
@@ -168,26 +156,8 @@ This is an example of a content tab to retrieve an list of impact stories from t
 ```
 
 ### Control config example
-```json
-"container_class": {
-    "hidden": "0",
-    "access": "all",
-    "label": {
-        "en-GB": "",
-        "fr-FR": ""
-    },
-    "type": "text|list",
-    "value": "",
-    "options": [
-        {
-            "value": "",
-            "label": {
-                "en-GB": "",
-                "fr-FR-FR": ""
-            }
-        }
-    ]
-}
+```
+@todo
 ```
 
 ### Show/Hide list options
@@ -356,78 +326,87 @@ This is an example of a content tab to retrieve an list of impact stories from t
 ]
 ```
 
-### CTA Colour list options
+### Colour list options
 ```json
 "colour_theme": {
-    "hidden": "0",
-    "access": "all",
     "label": {
         "en-GB": "Theme colour",
         "fr-FR": "Theme colour"
     },
-    "type": "list",
+    "control": "core/list",
     "value": "green",
-    "options": [{
-        "value": "green",
-        "label": {
-            "en-GB": "Green",
-            "fr-FR": "Green"
+    "options": [
+        {
+            "value": "green",
+            "label": {
+                "en-GB": "Green",
+                "fr-FR": "Green"
+            }
+        },
+        {
+            "value": "blue",
+            "label": {
+                "en-GB": "Blue",
+                "fr-FR": "Blue"
+            }
+        },
+        {
+            "value": "lime",
+            "label": {
+                "en-GB": "Lime",
+                "fr-FR": "Lime"
+            }
+        },
+        {
+            "value": "yellow",
+            "label": {
+                "en-GB": "Yellow",
+                "fr-FR": "Yellow"
+            }
+        },
+        {
+            "value": "gold",
+            "label": {
+                "en-GB": "Gold",
+                "fr-FR": "Gold"
+            }
+        },
+        {
+            "value": "orange",
+            "label": {
+                "en-GB": "Orange",
+                "fr-FR": "Orange"
+            }
+        },
+        {
+            "value": "salmon",
+            "label": {
+                "en-GB": "Salmon",
+                "fr-FR": "Salmon"
+            }
+        },
+        {
+            "value": "red",
+            "label": {
+                "en-GB": "Red",
+                "fr-FR": "Red"
+            }
+        },
+        {
+            "value": "burgundy",
+            "label": {
+                "en-GB": "Burgundy",
+                "fr-FR": "Burgundy"
+            }
+        },
+        {
+            "value": "purple",
+            "label": {
+                "en-GB": "Purple",
+                "fr-FR": "Purple"
+            }
         }
-    }, {
-        "value": "blue",
-        "label": {
-            "en-GB": "Blue",
-            "fr-FR": "Blue"
-        }
-    }, {
-        "value": "lime",
-        "label": {
-            "en-GB": "Lime",
-            "fr-FR": "Lime"
-        }
-    }, {
-        "value": "yellow",
-        "label": {
-            "en-GB": "Yellow",
-            "fr-FR": "Yellow"
-        }
-    }, {
-        "value": "gold",
-        "label": {
-            "en-GB": "Gold",
-            "fr-FR": "Gold"
-        }
-    }, {
-        "value": "orange",
-        "label": {
-            "en-GB": "Orange",
-            "fr-FR": "Orange"
-        }
-    }, {
-        "value": "salmon",
-        "label": {
-            "en-GB": "Salmon",
-            "fr-FR": "Salmon"
-        }
-    }, {
-        "value": "red",
-        "label": {
-            "en-GB": "Red",
-            "fr-FR": "Red"
-        }
-    }, {
-        "value": "burgundy",
-        "label": {
-            "en-GB": "Burgundy",
-            "fr-FR": "Burgundy"
-        }
-    }, {
-        "value": "purple",
-        "label": {
-            "en-GB": "Purple",
-            "fr-FR": "Purple"
-        }
-    }]
+    ]
 }
 ```
 

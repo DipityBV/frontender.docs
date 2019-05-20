@@ -9,9 +9,9 @@ currentMenu: templates
 In some cases it is required to disable certain functionality in the site, that isn't required in Frontender. (eg: cookie policy notice)
 
 Inside of every twig file a query is available, this allows you to check what is in the query.
-When a page is called by Frontender, it will send a query variable called ```fromFrontender```, when this variable is set you can hide functionality that you don't want to show in frontender.
+When a page is called by Frontender, it will send a query variable called ```fromFrontender```, when this variable is set you can hide functionality that you don't want to show in Frontender.
 
-Below is an example, in which we hide Google Analytics from frontender.
+Below is an example, in which we hide Google Analytics from Frontender.
 ```twig
 {% if not query.fromFrontender %}
     window.addEventListener("load", function(){
@@ -28,4 +28,4 @@ Below is an example, in which we hide Google Analytics from frontender.
 ```
 
 ### Localization
-Localization is done through translation files written in yaml. These files are located in the ```project/translations``` folder.
+Localization is done through translation files written in YAML. These files are located in the ```project/translations``` folder.

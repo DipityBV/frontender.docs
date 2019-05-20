@@ -2,7 +2,6 @@
 currentMenu: documentation
 ---
 
-## Initial setup
-```
-<div>code</div>
-```
+## Introduction
+
+Introduction to Frontender

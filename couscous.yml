@@ -23,9 +23,27 @@ menu:
         documentation:
             text: Index
             relativeUrl: index.html
-        secondary:
-            text: Configuration
-            relativeUrl: secondary.html
-        faq:
-            text: Frequently Asked Questions
-            relativeUrl: faq.html
+        assets:
+            text: Assets
+            relativeUrl: assets.html
+        blueprints:
+            text: Blueprints
+            relativeUrl: blueprints.html
+        filters:
+            text: Filters
+            relativeUrl: filters.html
+        controls:
+            text: Controls
+            relativeUrl: controls.html
+        macros:
+            text: Macros
+            relativeUrl: macros.html
+        templates:
+            text: Templates
+            relativeUrl: templates.html
+        helpers:
+            text: Helpers
+            relativeUrl: helpers.html
+        adapters:
+            text: Adapters
+            relativeUrl: adapters.html

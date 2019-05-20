@@ -19,3 +19,19 @@ output: strings
 ```
 output: string
 ```
+
+### Raw
+```twig
+'<p>strings</p>'|raw
+```
+```
+output: <p>strings</p>
+```
+
+### Translate
+```twig
+{{ {'en-GB': 'Red', 'fr-FR': "Rouge"}|t }}
+```
+```
+output: Red
+```

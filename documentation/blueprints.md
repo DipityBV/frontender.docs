@@ -8,7 +8,7 @@ Blueprints are small snippets of template instructions in JSON format. Blueprint
 
 ### Syntax
 
-```json
+```JSON
 {
     "fe-id": null,
     "template": "containers/[contenttype]/[containername]/[containername].html.twig",
@@ -46,7 +46,7 @@ Blueprints are small snippets of template instructions in JSON format. Blueprint
 ### Assigning content from the SCR to a blueprint
 
 This is an example of a content tab to retrieve an list of impact stories from the SCR (note that the content type is currently a text field – it may become a select list instead, but for the sake of the example we keep it a text field):
-```json
+```JSON
 "model": {
     "label": {
         "en-GB": "Content",
@@ -101,7 +101,7 @@ This is an example of a content tab to retrieve an list of impact stories from t
 ## Blueprint snippets
 
 ### Default properties
-```json
+```JSON
 "frontender": null,
 "name": {
     "en-GB": "",
@@ -116,7 +116,7 @@ This is an example of a content tab to retrieve an list of impact stories from t
 ```
 
 ### Default tabs
-```json
+```JSON
 "model": {
     "label": {
         "en-GB": "Content",
@@ -161,7 +161,7 @@ This is an example of a content tab to retrieve an list of impact stories from t
 ```
 
 ### Show/Hide list options
-```json
+```JSON
 "options": [
     {
         "value": "1",
@@ -181,157 +181,136 @@ This is an example of a content tab to retrieve an list of impact stories from t
 ```
 
 ### Article content types option list options
-```json
+```JSON
 "options": [
     {
         "value": "blog",
         "label": {
-            "en-GB": "Blog post",
-            "fr-FR": "Blog post"
+            "en-GB": "Blog post"
         }
     },
     {
         "value": "corporate_news",
         "label": {
-            "en-GB": "Corporate news article",
-            "fr-FR": "Corporate news article"
+            "en-GB": "Corporate news article"
         }
     },
     {
         "value": "impact",
         "label": {
-            "en-GB": "Impact article",
-            "fr-FR": "Impact article"
+            "en-GB": "Impact article"
         }
     },
     {
         "value": "background",
         "label": {
-            "en-GB": "Background story",
-            "fr-FR": "Background story"
+            "en-GB": "Background story"
         }
     },
     {
         "value": "opinion",
         "label": {
-            "en-GB": "Opinion article",
-            "fr-FR": "Opinion article"
+            "en-GB": "Opinion article"
         }
     },
     {
         "value": "interview",
         "label": {
-            "en-GB": "Interview",
-            "fr-FR": "Interview"
+            "en-GB": "Interview"
         }
     },
     {
         "value": "syndicated",
         "label": {
-            "en-GB": "Syndicated articles",
-            "fr-FR": "Syndicated articles"
+            "en-GB": "Syndicated articles"
         }
     },
     {
         "value": "review",
         "label": {
-            "en-GB": "Publication review",
-            "fr-FR": "Publication review"
+            "en-GB": "Publication review"
         }
     },
     {
         "value": "technical_scientific",
         "label": {
-            "en-GB": "Technical articles",
-            "fr-FR": "Technical articles"
+            "en-GB": "Technical articles"
         }
     },
     {
         "value": "data_report",
         "label": {
-            "en-GB": "Data report",
-            "fr-FR": "Data report"
+            "en-GB": "Data report"
         }
     },
     {
         "value": "communique",
         "label": {
-            "en-GB": "Communiqué",
-            "fr-FR": "Communiqué"
+            "en-GB": "Communiqué"
         }
     },
     {
         "value": "vacancy",
         "label": {
-            "en-GB": "Vacancy announcement",
-            "fr-FR": "Vacancy announcement"
+            "en-GB": "Vacancy announcement"
         }
     },
     {
         "value": "internship",
         "label": {
-            "en-GB": "Internship vacancy announcement",
-            "fr-FR": "Internship vacancy announcement"
+            "en-GB": "Internship vacancy announcement"
         }
     },
     {
         "value": "call_for_external_expert",
         "label": {
-            "en-GB": "Call for external expert",
-            "fr-FR": "Call for external expert"
+            "en-GB": "Call for external expert"
         }
     },
     {
         "value": "call_for_tender",
         "label": {
-            "en-GB": "Call for tender",
-            "fr-FR": "Call for tender"
+            "en-GB": "Call for tender"
         }
     },
     {
         "value": "call_for_proposal",
         "label": {
-            "en-GB": "Call for proposal",
-            "fr-FR": "Call for proposal"
+            "en-GB": "Call for proposal"
         }
     },
     {
         "value": "partnership",
         "label": {
-            "en-GB": "Call for partnership",
-            "fr-FR": "Call for partnership"
+            "en-GB": "Call for partnership"
         }
     },
     {
         "value": "tender_award_notice",
         "label": {
-            "en-GB": "Tender award notice",
-            "fr-FR": "Tender award notice"
+            "en-GB": "Tender award notice"
         }
     },
     {
         "value": "tender_highlight",
         "label": {
-            "en-GB": "Tender highlight",
-            "fr-FR": "Tender highlight"
+            "en-GB": "Tender highlight"
         }
     },
     {
         "value": "speech",
         "label": {
-            "en-GB": "Speech transcript",
-            "fr-FR": "Speech transcript"
+            "en-GB": "Speech transcript"
         }
     }
 ]
 ```
 
 ### Colour list options
-```json
+```JSON
 "colour_theme": {
     "label": {
-        "en-GB": "Theme colour",
-        "fr-FR": "Theme colour"
+        "en-GB": "Theme colour"
     },
     "control": "core/list",
     "value": "green",
@@ -339,71 +318,61 @@ This is an example of a content tab to retrieve an list of impact stories from t
         {
             "value": "green",
             "label": {
-                "en-GB": "Green",
-                "fr-FR": "Green"
+                "en-GB": "Green"
             }
         },
         {
             "value": "blue",
             "label": {
-                "en-GB": "Blue",
-                "fr-FR": "Blue"
+                "en-GB": "Blue"
             }
         },
         {
             "value": "lime",
             "label": {
-                "en-GB": "Lime",
-                "fr-FR": "Lime"
+                "en-GB": "Lime"
             }
         },
         {
             "value": "yellow",
             "label": {
-                "en-GB": "Yellow",
-                "fr-FR": "Yellow"
+                "en-GB": "Yellow"
             }
         },
         {
             "value": "gold",
             "label": {
-                "en-GB": "Gold",
-                "fr-FR": "Gold"
+                "en-GB": "Gold"
             }
         },
         {
             "value": "orange",
             "label": {
-                "en-GB": "Orange",
-                "fr-FR": "Orange"
+                "en-GB": "Orange"
             }
         },
         {
             "value": "salmon",
             "label": {
-                "en-GB": "Salmon",
-                "fr-FR": "Salmon"
+                "en-GB": "Salmon"
             }
         },
         {
             "value": "red",
             "label": {
-                "en-GB": "Red",
-                "fr-FR": "Red"
+                "en-GB": "Red"
             }
         },
         {
             "value": "burgundy",
             "label": {
-                "en-GB": "Burgundy",
-                "fr-FR": "Burgundy"
+                "en-GB": "Burgundy"
             }
         },
         {
             "value": "purple",
             "label": {
-                "en-GB": "Purple",
-                "fr-FR": "Purple"
+                "en-GB": "Purple"
             }
         }
     ]

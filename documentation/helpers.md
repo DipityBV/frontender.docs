@@ -3,3 +3,44 @@ currentMenu: helpers
 ---
 
 ## Helpers
+
+
+### Template helper
+
+```twig
+{# Process any class variables from the config and return a single class string #}
+{% macro class_string(config) %}
+    {{ [
+        config.crown|t(locales) ? config.crown|t(locales),
+        config.body_class|t(locales) ? config.body_class|t(locales),
+        config.container_class|t(locales) ? config.container_class|t(locales),
+        config.divider|t(locales) ? config.divider|t(locales),
+        config.wings|t(locales) ? config.wings|t(locales),
+        config.leader|t(locales) ? config.leader|t(locales),
+        config.leader_inside|t(locales) ? config.leader_inside|t(locales),
+        config.trailer|t(locales) ? config.trailer|t(locales),
+        config.trailer_inside|t(locales) ? config.trailer_inside|t(locales),
+        config.colour_theme|t(locales) ? config.colour_theme|t(locales),
+        config.colour_background|t(locales) ? config.colour_background|t(locales)
+    ]|join(' ')|trim }}
+{% endmacro %}
+
+{# Process any class variables from the config and return class attribute #}
+{% macro class_attribute(config, class) %}
+    {% import _self as helper %}
+    {% set class = [helper.class_string(config)|trim, class|trim]|join(' ')|trim %}
+    {% if class %} class="{{ class }}"{% endif %}
+{% endmacro %}
+
+{# Alias for class_string, for backward compatibility #}
+{% macro class(config) %}
+    {% import _self as helper %}
+    {{ helper.class_string(config) }}
+{% endmacro %}
+
+{# Build container id attribute #}
+{% macro container_id_attribute(value, namespace) %}
+    {% if value %} data-{{namespace}}="{{ value|raw }}"{% endif %}
+{% endmacro %}
+
+```

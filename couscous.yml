@@ -21,8 +21,11 @@ title: Frontender Documentation
 menu:
     items:
         documentation:
-            text: Index
+            text: Documentation
             relativeUrl: index.html
+        introduction:
+            text: Introduction
+            relativeUrl: introduction.html
         assets:
             text: Assets
             relativeUrl: assets.html
@@ -47,3 +50,6 @@ menu:
         adapters:
             text: Adapters
             relativeUrl: adapters.html
+        glossary:
+            text: Glossary
+            relativeUrl: glossary.html

@@ -2,7 +2,7 @@
     margin-bottom: 0;
 }
 
-.wy-nav-side { overflow: inherit; } 
+.wy-nav-side { overflow: inherit; }
 
 /* Code blocks */
 pre > code {
@@ -23,4 +23,26 @@ pre {
     border: 1px solid #e1e4e5;
     background: #fff;
     margin: 1px 0 24px 0;
+}
+.document ul,ol,dl {
+    list-style-position: inside;
+}
+.document ul,ol li {
+    list-style: initial;
+    list-style-position: inside;
+}
+.document table,ul,ol {
+    margin-bottom: 24px;
+}
+.document tbody tr:nth-child(even) {
+    background-color: rgba(52, 49, 49, .1);
+}
+.document tbody td {
+    padding: 10px;
+}
+.document thead th {
+    padding-bottom: 10px;
+}
+.document thead th:nth-child(1)  {
+    width: 25%;
 }

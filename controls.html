@@ -89,6 +89,12 @@
                                 Glossary
                             </a>
                         </li>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
+                               href="/container.html">
+                                Container
+                            </a>
+                        </li>
                                     </ul>
             </div>
             &nbsp;
@@ -151,11 +157,11 @@ The following controls are build into Frontender:</p>
 </tr>
 <tr>
 <td>core/json</td>
-<td>JSON textarea</td>
+<td><a href="#json">JSON</a></td>
 </tr>
 <tr>
 <td>core/abstract</td>
-<td>???</td>
+<td><a href="#abstract">Abstract</a></td>
 </tr>
 <tr>
 <td>core/text</td>
@@ -163,7 +169,7 @@ The following controls are build into Frontender:</p>
 </tr>
 <tr>
 <td>core/robots</td>
-<td>Robots text field</td>
+<td><a href="#robots">Robots</a></td>
 </tr>
 </tbody>
 </table>
@@ -275,6 +281,11 @@ The following controls are build into Frontender:</p>
     },
     "control": "core/textarea"
 }</code></pre>
+<h3 id="json">JSON</h3>
+<p>JSON textarea</p>
+<pre><code class="language-JSON">???</code></pre>
+<h3 id="abstract">Abstract</h3>
+<pre><code class="language-JSON">???</code></pre>
 <h3 id="text">Text</h3>
 <p>Text input field</p>
 <pre><code class="language-JSON">"text": {
@@ -286,6 +297,18 @@ The following controls are build into Frontender:</p>
     },
     "control": "core/text"
 }</code></pre>
+<hr />
+<h3 id="robots">Robots</h3>
+<p>Robots text field</p>
+<pre><code class="language-JSON">"meta_robots": {
+    "value": "index, follow",
+    "label": {
+        "en-GB": "Indexing"
+    },
+    "control": "core/robots",
+    "type": "text"
+}</code></pre>
+<hr />
 <h3 id="repeatable">Repeatable</h3>
 <p>Controls can be extended with an option to make them repeatable.
 This will add a menu next to the item that allows repetition.</p>

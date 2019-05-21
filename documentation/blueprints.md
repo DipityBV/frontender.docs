@@ -40,7 +40,6 @@ Blueprints are small snippets of template instructions in JSON format. Blueprint
     },
     "containers": []
 }
-
 ```
 
 ### Assigning content from the SCR to a blueprint

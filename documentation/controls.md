@@ -17,10 +17,10 @@ The following controls are build into Frontender:
 | core/route | [Route](#route) |
 | core/list | [List](#list) |
 | core/textarea | [Textarea](#textarea) |
-| core/json | JSON textarea |
-| core/abstract | ??? |
+| core/json | [JSON](#json) |
+| core/abstract | [Abstract](#abstract) |
 | core/text | [Text](#text) |
-| core/robots | Robots text field |
+| core/robots | [Robots](#robots) |
 
 Additional core controls will be added in the near future.
 
@@ -157,6 +157,17 @@ Normal textarea
 }
 ```
 
+### JSON
+JSON textarea
+```JSON
+???
+```
+
+### Abstract
+```JSON
+???
+```
+
 ### Text
 Text input field
 ```JSON
@@ -170,7 +181,20 @@ Text input field
     "control": "core/text"
 }
 ```
-
+---
+### Robots
+Robots text field
+```JSON
+"meta_robots": {
+	"value": "index, follow",
+	"label": {
+		"en-GB": "Indexing"
+	},
+	"control": "core/robots",
+	"type": "text"
+}
+```
+---
 ### Repeatable
 Controls can be extended with an option to make them repeatable.
 This will add a menu next to the item that allows repetition.

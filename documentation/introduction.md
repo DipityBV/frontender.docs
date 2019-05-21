@@ -24,8 +24,6 @@ A container (definition) is a JSON object. Containers may be nested to create co
 | Config | the configuration object used by the template to render the container. This object may contain model instructions as well as configuration instructions. |
 | Containers | additional containers that may be included in the template. |
 
----
-
 ### Blueprint definition
 A blueprint (definition) is like a container. Blueprints have controls that allow Frontender Desktop to render the configuration UI used to edit the container instructions (config). Blueprints are used as a template to create containers. They are preformatted to container useful default settings that can be overridden once they have been included onto a page.
 

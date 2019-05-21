@@ -24,8 +24,6 @@ currentMenu: glossary
 | Space | A collection of sites and resources. Usually, a Space represents a (paying) client. There is also a global Space (frontendermanager.com?) that is used for smaller clients, comparable to wordpress.com. |
 | Template | Markup code (HTML, CSS, JavaScript). |
 
----
-
 ## Terms
 
 ###### Frontender Desktop

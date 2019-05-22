@@ -16,43 +16,95 @@ exclude:
 cname: docs.getfrontender.com
 
 title: Frontender Documentation
-# subTitle: This is a couscous test.
 
+# Regular menu
+# menu:
+#     items:
+#         documentation:
+#             text: Documentation
+#             relativeUrl: index.html
+#         introduction:
+#             text: Introduction
+#             relativeUrl: introduction.html
+#         assets:
+#             text: Assets
+#             relativeUrl: assets.html
+#         blueprints:
+#             text: Blueprints
+#             relativeUrl: blueprints.html
+#         filters:
+#             text: Filters
+#             relativeUrl: filters.html
+#         controls:
+#             text: Controls
+#             relativeUrl: controls.html
+#         macros:
+#             text: Macros
+#             relativeUrl: macros.html
+#         templates:
+#             text: Templates
+#             relativeUrl: templates.html
+#         helpers:
+#             text: Helpers
+#             relativeUrl: helpers.html
+#         adapters:
+#             text: Adapters
+#             relativeUrl: adapters.html
+#         glossary:
+#             text: Glossary
+#             relativeUrl: glossary.html
+#         container:
+#             text: Container
+#             relativeUrl: container.html
+
+# Layered menu
 menu:
-    items:
-        documentation:
-            text: Documentation
-            relativeUrl: index.html
-        introduction:
-            text: Introduction
-            relativeUrl: introduction.html
-        assets:
-            text: Assets
-            relativeUrl: assets.html
-        blueprints:
-            text: Blueprints
-            relativeUrl: blueprints.html
-        filters:
-            text: Filters
-            relativeUrl: filters.html
-        controls:
-            text: Controls
-            relativeUrl: controls.html
-        macros:
-            text: Macros
-            relativeUrl: macros.html
-        templates:
-            text: Templates
-            relativeUrl: templates.html
-        helpers:
-            text: Helpers
-            relativeUrl: helpers.html
-        adapters:
-            text: Adapters
-            relativeUrl: adapters.html
-        glossary:
-            text: Glossary
-            relativeUrl: glossary.html
-        container:
-            text: Container
-            relativeUrl: container.html
+    sections:
+        main:
+            name: Main documentation
+            items:
+                documentation:
+                    text: Documentation
+                    relativeUrl: index.html
+                introduction:
+                    text: Introduction
+                    relativeUrl: introduction.html
+                assets:
+                    text: Assets
+                    relativeUrl: assets.html
+                blueprints:
+                    text: Blueprints
+                    relativeUrl: blueprints.html
+                filters:
+                    text: Filters
+                    relativeUrl: filters.html
+                controls:
+                    text: Controls
+                    relativeUrl: controls.html
+                macros:
+                    text: Macros
+                    relativeUrl: macros.html
+                templates:
+                    text: Templates
+                    relativeUrl: templates.html
+                helpers:
+                    text: Helpers
+                    relativeUrl: helpers.html
+                adapters:
+                    text: Adapters
+                    relativeUrl: adapters.html
+                glossary:
+                    text: Glossary
+                    relativeUrl: glossary.html
+                container:
+                    text: Container
+                    relativeUrl: container.html
+                proxy-domains:
+                    text: Proxy domains
+                    relativeUrl: proxy-domains.html
+                landingpage:
+                    text: Landing page
+                    relativeUrl: landingpage.html
+                pages:
+                    text: Pages
+                    relativeUrl: pages.html

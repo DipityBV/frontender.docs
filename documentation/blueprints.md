@@ -10,7 +10,7 @@ Blueprints are small snippets of template instructions in JSON format. Blueprint
 
 ```JSON
 {
-    "fe-id": null,
+    "frontender": null,
     "template": "containers/[contenttype]/[containername]/[containername].html.twig",
     "name": {
         "en-GB": "Name for Frontender in English",

@@ -6,8 +6,12 @@ currentMenu: container
 Twig container with data from it's JSON configuration.
 ```twig
 <{{ config.container_tag|default('section') }} {{ helper.container_id_attribute(frontender, 'frontender')|raw }}>
-    <h1>{{ content.title|t(locales) }}</h1>
-    <p>{{ content.body|t(locales) }}</p>
+    {% if content.title|t %}
+        <h1>{{ content.title|t }}</h1>
+    {% endif %}
+    {% if content.body|t %}
+        <p>{{ content.body|t }}</p>
+    {% endif %}
 </{{ config.container_tag|default('section') }}>
 ```
 JSON code:

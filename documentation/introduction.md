@@ -25,7 +25,7 @@ A container (definition) is a JSON object. Containers may be nested to create co
 | Containers | additional containers that may be included in the template. |
 
 ### Blueprint definition
-A blueprint (definition) is like a container. Blueprints have controls that allow Frontender Desktop to render the configuration UI used to edit the container instructions (config). Blueprints are used as a template to create containers. They are preformatted to container useful default settings that can be overridden once they have been included onto a page.
+A blueprint (definition) is like a container. Blueprints have controls that allow Frontender Desktop to render the configuration UI used to edit the container instructions (config). Blueprints are used as a template to create containers. They are pre-formatted to container useful default settings that can be overridden once they have been included onto a page.
 
 
 ### Page definitions
@@ -52,8 +52,8 @@ A page (definition) is a (compound) container. A page commonly consists of a hea
             },
             "template": "path/to/header/template.html.twig",
             "template_config": {},
-            "blueprint": "ea6b893c-de10-47d6-9370-1ecddf011e58",
-            "containers": []
+            "containers": [],
+            "blueprint": "ea6b893c-de10-47d6-9370-1ecddf011e58"
         },
         {
             "frontender": "1558357550",
@@ -65,8 +65,8 @@ A page (definition) is a (compound) container. A page commonly consists of a hea
             },
             "template": "path/to/body/template.html.twig",
             "template_config": {},
-            "blueprint": "ea6b893c-de10-47d6-9370-1ecddf011e58",
-            "Containers": []
+            "Containers": [],
+            "blueprint": "ea6b893c-de10-47d6-9370-1ecddf011e58"
         },
         {
             "frontender": "1558357551",
@@ -78,8 +78,8 @@ A page (definition) is a (compound) container. A page commonly consists of a hea
             },
             "template": "path/to/footer/template.html.twig",
             "template_config": {},
-            "containers": [],
-            "blueprint": "ea6b893c-de10-47d6-9370-1ecddf011e58"
+            "blueprint": "ea6b893c-de10-47d6-9370-1ecddf011e58",
+            "containers": []
         }
     ],
     "blueprint": "a3248875-d0bf-4b0b-a496-0e1f0dec1f57",
@@ -87,21 +87,24 @@ A page (definition) is a (compound) container. A page commonly consists of a hea
 }
 ```
 
+### Scope definition
+Each site has access to 2 scopes by default. Additional scopes may be purchased by the space owner.
+
 
 ### Page states
 A page has different states that define its access:
 
-#### Public
+###### Public
 The revision of the page that is accessible to the frontend. It is stored in the Pages.public Collection (see: Collections).
 
-#### Revision
+###### Revision
 A version of a page. It is stored in the Pages Collection (see: Collections). A revision is a complete page definition that can be loaded and previewed in Frontender Desktop and Frontender Platform(using its uuid). A revision is not publicly accessible to the frontend. A revision is defined by a date and time.
 
 Revisions are managed in Frontender.
 
 A revision of a page definition contains a MD5 hash of the page definition’s config attribute (which contains the actual container object).
 
-#### Draft
+###### Draft
 A non-persisted version of a page. The draft is the working copy of a page. A draft is persisted in some kind of memory storage and is destroyed when:
 
 - The user navigates away without saving
@@ -114,7 +117,7 @@ When a user wishes to preview a draft in Frontender, it must be saved first to c
 
 Opening a (public) revision with Frontender Desktop will generate a draft.
 
-#### Trash
+###### Trash
 A revision lot (all revisions of a page) that have been moved to the pages.trash collection. Pages in the trash will be retrievable (in some future version of Frontender).
 
 

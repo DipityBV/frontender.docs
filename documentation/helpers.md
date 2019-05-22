@@ -11,17 +11,17 @@ currentMenu: helpers
 {# Process any class variables from the config and return a single class string #}
 {% macro class_string(config) %}
     {{ [
-        config.crown|t(locales) ? config.crown|t(locales),
-        config.body_class|t(locales) ? config.body_class|t(locales),
-        config.container_class|t(locales) ? config.container_class|t(locales),
-        config.divider|t(locales) ? config.divider|t(locales),
-        config.wings|t(locales) ? config.wings|t(locales),
-        config.leader|t(locales) ? config.leader|t(locales),
-        config.leader_inside|t(locales) ? config.leader_inside|t(locales),
-        config.trailer|t(locales) ? config.trailer|t(locales),
-        config.trailer_inside|t(locales) ? config.trailer_inside|t(locales),
-        config.colour_theme|t(locales) ? config.colour_theme|t(locales),
-        config.colour_background|t(locales) ? config.colour_background|t(locales)
+        config.crown|t ? config.crown|t,
+        config.body_class|t ? config.body_class|t,
+        config.container_class|t ? config.container_class|t,
+        config.divider|t ? config.divider|t,
+        config.wings|t ? config.wings|t,
+        config.leader|t ? config.leader|t,
+        config.leader_inside|t ? config.leader_inside|t,
+        config.trailer|t ? config.trailer|t,
+        config.trailer_inside|t ? config.trailer_inside|t,
+        config.colour_theme|t ? config.colour_theme|t,
+        config.colour_background|t ? config.colour_background|t
     ]|join(' ')|trim }}
 {% endmacro %}
 
@@ -42,5 +42,4 @@ currentMenu: helpers
 {% macro container_id_attribute(value, namespace) %}
     {% if value %} data-{{namespace}}="{{ value|raw }}"{% endif %}
 {% endmacro %}
-
 ```

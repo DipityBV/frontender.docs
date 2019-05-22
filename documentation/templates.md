@@ -27,5 +27,36 @@ Below is an example, in which we hide Google Analytics from Frontender.
 {% endif %}
 ```
 
-### Localization
-Localization is done through translation files written in YAML. These files are located in the ```project/translations``` folder.
+### Localisation
+Localisation is done through translation files written in YAML. These files are located in the ```project/translations``` folder.
+
+
+### Internationalisation (i18n) and localisation (l10n)
+We need to keep in mind the different versions of a language, and the support for them in either routes or domains. These are all legitimate examples:
+```
+domain.ext/en/english_content
+en.domain.ext/english_content
+domain.uk/english_content
+domain.au/australian_english_content
+domain.ext/en/gb/british_english_content
+domain.ext/en/us/american_english_content
+domain.ext/en/au/australian_english_content
+en.domain.ext/us/american_english_content
+au.en.domain.ext/australian_english_content
+us.domain.ext/american_english_content
+```
+
+A solid and flexible  implementation is yet to be found. Currently, we use ```"en"``` to indicate English locale, however this will not hold up when multiple variations of language (e.g. ```"en-GB"```, ```"en-AU"``` and ```"en-US"```) are used in a single site.
+
+A possible solution is to use the full locale ISO (```"en-GB"```) and then have rules on how to parse these to a route. We could also assume that each part of the ISO is a path component, so ```"en"``` would parse as ```en/``` and ```"en-GB"``` would parse as ```en/gb/```.
+
+This is a suggestion on how to define a language/domain combination (totally arbitrary examples):
+```JSON
+{
+    "nl-NL": "brickson.nl",
+    "nl-BE": "brickson.be",
+    "en-EN": "en.brickson.nl",
+    "en-US": "brickson.nl/en/us",
+    "en-AU": "en.brickson.nl/au"
+}
+```

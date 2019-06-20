@@ -30,7 +30,7 @@ output: string
 ```twig
 {{ {'en-GB': 'Red', 'fr-FR': "Rouge"}|translate }}
 ```
-All result in the following output:
+All result in the following output, assuming the English scope is active:
 ```
 output: Red
 ```

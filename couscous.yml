@@ -108,3 +108,21 @@ menu:
                 pages:
                     text: Pages
                     relativeUrl: pages.html
+        # v1:
+        #     name: Version 1
+        #     items:
+        #         bla:
+        #             text: Bla
+        #             relativeUrl: v1/bla.html
+        #         ra:
+        #             text: Ra
+        #             relativeUrl: v1/ra.html
+        #         version1:
+        #             text: Version 1
+        #             relativeUrl: v1/version1.html
+        # v2:
+        #     name: Version 2
+        #     items:
+        #         test:
+        #             text: Test
+        #             relativeUrl: v2/test.html

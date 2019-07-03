@@ -4,9 +4,8 @@ currentMenu: macros
 
 ## Macros
 
-
 ### Container class
-Process any class variables from the config and return class attribute
+Process any class variables from the config and return class attribute.
 ```twig
 {% macro class_attribute(config, class) %}
     {% import _self as helper %}
@@ -14,3 +13,6 @@ Process any class variables from the config and return class attribute
     {% if class %} class="{{ class }}"{% endif %}
 {% endmacro %}
 ```
+
+### Template macro
+The template macro can be found on the [helpers page](/helpers.html).

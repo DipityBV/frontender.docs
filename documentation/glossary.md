@@ -3,30 +3,33 @@ currentMenu: glossary
 ---
 
 ## Glossary
+An overview of terms used throughout the documentation.
+
+_More detailed information about every term can be found below the table._
 
 | Term | Definition |
 | --- | --- |
-| Adapter | An adapter is the gateway to the content. |
+| [Adapter](#adapter) | An adapter is the gateway to the content. |
 | API | An API enables data access from an external client. |
-| Blueprint definition | A JSON object containing the presets from which a container may be generated. |
-| Container definition | A JSON object containing instructions to render a template. A container is the visual representation of a blueprint. |
-| Control | A JSON object with instructions to render a field. Controls are very specialised, tiny snippets of JSON that Frontender Desktop uses to render its interface. |
+| [Blueprint](#blueprints) | A JSON object containing the presets from which a container may be generated. |
+| [Container](#container-blueprints) | A JSON object containing instructions to render a template. A container is the visual representation of a blueprint. |
+| [Control](#control-blueprints) | A JSON object with instructions to render a field. Controls are very specialised, tiny snippets of JSON that Frontender Desktop uses to render its interface. |
 | Definition | A JSON object with rendering instructions. |
 | Dirty | A changed value or set of values (definition) that have not (yet) been persisted (saved). |
-| Extension Package | A collection of files needed for the import of an extension (blueprint, adapter or template). |
+| [Extension Package](#extensions) | A collection of files needed for the import of an extension (blueprint, adapter or template). |
 | Frontend | The frontend application. |
-| Frontender Desktop | Frontender, the Electron desktop application (FED) |
+| [Frontender desktop](#frontender-desktop) | Frontender, the Electron desktop application (FED) |
 | Frontender Platform | The frontend application, a (collection of) site(s). |
 | JSON | JavaScript Object Notation https://www.json.org/ |
 | Locale | A language scope, includes time, date and currency in the locale’s format. |
 | Lot revisions | A collection of page, collection, blueprint or control definitions that have the same lot id. |
 | Modules | A modules is a nested in container. |
-| Page definition | Pages are collections of containers. In fact, a page is also a container. This JSON object will also contain a path attribute. |
+| Page | Pages are collections of containers. In fact, a page is also a container. This JSON object will also contain a path attribute. |
 | Path | A routable path to a page (e.g. "/blog"). |
 | Revision | A stored, older version of a container. |
 | Route | The path to a resource as displayed in the browser's address bar. |
 | Space | A collection of sites and resources. Usually, a Space represents a (paying) client. There is also a global Space (frontendermanager.com?) that is used for smaller clients, comparable to wordpress.com. |
-| Template | Templates render the containers in the browser. Templates contain layout and styling instructions. |
+| [Template](#templates) | Templates render the containers in the browser. Templates contain layout and styling instructions. |
 
 ## Terms
 

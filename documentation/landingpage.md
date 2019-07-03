@@ -12,11 +12,6 @@ A landing page is a dynamic page with a fixed resource id. It’s function is to
 A landing page is defined in Frontender Desktop by saving a page with a model configuration including resource id in the top-level container (page definition):
 ```JSON
 {
-    "revision" : {
-        "date": "2018-04-20 00:00:00",
-        "hash": "71e089512689b9f29ba26a3d8db5aac9",
-        "user": {}
-    },
     "definition": {
         "template": "path/to/template.html.twig",
         "template_config": {

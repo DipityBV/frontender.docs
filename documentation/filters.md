@@ -4,7 +4,9 @@ currentMenu: filters
 
 ## Filters
 
-### Pluralize
+### Pluralise
+A simple extension that allows you to pluralise a given string.
+
 ```twig
 'string'|pluralize
 ```
@@ -12,7 +14,9 @@ currentMenu: filters
 output: strings
 ```
 
-### Singularize
+### Singularise
+A simple extension that allows you to singularise a given string.
+
 ```twig
 'strings'|singularize
 ```
@@ -21,6 +25,8 @@ output: string
 ```
 
 ### Translate
+Additional information about localisation can be found on the [Templates page](/templates.html#localisation).
+Translate a string into a different locale. use ```|i18n```, ```|t``` or ```|translate```
 ```twig
 {{ {'en-GB': 'Red', 'fr-FR': "Rouge"}|i18n }}
 ```

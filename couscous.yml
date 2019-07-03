@@ -17,64 +17,48 @@ cname: docs.getfrontender.com
 
 title: Frontender Documentation
 
-# Regular menu
-# menu:
-#     items:
-#         documentation:
-#             text: Documentation
-#             relativeUrl: index.html
-#         introduction:
-#             text: Introduction
-#             relativeUrl: introduction.html
-#         assets:
-#             text: Assets
-#             relativeUrl: assets.html
-#         blueprints:
-#             text: Blueprints
-#             relativeUrl: blueprints.html
-#         filters:
-#             text: Filters
-#             relativeUrl: filters.html
-#         controls:
-#             text: Controls
-#             relativeUrl: controls.html
-#         macros:
-#             text: Macros
-#             relativeUrl: macros.html
-#         templates:
-#             text: Templates
-#             relativeUrl: templates.html
-#         helpers:
-#             text: Helpers
-#             relativeUrl: helpers.html
-#         adapters:
-#             text: Adapters
-#             relativeUrl: adapters.html
-#         glossary:
-#             text: Glossary
-#             relativeUrl: glossary.html
-#         container:
-#             text: Container
-#             relativeUrl: container.html
-
 # Layered menu
 menu:
     sections:
+        introduction:
+            name: Introduction
+            items:
+                introduction:
+                    text: Introduction
+                    relativeUrl: index.html
+                technical_introduction:
+                    text: Technical Introduction
+                    relativeUrl: introduction.html
+                installation:
+                    text: Installation
+                    relativeUrl: installation.html
+                glossary:
+                    text: Glossary
+                    relativeUrl: glossary.html
         main:
             name: Main documentation
             items:
-                documentation:
-                    text: Documentation
-                    relativeUrl: index.html
-                introduction:
-                    text: Introduction
-                    relativeUrl: introduction.html
-                assets:
-                    text: Assets
-                    relativeUrl: assets.html
+                pages:
+                    text: Pages
+                    relativeUrl: pages.html
+                landingpage:
+                    text: Landing page
+                    relativeUrl: landingpage.html
+                templates:
+                    text: Templates
+                    relativeUrl: templates.html
+                container:
+                    text: Container
+                    relativeUrl: container.html
                 blueprints:
                     text: Blueprints
                     relativeUrl: blueprints.html
+                collection:
+                    text: Collections
+                    relativeUrl: collection.html
+                assets:
+                    text: Assets
+                    relativeUrl: assets.html
                 filters:
                     text: Filters
                     relativeUrl: filters.html
@@ -84,45 +68,12 @@ menu:
                 macros:
                     text: Macros
                     relativeUrl: macros.html
-                templates:
-                    text: Templates
-                    relativeUrl: templates.html
                 helpers:
                     text: Helpers
                     relativeUrl: helpers.html
                 adapters:
                     text: Adapters
                     relativeUrl: adapters.html
-                glossary:
-                    text: Glossary
-                    relativeUrl: glossary.html
-                container:
-                    text: Container
-                    relativeUrl: container.html
                 proxy-domains:
                     text: Proxy domains
                     relativeUrl: proxy-domains.html
-                landingpage:
-                    text: Landing page
-                    relativeUrl: landingpage.html
-                pages:
-                    text: Pages
-                    relativeUrl: pages.html
-        # v1:
-        #     name: Version 1
-        #     items:
-        #         bla:
-        #             text: Bla
-        #             relativeUrl: v1/bla.html
-        #         ra:
-        #             text: Ra
-        #             relativeUrl: v1/ra.html
-        #         version1:
-        #             text: Version 1
-        #             relativeUrl: v1/version1.html
-        # v2:
-        #     name: Version 2
-        #     items:
-        #         test:
-        #             text: Test
-        #             relativeUrl: v2/test.html

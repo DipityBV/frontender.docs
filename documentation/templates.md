@@ -8,10 +8,11 @@ currentMenu: templates
 
 In some cases it is required to disable certain functionality in the site, that isn't required in Frontender. (eg: cookie policy notice)
 
-Inside of every twig file a query is available, this allows you to check what is in the query.
-When a page is called by Frontender, it will send a query variable called ```fromFrontender```, when this variable is set you can hide functionality that you don't want to show in Frontender.
+Inside of every twig file a query is available, this allows you to check what is in the request.
+When a page is called by Frontender, it will send a query variable called ```fromFrontender```, using this variable you can hide functionality that you don't want to show in Frontender.
 
-Below is an example, in which we hide Google Analytics from Frontender.
+In the following example we make sure the Google analytics code is not used inside of the Frontender application.
+The code will run if the page is previewed in the browser.
 ```twig
 {% if not query.fromFrontender %}
     window.addEventListener("load", function(){
@@ -28,35 +29,34 @@ Below is an example, in which we hide Google Analytics from Frontender.
 ```
 
 ### Localisation
-Localisation is done through translation files written in YAML. These files are located in the ```project/translations``` folder.
+Localisation is done through translation files written in YAML. These files are generally located in the ```project/translations``` folder.
 
 
 ### Internationalisation (i18n) and localisation (l10n)
-We need to keep in mind the different versions of a language, and the support for them in either routes or domains. These are all legitimate examples:
-```
-domain.ext/en/english_content
-en.domain.ext/english_content
-domain.uk/english_content
-domain.au/australian_english_content
-domain.ext/en/gb/british_english_content
-domain.ext/en/us/american_english_content
-domain.ext/en/au/australian_english_content
-en.domain.ext/us/american_english_content
-au.en.domain.ext/australian_english_content
-us.domain.ext/american_english_content
-```
+We need to keep in mind the different versions of a language and the support for them in either routes or domains. These are all potential possibilities:
 
-A solid and flexible  implementation is yet to be found. Currently, we use ```"en"``` to indicate English locale, however this will not hold up when multiple variations of language (e.g. ```"en-GB"```, ```"en-AU"``` and ```"en-US"```) are used in a single site.
+| Domain | Language |
+| - | :-: |
+| domain.com/en/ | English content |
+| domain.co.uk | English content |
+| domain.au | Australian English content |
+| domain.com/en/gb/ | British English content |
+| domain.com/en/us/ | American English content |
+| domain.com/en/au/ | Australian English content |
+| en.domain.com | English content |
+| en.domain.com/us/ | American English content |
+| au.en.domain.com | Australian English content |
+| us.domain.com | American English content |
 
-A possible solution is to use the full locale ISO (```"en-GB"```) and then have rules on how to parse these to a route. We could also assume that each part of the ISO is a path component, so ```"en"``` would parse as ```en/``` and ```"en-GB"``` would parse as ```en/gb/```.
+A solution is to use the full locale ISO (```"en-GB"```) and then have rules on how to parse these to a route. We could also assume that each part of the ISO is a path component, so ```"en"``` would parse as ```en/``` and ```"en-GB"``` would parse as ```en/gb/```.
 
 This is a suggestion on how to define a language/domain combination (totally arbitrary examples):
 ```JSON
 {
-    "nl-NL": "brickson.nl",
-    "nl-BE": "brickson.be",
-    "en-EN": "en.brickson.nl",
-    "en-US": "brickson.nl/en/us",
-    "en-AU": "en.brickson.nl/au"
+    "nl-NL": "getfrontender.com",
+    "nl-BE": "getfrontender.be",
+    "en-EN": "en.getfrontender.com",
+    "en-US": "getfrontender.com/en/us",
+    "en-AU": "en.getfrontender.com/au"
 }
 ```

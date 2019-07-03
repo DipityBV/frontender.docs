@@ -14,21 +14,22 @@ Twig container with data from it's JSON configuration.
     {% endif %}
 </{{ config.container_tag|default('section') }}>
 ```
-JSON code:
+
+JSON configuration:
 ```JSON
 {
     "frontender": "1558425992",
     "template": "containers/[content-type]/[container-name].html.twig",
     "name": {
-        "en-GB": "Name for Frontender in English"
+        "en-GB": "Container name"
     },
     "description": {
-        "en-GB": "Description for Frontender in English"
+        "en-GB": "Description for container"
     },
     "template_config": {
         "content": {
             "label": {
-                "en-GB": "Tab label for Frontender in English"
+                "en-GB": "Contextual data"
             },
             "controls": {
                 "title": {
@@ -57,8 +58,28 @@ JSON code:
 ```
 
 ### Frontender ID
-A Frontender ID is required
+Frontender ID is a required field. The page/container will not work properly if it is omitted.  
+It's perfectly fine to add `"frontender": null`, the Frontender application will change it to a valid ID after the page has been saved.
 
 ### Multilingual
 ##### Project locale
+The language(s) of the website itself. Can be configured to contain multiple languages.
+
+```JSON
+{
+    "content_type_example": {
+        "label": {
+            "en-GB": "Environment locale label."
+        },
+        "control": "core/text",
+        "value": {
+            "en-GB": "English project locale",
+            "fr-FR": "French project locale",
+            "es-ES": "Spanish project locale"
+        }
+    }
+}
+```
+
 ##### Environment locale
+The language of the the Frontender configuration. The default value is `en-GB`.

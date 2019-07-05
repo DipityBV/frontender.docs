@@ -106,7 +106,7 @@
                                             Macros
                                         </a>
                                     </li>
-                                                                    <li class="active">
+                                                                    <li class="">
                                         <a href="/helpers.html">
                                             Helpers
                                         </a>
@@ -116,7 +116,7 @@
                                             Adapters
                                         </a>
                                     </li>
-                                                                    <li class="">
+                                                                    <li class="active">
                                         <a href="/proxy-domains.html">
                                             Proxy domains
                                         </a>
@@ -191,33 +191,14 @@
                         <div class="wy-nav-content">
                 <div class="rst-content">
                     <div role="main" class="document">
-                        <h1 id="helpers">Helpers</h1>
-<h3 id="template-helper">Template helper</h3>
-<p>Process any class variables from the config and return a single class string</p>
-<pre><code class="language-twig">{% macro class_string(config) %}
-    {{ [
-        config.body_class ? config.body_class,
-        config.container_class ? config.container_class,
-        config.divider ? config.divider,
-        config.colour_theme ? config.colour_theme,
-        config.colour_background ? config.colour_background
-    ]|join(' ')|trim }}
-{% endmacro %}</code></pre>
-<p>Process any class variables from the config and return class attribute</p>
-<pre><code class="language-twig">{% macro class_attribute(config, class) %}
-    {% import _self as helper %}
-    {% set class = [helper.class_string(config)|trim, class|trim]|join(' ')|trim %}
-    {% if class %} class="{{ class }}"{% endif %}
-{% endmacro %}</code></pre>
-<p>Alias for class_string, for backward compatibility</p>
-<pre><code class="language-twig">{% macro class(config) %}
-    {% import _self as helper %}
-    {{ helper.class_string(config) }}
-{% endmacro %}</code></pre>
-<p>Build container id attribute</p>
-<pre><code class="language-twig">{% macro container_id_attribute(value, namespace) %}
-    {% if value %} data-{{namespace}}="{{ value|raw }}"{% endif %}
-{% endmacro %}</code></pre>
+                        <h2 id="proxy-domains">Proxy domains</h2>
+<p>Pages may be configured as a proxy domain.</p>
+<pre><code>getfrontender.com/proxy-domain</code></pre>
+<p>Can be turned into</p>
+<pre><code>proxy-domain.getfrontender.com</code></pre>
+<h3 id="dns">DNS</h3>
+<!-- @TODO -->
+<p>???</p>
                     </div>
 
                     <footer>

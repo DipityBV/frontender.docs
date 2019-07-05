@@ -81,7 +81,7 @@
                                             Blueprints
                                         </a>
                                     </li>
-                                                                    <li class="">
+                                                                    <li class="active">
                                         <a href="/collection.html">
                                             Collections
                                         </a>
@@ -106,7 +106,7 @@
                                             Macros
                                         </a>
                                     </li>
-                                                                    <li class="active">
+                                                                    <li class="">
                                         <a href="/helpers.html">
                                             Helpers
                                         </a>
@@ -191,33 +191,103 @@
                         <div class="wy-nav-content">
                 <div class="rst-content">
                     <div role="main" class="document">
-                        <h1 id="helpers">Helpers</h1>
-<h3 id="template-helper">Template helper</h3>
-<p>Process any class variables from the config and return a single class string</p>
-<pre><code class="language-twig">{% macro class_string(config) %}
-    {{ [
-        config.body_class ? config.body_class,
-        config.container_class ? config.container_class,
-        config.divider ? config.divider,
-        config.colour_theme ? config.colour_theme,
-        config.colour_background ? config.colour_background
-    ]|join(' ')|trim }}
-{% endmacro %}</code></pre>
-<p>Process any class variables from the config and return class attribute</p>
-<pre><code class="language-twig">{% macro class_attribute(config, class) %}
-    {% import _self as helper %}
-    {% set class = [helper.class_string(config)|trim, class|trim]|join(' ')|trim %}
-    {% if class %} class="{{ class }}"{% endif %}
-{% endmacro %}</code></pre>
-<p>Alias for class_string, for backward compatibility</p>
-<pre><code class="language-twig">{% macro class(config) %}
-    {% import _self as helper %}
-    {{ helper.class_string(config) }}
-{% endmacro %}</code></pre>
-<p>Build container id attribute</p>
-<pre><code class="language-twig">{% macro container_id_attribute(value, namespace) %}
-    {% if value %} data-{{namespace}}="{{ value|raw }}"{% endif %}
-{% endmacro %}</code></pre>
+                        <h1 id="collections">Collections</h1>
+<p>Page, blueprint and control definitions are stored in MongoDB collections.</p>
+<p>MongoDB stores data records as BSON documents. BSON is a binary representation of JSON documents, though it contains more data types than JSON.</p>
+<p>Both Frontender Desktop and Frontender Platform have access to these collections:</p>
+<ul>
+<li>lots</li>
+<li>blueprints</li>
+<li>containers</li>
+<li>pages</li>
+<li>pages.public</li>
+<li>pages.trash</li>
+<li>controls</li>
+<li>settings</li>
+<li>teams</li>
+</ul>
+<h3 id="blueprints">Blueprints</h3>
+<p>Blueprints have a revision object. The definition object contains the actual blueprint. The UUID is referenced in containers that implement that blueprint (inside page definitions). A blueprint has instructions on how to render a control, or includes a reference to a control.</p>
+<p>A blueprint has a type attribute in the revision object. Possible types are:</p>
+<ul>
+<li>container</li>
+<li>page</li>
+</ul>
+<pre><code class="language-JSON">{
+    "_id": "ea6b893c-de10-47d6-9370-1ecddf011e58",
+    "revision": {
+        "hash": "71e089512689b9f29ba26a3d8db5aac9",
+        "type": "container",
+        "date": "2018-04-20 00:00:00",
+        "lot": "07156454-f83b-4f8e-ba8f-46417564f409",
+        "thumbnail": {}
+    },
+    "definition": {
+        "frontender": "1234567890",
+        "template": "path/to/template.html.twig",
+        "name": {},
+        "description": {},
+        "template_config": {},
+        "containers": []
+    },
+    "identifier": "container/blueprint_name"
+}</code></pre>
+<h3 id="pages">Pages</h3>
+<p>Pages are similar to a blueprint, but contain containers (that may reference blueprints). They also contain a <code>template_config.route.path</code> object that is used by the frontend router. When the path object is empty, the lot id will be used as a default.</p>
+<pre><code class="language-JSON">{
+    "_id": "ea6b839c-de10-47d6-9730-1ecddf101e58",
+    "revision": {
+        "lot": "07465154-f83b-4f8e-ba8f-46417564f409",
+        "date": "2018-04-20 00:00:00",
+        "hash": "71e052198689b9f29ba26a3d8db5aac9",
+        "thumbnail": {},
+        "user": {}
+    },
+    "definition": {
+        "route": {},
+        "frontender": "1234567890",
+        "template": "path/to/template.html.twig",
+        "name": {},
+        "description": {},
+        "page_config": {},
+        "template_config": {},
+        "containers": []
+    }
+}</code></pre>
+<h3 id="pagespublic">Pages.public</h3>
+<p>Identical to <code>pages</code> collection. Each page is an identical copy of a revision. When a page is published, the page definition is copied from the <code>pages</code> collection to the <code>pages.public</code> collection. When requesting a revision list in Frontender, page definitions from the <code>pages</code> collections are sanitised to exclude pages with identical hashes, only the version with the earliest revision date is included. When the a revision has an identical lot and hash as a page in the <code>pages.public</code> collection, it is marked in the UI as the currently published revision.</p>
+<h3 id="pagesthrash">Pages.thrash</h3>
+<p>Pages that have been removed. The published page is permanently deleted, all its revisions are moved to the <code>trash</code> collection.</p>
+<h3 id="controls">Controls</h3>
+<p>A special kind of blueprint, only for controls. A control can reference another control.</p>
+<pre><code class="language-JSON">{
+    "_id": "ea6b893c-de10-47d6-9370-1ecddf011e58",
+    "revision" : {
+       "lot": "07156454-f83b-4f8e-ba8f-46417564f409",
+       "date": "2018-04-20 00:00:00",
+       "hash": "71e089512689b9f29ba26a3d8db5aac9",
+       "user": {}
+    },
+    "definition": {
+        "control": "ea6b893c-de10-47d6-9370-1ecddf011e58",
+        "label": {},
+        "type": "compound",
+        "controls": {
+            "label": {
+                "label": {},
+                "control": "ea6b893c-de10-47d6-9370-1ecddf011e58"
+            },
+            "url": {
+                "label": {},
+                "control": "ea6b893c-de10-47d6-9370-1ecddf011e58"
+            }
+        },
+        "value": {
+            "label": {},
+            "url": {}
+        }
+    }
+}</code></pre>
                     </div>
 
                     <footer>

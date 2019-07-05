@@ -106,7 +106,7 @@
                                             Macros
                                         </a>
                                     </li>
-                                                                    <li class="active">
+                                                                    <li class="">
                                         <a href="/helpers.html">
                                             Helpers
                                         </a>
@@ -134,7 +134,7 @@
                                             Frequently Asked Questions
                                         </a>
                                     </li>
-                                                                    <li class="">
+                                                                    <li class="active">
                                         <a href="/faq/misc.html">
                                             Miscellaneous
                                         </a>
@@ -191,33 +191,29 @@
                         <div class="wy-nav-content">
                 <div class="rst-content">
                     <div role="main" class="document">
-                        <h1 id="helpers">Helpers</h1>
-<h3 id="template-helper">Template helper</h3>
-<p>Process any class variables from the config and return a single class string</p>
-<pre><code class="language-twig">{% macro class_string(config) %}
-    {{ [
-        config.body_class ? config.body_class,
-        config.container_class ? config.container_class,
-        config.divider ? config.divider,
-        config.colour_theme ? config.colour_theme,
-        config.colour_background ? config.colour_background
-    ]|join(' ')|trim }}
-{% endmacro %}</code></pre>
-<p>Process any class variables from the config and return class attribute</p>
-<pre><code class="language-twig">{% macro class_attribute(config, class) %}
-    {% import _self as helper %}
-    {% set class = [helper.class_string(config)|trim, class|trim]|join(' ')|trim %}
-    {% if class %} class="{{ class }}"{% endif %}
-{% endmacro %}</code></pre>
-<p>Alias for class_string, for backward compatibility</p>
-<pre><code class="language-twig">{% macro class(config) %}
-    {% import _self as helper %}
-    {{ helper.class_string(config) }}
-{% endmacro %}</code></pre>
-<p>Build container id attribute</p>
-<pre><code class="language-twig">{% macro container_id_attribute(value, namespace) %}
-    {% if value %} data-{{namespace}}="{{ value|raw }}"{% endif %}
-{% endmacro %}</code></pre>
+                        <h1 id="miscellaneous">Miscellaneous</h1>
+<h5 id="what-is-frontender">What is Frontender?</h5>
+<p>t.b.d.</p>
+<h5 id="what-are-frontenders-features">What are Frontender's features?</h5>
+<p>t.b.d.</p>
+<h5 id="what-are-the-requirements-to-use-frontender">What are the requirements to use Frontender?</h5>
+<p>t.b.d.</p>
+<h5 id="is-frontender-open-source">Is Frontender open source?</h5>
+<p>t.b.d.</p>
+<h5 id="can-i-contribute-to-frontender">Can I contribute to Frontender?</h5>
+<p>t.b.d.</p>
+<h5 id="what-does-frontender-bring-to-the-table">What does Frontender bring to the table?</h5>
+<p>t.b.d.</p>
+<h5 id="what-are-scopes">What are scopes?</h5>
+<p>t.b.d.</p>
+<h5 id="what-apis-are-supported-by-frontender">What APIs are supported by Frontender?</h5>
+<p>t.b.d.</p>
+<h5 id="how-is-frontender-licensed">How is Frontender licensed?</h5>
+<p>t.b.d.</p>
+<h5 id="what-kind-of-support-can-i-expect-from-frontender">What kind of support can I expect from Frontender?</h5>
+<p>t.b.d.</p>
+<h5 id="how-do-i-contact-frontender-support">How do I contact Frontender Support</h5>
+<p>t.b.d.</p>
                     </div>
 
                     <footer>

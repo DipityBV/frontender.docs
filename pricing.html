@@ -106,7 +106,7 @@
                                             Macros
                                         </a>
                                     </li>
-                                                                    <li class="active">
+                                                                    <li class="">
                                         <a href="/helpers.html">
                                             Helpers
                                         </a>
@@ -144,7 +144,7 @@
                                             User
                                         </a>
                                     </li>
-                                                                    <li class="">
+                                                                    <li class="active">
                                         <a href="/faq/pricing.html">
                                             Pricing
                                         </a>
@@ -191,33 +191,19 @@
                         <div class="wy-nav-content">
                 <div class="rst-content">
                     <div role="main" class="document">
-                        <h1 id="helpers">Helpers</h1>
-<h3 id="template-helper">Template helper</h3>
-<p>Process any class variables from the config and return a single class string</p>
-<pre><code class="language-twig">{% macro class_string(config) %}
-    {{ [
-        config.body_class ? config.body_class,
-        config.container_class ? config.container_class,
-        config.divider ? config.divider,
-        config.colour_theme ? config.colour_theme,
-        config.colour_background ? config.colour_background
-    ]|join(' ')|trim }}
-{% endmacro %}</code></pre>
-<p>Process any class variables from the config and return class attribute</p>
-<pre><code class="language-twig">{% macro class_attribute(config, class) %}
-    {% import _self as helper %}
-    {% set class = [helper.class_string(config)|trim, class|trim]|join(' ')|trim %}
-    {% if class %} class="{{ class }}"{% endif %}
-{% endmacro %}</code></pre>
-<p>Alias for class_string, for backward compatibility</p>
-<pre><code class="language-twig">{% macro class(config) %}
-    {% import _self as helper %}
-    {{ helper.class_string(config) }}
-{% endmacro %}</code></pre>
-<p>Build container id attribute</p>
-<pre><code class="language-twig">{% macro container_id_attribute(value, namespace) %}
-    {% if value %} data-{{namespace}}="{{ value|raw }}"{% endif %}
-{% endmacro %}</code></pre>
+                        <h1 id="pricing">Pricing</h1>
+<h5 id="how-much-does-frontender-cost">How much does Frontender cost?</h5>
+<p>t.b.d.</p>
+<h5 id="can-i-try-frontender-before-i-sign-up">Can I try Frontender before I sign up?</h5>
+<p>t.b.d.</p>
+<h5 id="are-there-any-enterprise-options-available">Are there any enterprise options available?</h5>
+<p>t.b.d.</p>
+<h5 id="what-are-my-payment-options">What are my payment options?</h5>
+<p>t.b.d.</p>
+<h5 id="is-there-a-free-version-of-frontender-available">Is there a free version of Frontender available?</h5>
+<p>t.b.d.</p>
+<h5 id="my-current-plan-is-not-sufficient-how-can-i-upgrade-to-a-larger-plan">My current plan is not sufficient, how can I upgrade to a larger plan?</h5>
+<p>t.b.d.</p>
                     </div>
 
                     <footer>

@@ -61,7 +61,7 @@
                                             Pages
                                         </a>
                                     </li>
-                                                                    <li class="">
+                                                                    <li class="active">
                                         <a href="/landingpage.html">
                                             Landing page
                                         </a>
@@ -106,7 +106,7 @@
                                             Macros
                                         </a>
                                     </li>
-                                                                    <li class="active">
+                                                                    <li class="">
                                         <a href="/helpers.html">
                                             Helpers
                                         </a>
@@ -191,33 +191,26 @@
                         <div class="wy-nav-content">
                 <div class="rst-content">
                     <div role="main" class="document">
-                        <h1 id="helpers">Helpers</h1>
-<h3 id="template-helper">Template helper</h3>
-<p>Process any class variables from the config and return a single class string</p>
-<pre><code class="language-twig">{% macro class_string(config) %}
-    {{ [
-        config.body_class ? config.body_class,
-        config.container_class ? config.container_class,
-        config.divider ? config.divider,
-        config.colour_theme ? config.colour_theme,
-        config.colour_background ? config.colour_background
-    ]|join(' ')|trim }}
-{% endmacro %}</code></pre>
-<p>Process any class variables from the config and return class attribute</p>
-<pre><code class="language-twig">{% macro class_attribute(config, class) %}
-    {% import _self as helper %}
-    {% set class = [helper.class_string(config)|trim, class|trim]|join(' ')|trim %}
-    {% if class %} class="{{ class }}"{% endif %}
-{% endmacro %}</code></pre>
-<p>Alias for class_string, for backward compatibility</p>
-<pre><code class="language-twig">{% macro class(config) %}
-    {% import _self as helper %}
-    {{ helper.class_string(config) }}
-{% endmacro %}</code></pre>
-<p>Build container id attribute</p>
-<pre><code class="language-twig">{% macro container_id_attribute(value, namespace) %}
-    {% if value %} data-{{namespace}}="{{ value|raw }}"{% endif %}
-{% endmacro %}</code></pre>
+                        <h2 id="landing-page">Landing page</h2>
+<p>The root page is the default landing page of the entire site. It is accessed by the root URL, e.g. <a href="https://example.com/">https://example.com/</a> The route page is stored in the site configuration settings.</p>
+<p><strong><em>A root page is also a route page, and may also only be removed or unpublished under certain conditions.</em></strong></p>
+<p>A landing page is a dynamic page with a fixed resource id (with the exception of the root page, where a resource id is not required). It’s function is to be able to expose, for instance, a popular article on its own URL.</p>
+<p>A landing page is defined in Frontender Desktop by saving a page with a model configuration including resource id in the top-level container (page definition):</p>
+<pre><code class="language-JSON">{
+    "definition": {
+        "template": "path/to/template.html.twig",
+        "template_config": {
+            "model": {
+                "controls": {
+                    "name": "article",
+                    "id": "811cfa64-e6a3-4c79-b115-50e3dc7016c4"
+                }
+            }
+        },
+        "containers": []
+    }
+}</code></pre>
+<p>Landing page routes are stored in a routes.json file.</p>
                     </div>
 
                     <footer>

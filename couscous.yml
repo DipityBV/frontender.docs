@@ -3,6 +3,7 @@ template:
 
 include:
     - documentation
+    - documentation/faq
 
 exclude:
     - vendor
@@ -77,3 +78,33 @@ menu:
                 proxy-domains:
                     text: Proxy domains
                     relativeUrl: proxy-domains.html
+        faq:
+            name: Frequently Asked Questions
+            items:
+                faq_index:
+                    text: Frequently Asked Questions
+                    relativeUrl: faq.html
+                faq_misc:
+                    text: Miscellaneous
+                    relativeUrl: faq/misc.html
+                faq_user:
+                    text: User
+                    relativeUrl: faq/user.html
+                faq_pricing:
+                    text: Pricing
+                    relativeUrl: faq/pricing.html
+                faq_implementation:
+                    text: Implementation
+                    relativeUrl: faq/implementation.html
+                faq_spaces:
+                    text: Spaces
+                    relativeUrl: faq/spaces.html
+                faq_sites:
+                    text: Sites
+                    relativeUrl: faq/sites.html
+                faq_controls:
+                    text: Controls
+                    relativeUrl: faq/controls.html
+                faq_content:
+                    text: Content
+                    relativeUrl: faq/content.html

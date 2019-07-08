@@ -103,8 +103,8 @@ menu:
                     text: Sites
                     relativeUrl: faq/sites.html
                 faq_controls:
-                    text: Controls
-                    relativeUrl: faq/controls.html
+                    text: Control
+                    relativeUrl: faq/control.html
                 faq_content:
                     text: Content
                     relativeUrl: faq/content.html

@@ -2,7 +2,7 @@
 currentMenu: adapters
 ---
 
-## Adapters
+# Adapters
 
 #### Unsplash adapter
 Data lookup with images from https://unsplash.com/

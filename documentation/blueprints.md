@@ -2,7 +2,7 @@
 currentMenu: blueprints
 ---
 
-## Blueprints
+# Blueprints
 
 Blueprints are small snippets of template instructions in JSON format. Blueprints can be nested by adding them to the container array.
 

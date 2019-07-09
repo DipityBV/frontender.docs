@@ -2,10 +2,10 @@
 currentMenu: glossary
 ---
 
-## Glossary
+# Glossary
 An overview of terms used throughout the documentation.
 
-_More detailed information about every term can be found below the table._
+**More detailed information about every term can be found below the table.**
 
 | Term | Definition |
 | --- | --- |
@@ -18,7 +18,7 @@ _More detailed information about every term can be found below the table._
 | Dirty | A changed value or set of values (definition) that have not (yet) been persisted (saved). |
 | [Extension Package](#extensions) | A collection of files needed for the import of an extension (blueprint, adapter or template). |
 | Frontend | The frontend application. |
-| [Frontender desktop](#frontender-desktop) | Frontender, the Electron desktop application (FED) |
+| Frontender desktop | Frontender, the Electron desktop application (FED) |
 | Frontender Platform | The frontend application, a (collection of) site(s). |
 | JSON | JavaScript Object Notation https://www.json.org/ |
 | Locale | A language scope, includes time, date and currency in the locale’s format. |
@@ -34,7 +34,7 @@ _More detailed information about every term can be found below the table._
 ## Terms
 
 ###### Adapter
-An adapter interacts directly with an API. An adapter is an extension package of
+An adapter interacts directly with an API. An adapter is an extension package of:
 - PHP Models, which extend/implement Frontender Platform core adapter models,
 - Control blueprints, which are used inside container blueprints and are used to set the model states
 Adapters have one or more models, any website can have multiple adapters.
@@ -50,13 +50,11 @@ Instructions for a single container.
 ###### Control blueprints
 A special kind of blueprint that contains instructions on how to render a field to edit the attributes (values) of a container.
 
-Controls are only used inside Frontender Desktop and are not included in the page.
-
-###### Frontender Desktop
-Frontender Desktop is the Frontend Management System. It is a desktop application (OSX, Windows and Linux) with which webviews are created, edited and managed from a WYSIWYG User Interface.
+Controls are only used inside Frontender Desktop and are not included in the page.  
+A list of basic Frontender Desktop controls can be found on the [controls page](/controls.html).
 
 ###### Extensions
-Extensions are installable components. Components may be developed by Frontender or 3rd parties.
+Extensions are installable components. Components may be developed by Frontender or third parties.
 We distinguish between three types of extensions:
 1. Adapters
 2. Blueprints

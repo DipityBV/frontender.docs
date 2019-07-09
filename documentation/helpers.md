@@ -2,8 +2,7 @@
 currentMenu: helpers
 ---
 
-## Helpers
-
+# Helpers
 
 ### Template helper
 Process any class variables from the config and return a single class string

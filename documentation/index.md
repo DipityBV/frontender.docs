@@ -2,7 +2,7 @@
 currentMenu: introduction
 ---
 
-## Introduction
+# Introduction
 Content, design and technology are the cornerstones of online publishing. A successful combination of each of these results in a better user experience, which leads to happier visitors and higher conversions. And yet, the way in which we publish content to the web is compromised by one of those very cornerstones – technology.
 
 For years now, we use content management systems to produce content. We construct web pages from that content by injecting it into templates that can be published by the CMS. While that process is simple and offers many benefits, it also introduces many disadvantages.
@@ -16,7 +16,7 @@ Frontender is a collection of systems that in combination are referred to as Fro
 ![](https://lh6.googleusercontent.com/tKsC09ZJSapku1TOeyrm4AnHkJZq1fO6UUsl2Ynr5wsJwqFTx1rmcurFpcNxf1V_JOFeQdHCryJntrOmNrzFHU2jgAOZqcHnRiYxpjnI2mdq9_ObXNPGxH7Kdh7cytXWxg)
 
 ## Frontender Desktop
-Frontender Desktop is the Frontend Management System. It is a desktop application (OSX, Windows and Linux) with which webviews are created, edited and managed from a WYSIWYG User Interface.
+Frontender Desktop is the Frontend Management System. It is a desktop application (OSX, Windows and Linux) to create, edit and manage web pages from a <a href="https://en.wikipedia.org/wiki/WYSIWYG" target="&#95;blank" rel="nofollow" title="What You See Is What You Get">WYSIWYG</a> User Interface.
 
 Frontender Desktop ‘talks’ to Frontender Platform and Frontender Manager.
 
@@ -30,7 +30,7 @@ The site consists of site specific code like templates, scripts and styling. It 
 Frontender Platform is a secluded environment and only Frontender Desktop and Frontender Manager have access to it. Frontender Platform has no access to Frontender Manager or Frontender Desktop but it does have an API that can expose information and functionality, but only Frontender Manager and Frontender Desktop are authorised to access the API.
 
 ## Frontender Manager
-Frontender Manager is an web application that functions as the control center. It manages all information regarding user-space-site access. Frontender Desktop authenticates users via the Frontender Manager. When the user is successfully logged in, Frontender Manager will serve him all spaces and sites that the user is authorised to manage. Frontender Manager is responsible for access control in Frontender Desktop (not in Frontender Platform!).
+Frontender Manager is an web application that functions as the control centre. It manages all information regarding user-space-site access. Frontender Desktop authenticates users via the Frontender Manager. When the user is successfully logged in, Frontender Manager will serve him all spaces and sites that the user is authorised to manage. Frontender Manager is responsible for access control in Frontender Desktop (not in Frontender Platform!).
 
 Frontender Manager will store the bare minimum data that is required for Frontender Desktop to function. This includes information about the physical location of a Space (via it’s IP) and the roles and permissions for each user and per site.
 

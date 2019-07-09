@@ -2,7 +2,7 @@
 currentMenu: assets
 ---
 
-## Asset loading snippet
+# Asset loading snippet
 
 There are two alias method for loading code or other library files.
 

@@ -2,7 +2,7 @@
 currentMenu: templates
 ---
 
-## Templates
+# Templates
 
 ### Hiding functionality in Frontender
 
@@ -32,7 +32,7 @@ The code will run if the page is previewed in the browser.
 Localisation is done through translation files written in YAML. These files are generally located in the ```project/translations``` folder.
 
 
-### Internationalisation (i18n) and localisation (l10n)
+### Internationalisation(i18n) and localisation(l10n)
 We need to keep in mind the different versions of a language and the support for them in either routes or domains. These are all potential possibilities:
 
 | Domain | Language |

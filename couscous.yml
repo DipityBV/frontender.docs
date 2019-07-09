@@ -31,7 +31,7 @@ menu:
                     text: Technical Introduction
                     relativeUrl: introduction.html
                 installation:
-                    text: Installation
+                    text: Creating your first project
                     relativeUrl: installation.html
                 glossary:
                     text: Glossary

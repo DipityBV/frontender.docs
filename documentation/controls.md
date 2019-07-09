@@ -2,10 +2,10 @@
 currentMenu: controls
 ---
 
-## Controls
+# Controls
 A special kind of blueprint, only for controls. A control can reference another control.
 Frontender comes with a couple of core controls out of the box, these may be used alongside custom project controls.
-The following controls are build into Frontender:
+The following controls are part of the into Frontender core:
 
 | Control | Information
 | :---: | :---: |
@@ -25,7 +25,8 @@ The following controls are build into Frontender:
 Additional core controls will be added in the near future.
 
 ### Boolean
-Select list with "True"(1) and "False"(0), default value is "False".
+Options list with two values: "True"(1) and "False"(0).   
+The default value is "False".
 
 Example config:
 ```JSON
@@ -34,7 +35,7 @@ Example config:
         "label": {
             "en-GB": "Boolean example"
         },
-        "value": 1,
+        "value": 0,
         "control": "core/boolean"
     }
 }
@@ -223,6 +224,9 @@ Robots text field
 }
 ```
 ---
+
+## Control settings
+
 ### Repeatable
 Controls can be extended with an option to make them repeatable.
 This will add a menu next to the item that allows repetition.
@@ -263,9 +267,11 @@ Example config:
 ```
 
 ### Compound
-This control allows you to include multiple controls and form them to one.
+This control allows you to include multiple controls and form them to one.  
+A compound may also be [repeatable](#repeatable).
 
 Here is an example for the compound control. A compound control may only contain non-compounded fields.
+
 
 ```JSON
 {

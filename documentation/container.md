@@ -2,7 +2,7 @@
 currentMenu: container
 ---
 
-## Container
+# Container
 Twig container with data from it's JSON configuration.
 ```twig
 <{{ config.container_tag|default('section') }} {{ helper.container_id_attribute(frontender, 'frontender')|raw }}>

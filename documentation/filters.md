@@ -2,7 +2,11 @@
 currentMenu: filters
 ---
 
-## Filters
+# Filters
+
+A list of basic Twig filters can be found <a href="https://twig.symfony.com/doc/2.x/filters/index.html" target="&#95;blank" rel="nofollow">in the Twig documentation</a>.
+
+The following filters are custom made for Frontender:
 
 ### Pluralise
 A simple extension that allows you to pluralise a given string.
@@ -26,7 +30,7 @@ output: string
 
 ### Translate
 Additional information about localisation can be found on the [Templates page](/templates.html#localisation).
-Translate a string into a different locale. use ```|i18n```, ```|t``` or ```|translate```
+Translate a string into a different locale with ```|i18n```, ```|t``` or ```|translate```.
 ```twig
 {{ {'en-GB': 'Red', 'fr-FR': "Rouge"}|i18n }}
 ```

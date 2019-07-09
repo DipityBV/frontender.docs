@@ -2,7 +2,7 @@
 currentMenu: collection
 ---
 
-## Collections
+# Collections
 Page, blueprint and control definitions are stored in MongoDB collections.
 
 MongoDB stores data records as BSON documents. BSON is a binary representation of JSON documents, though it contains more data types than JSON.

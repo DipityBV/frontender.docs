@@ -2,7 +2,7 @@
 currentMenu: technical_introduction
 ---
 
-## Frontender introduction
+# Frontender introduction
 
 ### Container definition
 A container (definition) is a JSON object. Containers may be nested to create compound containers. A page in Frontender is a compound container.
@@ -44,6 +44,8 @@ A container may also be served in multiple languages.
 | Template | the file path of the template, this template will be used to render the container in the frontend. |
 | Config | the configuration object used by the template to render the container. This object may contain model instructions as well as configuration instructions. |
 | Containers | additional containers that may be included in the template. |
+| Blueprint | A blueprint ID is automatically generated when the container is saved as a blueprint. Do not enter a blueprint ID yourself. |
+| Route | The path where the page will live. Should not be prefixed with a forward slash. |
 
 ### Blueprint definition
 A blueprint (definition) is like a container. Blueprints have controls that allow Frontender Desktop to render the configuration UI used to edit the container instructions (config). Blueprints are used as a template to create containers. They are pre-formatted to container useful default settings that can be overridden once they have been included onto a page.
@@ -147,8 +149,7 @@ A page (definition) is a (compound) container. A page commonly consists of a hea
 ```
 
 ### Scope definition
-Each site has access to 2 scopes by default. Additional scopes may be purchased by the space owner.
-
+Each site has access to 2 scopes by default. Additional scopes may be purchased by the space owner. More information about pricing can be found on <a href="https://getfrontender.com/pricing" target="&#95;blank">getfrontender.com</a>.
 
 ### Page states
 A page has different states that define its access:
@@ -157,7 +158,7 @@ A page has different states that define its access:
 The revision of the page that is accessible to the frontend. It is stored in the Pages.public Collection (see: [Collections](/collection.html)).
 
 ###### Revision
-A version of a page. It is stored in the Pages Collection (see: [Collections](/collection.html)). A revision is a complete page definition that can be loaded and previewed in Frontender Desktop and Frontender Platform(using its uuid). A revision is not publicly accessible to the frontend. A revision is defined by a date and time.
+A previous version of a page. It is stored in the Pages Collection (see: [Collections](/collection.html)). A revision is a complete page definition that can be loaded and previewed in Frontender Desktop and Frontender Platform(using its UUID). A revision is not publicly accessible to the frontend. A revision is defined by a date and time.
 
 Revisions are managed in Frontender.
 
@@ -168,22 +169,22 @@ A non-persisted version of a page. The draft is the working copy of a page. A dr
 
 - The user navigates away without saving
 - The application is closed without saving
+- The drafted page is removed
 - …
 
 Drafts are not accessible outside the user’s installation of Frontender. A draft is not accessible by the frontend and can not be previewed in a browser.
 
-When a user wishes to preview a draft in Frontender, it must be saved first to create a revision of it.
+When a user wishes to preview a draft in the browser, it must be saved first to create a revision of it.
 
 Opening a (public) revision with Frontender Desktop will generate a draft.
 
 ###### Trash
-A revision lot (all revisions of a page) that have been moved to the pages.trash collection. Pages in the trash will be retrievable (in some future version of Frontender).
-
+A revision lot (all versions of a page) that have been moved to the pages.trash collection. Pages in the trash will be retrievable (in some future version of Frontender).
 
 ### Container and blueprint attributes
 Pages, containers and blueprints are JSON objects that contain configuration on which template to render, how, and with what data.
 
-- A **blueprint contains controls** (and optionally default values)
+- A **blueprint contains controls** (with default or custom values)
 - A **container contains values** (and optionally a reference to a blueprint)
 
 If a blueprint attribute is not included in the container, the container will still function but its values can only be edited in Code view.
@@ -196,6 +197,7 @@ When a value is a simple value, it is considered non-translatable and will be us
 
 #### Template path (required)
 The template.path attribute is exposed to the frontend. It can consist of values for each of one supported locales in the frontend. It defines what template (markup) will be used to render the page.
+The page will not work without a template path.
 
 - _In Frontender, when a container does not contain a value for template, it is invalid and a notification should be displayed upon saving the file (or while editing its JSON)._
 - _On the frontend, when a container does not contain a value for template, it can not be rendered and will simply be ignored by the JSON parser and discarded in the rendering process._
@@ -212,7 +214,7 @@ The template.path attribute is exposed to the frontend. It can consist of values
 #### Name
 The name attribute is only exposed to Frontender. It can consist of values for each of one supported locale in Frontender.
 
-Name is a required attribute, the user will be prompted to enter a name value on save if the value is empty.
+Name is a required attribute, the user will be prompted to enter a name value if the value is empty upon save.
 
 ```JSON
 {
@@ -224,9 +226,9 @@ Name is a required attribute, the user will be prompted to enter a name value on
 ```
 
 #### Description
-The description attribute is only exposed to Frontender. It can consist of values for each of one supported locale in Frontender.
+The description attribute is an optional attribute, it is only exposed to Frontender. It can consist of values for each of one supported locale in Frontender.
 
-When description is omitted (or its value empty) the attribute is disregarded.
+When description is omitted (or the value remains empty) the attribute is disregarded.
 
 ```JSON
 {
@@ -239,6 +241,7 @@ When description is omitted (or its value empty) the attribute is disregarded.
 
 #### Template config
 The template_config attribute holds configuration properties for rendering of the template.
+Although template_config is not required, it's highly advised to use it.
 
 Settings are grouped into different sections (one level). Each group will be rendered as a tab in the Frontender Desktop UI.
 

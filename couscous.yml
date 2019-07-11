@@ -78,6 +78,9 @@ menu:
                 proxy-domains:
                     text: Proxy domains
                     relativeUrl: proxy-domains.html
+                import:
+                    text: Import
+                    relativeUrl: import.html
         faq:
             name: Frequently Asked Questions
             items:
@@ -87,6 +90,9 @@ menu:
                 faq_misc:
                     text: Miscellaneous
                     relativeUrl: faq/misc.html
+                faq_content:
+                    text: Content
+                    relativeUrl: faq/content.html
                 faq_user:
                     text: User
                     relativeUrl: faq/user.html
@@ -105,6 +111,3 @@ menu:
                 faq_controls:
                     text: Control
                     relativeUrl: faq/control.html
-                faq_content:
-                    text: Content
-                    relativeUrl: faq/content.html

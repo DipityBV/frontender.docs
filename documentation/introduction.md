@@ -4,6 +4,8 @@ currentMenu: technical_introduction
 
 # Frontender introduction
 
+For more clarity regarding the following definitions visit the "Main documentation" section of the menu.
+
 ### Container definition
 A container (definition) is a JSON object. Containers may be nested to create compound containers. A page in Frontender is a compound container.
 ```JSON

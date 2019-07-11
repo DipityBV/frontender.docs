@@ -8,9 +8,9 @@ There are two alias method for loading code or other library files.
 
 ### Script loading
 First we will explain the script loading function.
-This can handle normal .js and .js.twig files.
+This can handle normal `.js` and `.js.twig` files.
 
-So basically it is possible loading a .js file with twig variables.
+So basically it is possible loading a `.js` file with twig variables.
 Below a few examples.
 ```twig
 {{'path_to_js_file'|addScript('position')}}
@@ -46,7 +46,7 @@ Below an example
 
 ### Advanced loading
 **Note!** This is advanced stuff, and a lot might/ could go wrong, use with care!  
-**Note!** All of the mentioned information is also available in the ```addStyle``` and ```addScript```.
+**Note!** All of the mentioned information is also available in the `addStyle` and `addScript`.
 
 It is also possible to load other kind of files, complete with tag data and attributes.
 

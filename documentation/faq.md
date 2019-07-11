@@ -6,10 +6,10 @@ currentMenu: faq_index
 
 Questions are split up in the following sections:
 1. [Miscellaneous](/faq/misc.html)
-2. [User](/faq/user.html)
-3. [Pricing](/faq/pricing.html)
-4. [Implementation](/faq/implementation.html)
-5. [Spaces](/faq/spaces.html)
-6. [Sites](/faq/sites.html)
-7. [Controls](/faq/control.html)
-8. [Content](/faq/content.html)
+1. [Content](/faq/content.html)
+1. [User](/faq/user.html)
+1. [Pricing](/faq/pricing.html)
+1. [Implementation](/faq/implementation.html)
+1. [Spaces](/faq/spaces.html)
+1. [Sites](/faq/sites.html)
+1. [Controls](/faq/control.html)

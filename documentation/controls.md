@@ -58,7 +58,7 @@ Hidden input field (not rendered in Frontender).
 ```
 
 ### Markdown
-Allows user to use [Markdown](https://daringfireball.net/projects/markdown/) inside of a text area.
+Allows user to use <a href="https://daringfireball.net/projects/markdown/" target="&#95;blank" rel="nofollow">Markdown</a> inside of a text area.
 ```JSON
 {
     "body": {

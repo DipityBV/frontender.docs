@@ -4,6 +4,17 @@ currentMenu: templates
 
 # Templates
 
+### Template structure
+All _templates_ (Twig files), _blueprints_ (JSON files) and pages are located in folders in `/source/projects/main/templates`.
+
+Templates and blueprints are stored in subfolders that indicate their content types or their intended use.  
+For example, Twig files intended to be used with Event content are stored inside a `/templates/containers/events` folder.  
+Each template needs to have an data-frontender attribute declared on it:
+```twig
+{{ helper.container_id_attribute(container, 'frontender')|raw }}
+```
+Frontender will use this if to identify a container and its configuration.
+
 ### Hiding functionality in Frontender
 
 In some cases it is required to disable certain functionality in the site, that isn't required in Frontender. (eg: cookie policy notice)
@@ -15,6 +26,10 @@ In the following example we make sure the Google analytics code is not used insi
 The code will run if the page is previewed in the browser.
 ```twig
 {% if not query.fromFrontender %}
+    /*
+     * Google Analytics is of no use inside of the Frontender application.
+     * Prevent the script from loading.
+     */
     window.addEventListener("load", function(){
 
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -48,7 +63,7 @@ We need to keep in mind the different versions of a language and the support for
 | au.en.domain.com | Australian English content |
 | us.domain.com | American English content |
 
-A solution is to use the full locale ISO (```"en-GB"```) and then have rules on how to parse these to a route. We could also assume that each part of the ISO is a path component, so ```"en"``` would parse as ```en/``` and ```"en-GB"``` would parse as ```en/gb/```.
+A solution is to use the full locale ISO (`"en-GB"`) and then have rules on how to parse these to a route. We could also assume that each part of the ISO is a path component, so `"en"` would parse as `en/` and `"en-GB"` would parse as `en/gb/`.
 
 This is a suggestion on how to define a language/domain combination (totally arbitrary examples):
 ```JSON

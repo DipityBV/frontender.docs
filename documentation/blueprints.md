@@ -7,7 +7,7 @@ currentMenu: blueprints
 Blueprints are small snippets of template instructions in JSON format. Blueprints can be nested by adding them to the container array.
 
 ### Syntax
-Example of a very basic bilingual blueprint. The "frontender" value will be automatically filled by Frontender when the page is saved.
+Example of a very basic bilingual blueprint. The `frontender` value will be automatically filled by Frontender when the page is saved.
 ```JSON
 {
     "frontender": null,
@@ -152,7 +152,7 @@ Depending on your environment, content is interchangeable with labels.
 ```
 
 ### Default config controls
-<!-- @TODO -->
+<!-- @TODO add default config controls -->
 ```JSON
 ???
 ```
@@ -324,7 +324,7 @@ Basic blueprint with a single child container.
 ```
 
 ### Control config example
-<!-- @TODO -->
+<!-- @TODO add control config example -->
 ```JSON
 ???
 ```

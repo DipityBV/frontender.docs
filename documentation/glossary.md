@@ -10,7 +10,7 @@ An overview of terms used throughout the documentation.
 | Term | Definition |
 | --- | --- |
 | [Adapter](#adapter) | An adapter is the gateway to the content. |
-| API | An API enables data access from an external client. |
+| [API](#api) | An API enables data access from an external client. |
 | [Blueprint](#blueprints) | A JSON object containing the presets from which a container may be generated. |
 | [Container](#container-blueprints) | A JSON object containing instructions to render a template. A container is the visual representation of a blueprint. |
 | [Control](#control-blueprints) | A JSON object with instructions to render a field. Controls are very specialised, tiny snippets of JSON that Frontender Desktop uses to render its interface. |
@@ -38,6 +38,13 @@ An adapter interacts directly with an API. An adapter is an extension package of
 - PHP Models, which extend/implement Frontender Platform core adapter models,
 - Control blueprints, which are used inside container blueprints and are used to set the model states
 Adapters have one or more models, any website can have multiple adapters.
+
+###### API
+In computer programming, an application programming interface (API) is a set of subroutine definitions, communication protocols, and tools for building software. In general terms, it is a set of clearly defined methods of communication among various components. A good API makes it easier to develop a computer program by providing all the building blocks, which are then put together by the programmer.
+
+An API may be for a web-based system, operating system, database system, computer hardware, or software library.
+
+An API specification can take many forms, but often includes specifications for routines, data structures, object classes, variables, or remote calls. POSIX, Windows API and ASPI are examples of different forms of APIs. Documentation for the API usually is provided to facilitate usage and implementation.
 
 ###### Blueprints
 Blueprints are (JSON) definitions. These definitions contain instructions for the templates and the adapters.

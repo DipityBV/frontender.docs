@@ -40,7 +40,7 @@
                                     </li>
                                                                     <li class="">
                                         <a href="/installation.html">
-                                            Installation
+                                            Creating your first project
                                         </a>
                                     </li>
                                                                     <li class="">
@@ -121,6 +121,11 @@
                                             Proxy domains
                                         </a>
                                     </li>
+                                                                    <li class="">
+                                        <a href="/import.html">
+                                            Import
+                                        </a>
+                                    </li>
                                                             </ul>
                         </div>
                                             <div class="section">
@@ -137,6 +142,11 @@
                                                                     <li class="">
                                         <a href="/faq/misc.html">
                                             Miscellaneous
+                                        </a>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="/faq/content.html">
+                                            Content
                                         </a>
                                     </li>
                                                                     <li class="">
@@ -165,13 +175,8 @@
                                         </a>
                                     </li>
                                                                     <li class="">
-                                        <a href="/faq/controls.html">
-                                            Controls
-                                        </a>
-                                    </li>
-                                                                    <li class="">
-                                        <a href="/faq/content.html">
-                                            Content
+                                        <a href="/faq/control.html">
+                                            Control
                                         </a>
                                     </li>
                                                             </ul>
@@ -204,7 +209,12 @@
 <pre><code>output: string</code></pre>
 <h3 id="translate">Translate</h3>
 <p>Additional information about localisation can be found on the <a href="/templates.html#localisation">Templates page</a>.
-Translate a string into a different locale with <code>|i18n</code>, <code>|t</code> or <code>|translate</code>.</p>
+Translate a string into a different locale with any of the following translation filters:</p>
+<ul>
+<li><code>|i18n</code></li>
+<li><code>|t</code></li>
+<li><code>|translate</code></li>
+</ul>
 <pre><code class="language-twig">{{ {'en-GB': 'Red', 'fr-FR': "Rouge"}|i18n }}</code></pre>
 <pre><code class="language-twig">{{ {'en-GB': 'Red', 'fr-FR': "Rouge"}|t }}</code></pre>
 <pre><code class="language-twig">{{ {'en-GB': 'Red', 'fr-FR': "Rouge"}|translate }}</code></pre>

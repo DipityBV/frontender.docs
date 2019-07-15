@@ -40,7 +40,7 @@
                                     </li>
                                                                     <li class="">
                                         <a href="/installation.html">
-                                            Installation
+                                            Creating your first project
                                         </a>
                                     </li>
                                                                     <li class="">
@@ -121,6 +121,11 @@
                                             Proxy domains
                                         </a>
                                     </li>
+                                                                    <li class="">
+                                        <a href="/import.html">
+                                            Import
+                                        </a>
+                                    </li>
                                                             </ul>
                         </div>
                                             <div class="section">
@@ -137,6 +142,11 @@
                                                                     <li class="">
                                         <a href="/faq/misc.html">
                                             Miscellaneous
+                                        </a>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="/faq/content.html">
+                                            Content
                                         </a>
                                     </li>
                                                                     <li class="">
@@ -165,13 +175,8 @@
                                         </a>
                                     </li>
                                                                     <li class="">
-                                        <a href="/faq/controls.html">
-                                            Controls
-                                        </a>
-                                    </li>
-                                                                    <li class="">
-                                        <a href="/faq/content.html">
-                                            Content
+                                        <a href="/faq/control.html">
+                                            Control
                                         </a>
                                     </li>
                                                             </ul>
@@ -192,9 +197,17 @@
                 <div class="rst-content">
                     <div role="main" class="document">
                         <h1 id="blueprints">Blueprints</h1>
-<p>Blueprints are small snippets of template instructions in JSON format. Blueprints can be nested by adding them to the container array.</p>
+<p>Blueprints are (JSON) definitions. These definitions contain instructions for the templates and the adapters.</p>
+<p>When blueprints are imported (uploaded into Frontender Platform) any referenced blueprints and/or assets (templates, css, js, media) may also be included in the extension package.</p>
+<h5 id="container-blueprints">Container blueprints</h5>
+<p>Instructions for a single container.</p>
+<h5 id="page-blueprints">Page blueprints</h5>
+<p>Instructions for a page. Technically, they are identical to a container blueprint definition as a page is in fact also a container. A page blueprint contains a collection of other containers.</p>
+<h5 id="control-blueprints">Control blueprints</h5>
+<p>A special kind of blueprint that contains instructions on how to render a field to edit the attributes (values) of a container.</p>
+<p>Controls are only used inside Frontender Desktop and are not included in the page</p>
 <h3 id="syntax">Syntax</h3>
-<p>Example of a very basic bilingual blueprint. The &quot;frontender&quot; value will be automatically filled by Frontender when the page is saved.</p>
+<p>Example of a very basic bilingual blueprint. The <code>frontender</code> value will be automatically filled by Frontender when the page is saved.</p>
 <pre><code class="language-JSON">{
     "frontender": null,
     "template": "containers/[content_type]/[container_name]/[container_name].html.twig",
@@ -322,7 +335,7 @@
     }
 }</code></pre>
 <h3 id="default-config-controls">Default config controls</h3>
-<!-- @TODO -->
+<!-- @TODO add default config controls -->
 <pre><code class="language-JSON">???</code></pre>
 <h3 id="model-controls">Model controls</h3>
 <p>Model configuration for <a href="https://unsplash.com" target="&#95;blank" rel="nofollow">Unsplash</a> used as an example.</p>
@@ -481,7 +494,7 @@ control robots data.</p>
     ]
 }</code></pre>
 <h3 id="control-config-example">Control config example</h3>
-<!-- @TODO -->
+<!-- @TODO add control config example -->
 <pre><code class="language-JSON">???</code></pre>
 <h3 id="showhide-list-options">Show/Hide list options</h3>
 <p>True or false selector. User cannot enter a custom value.</p>

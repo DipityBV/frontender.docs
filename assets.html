@@ -40,7 +40,7 @@
                                     </li>
                                                                     <li class="">
                                         <a href="/installation.html">
-                                            Installation
+                                            Creating your first project
                                         </a>
                                     </li>
                                                                     <li class="">
@@ -121,6 +121,11 @@
                                             Proxy domains
                                         </a>
                                     </li>
+                                                                    <li class="">
+                                        <a href="/import.html">
+                                            Import
+                                        </a>
+                                    </li>
                                                             </ul>
                         </div>
                                             <div class="section">
@@ -137,6 +142,11 @@
                                                                     <li class="">
                                         <a href="/faq/misc.html">
                                             Miscellaneous
+                                        </a>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="/faq/content.html">
+                                            Content
                                         </a>
                                     </li>
                                                                     <li class="">
@@ -165,13 +175,8 @@
                                         </a>
                                     </li>
                                                                     <li class="">
-                                        <a href="/faq/controls.html">
-                                            Controls
-                                        </a>
-                                    </li>
-                                                                    <li class="">
-                                        <a href="/faq/content.html">
-                                            Content
+                                        <a href="/faq/control.html">
+                                            Control
                                         </a>
                                     </li>
                                                             </ul>
@@ -191,12 +196,20 @@
                         <div class="wy-nav-content">
                 <div class="rst-content">
                     <div role="main" class="document">
-                        <h1 id="asset-loading-snippet">Asset loading snippet</h1>
+                        <h1 id="assets">Assets</h1>
+<p>A catch-all term referring to all materials needed to successfully complete a project. In terms of web design and development, <code>assets</code> typically refer to the text content, graphics, photographs, videos, audio files, scripts and styles.</p>
+<!-- @TODO Verify -->
+<p>Site assets have a fallback to the space’s assets. A template may have its own assets, so the file structure is somewhat loose. The fallback scenario will assume an identical file structure and will look for its files in the space’s file structure in such cases where it does not have its files itself.</p>
+<h3 id="asset-loading-snippet">Asset loading snippet</h3>
 <p>There are two alias method for loading code or other library files.</p>
-<h3 id="script-loading">Script loading</h3>
+<ul>
+<li><a href="#script-loading">Script loading</a></li>
+<li><a href="#style-loading">Style loading</a></li>
+</ul>
+<h5 id="script-loading">Script loading</h5>
 <p>First we will explain the script loading function.
-This can handle normal .js and .js.twig files.</p>
-<p>So basically it is possible loading a .js file with twig variables.
+This can handle normal <code>.js</code> and <code>.js.twig</code> files.</p>
+<p>So basically it is possible loading a <code>.js</code> file with twig variables.
 Below a few examples.</p>
 <pre><code class="language-twig">{{'path_to_js_file'|addScript('position')}}
 {{'path_to_js_twig_file'|addScript('position', {
@@ -209,7 +222,7 @@ Below a few examples.</p>
 <p>The following code should be placed in the template file to load the scripts from above.
 It's recommended to use multiple positions, i.e. in the head and before the end of the body.</p>
 <pre><code class="language-twig">{{ renderAssets('position')|raw }}</code></pre>
-<h3 id="style-loading">Style loading</h3>
+<h5 id="style-loading">Style loading</h5>
 <p>Just as described with the scripts above, it is also possible to load stylesheets.</p>
 <p>Below an example</p>
 <pre><code class="language-twig">{{'path_to_css_file'|addStyle('position')}}

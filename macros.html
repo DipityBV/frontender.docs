@@ -40,7 +40,7 @@
                                     </li>
                                                                     <li class="">
                                         <a href="/installation.html">
-                                            Installation
+                                            Creating your first project
                                         </a>
                                     </li>
                                                                     <li class="">
@@ -121,6 +121,11 @@
                                             Proxy domains
                                         </a>
                                     </li>
+                                                                    <li class="">
+                                        <a href="/import.html">
+                                            Import
+                                        </a>
+                                    </li>
                                                             </ul>
                         </div>
                                             <div class="section">
@@ -137,6 +142,11 @@
                                                                     <li class="">
                                         <a href="/faq/misc.html">
                                             Miscellaneous
+                                        </a>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="/faq/content.html">
+                                            Content
                                         </a>
                                     </li>
                                                                     <li class="">
@@ -165,13 +175,8 @@
                                         </a>
                                     </li>
                                                                     <li class="">
-                                        <a href="/faq/controls.html">
-                                            Controls
-                                        </a>
-                                    </li>
-                                                                    <li class="">
-                                        <a href="/faq/content.html">
-                                            Content
+                                        <a href="/faq/control.html">
+                                            Control
                                         </a>
                                     </li>
                                                             </ul>
@@ -191,7 +196,10 @@
                         <div class="wy-nav-content">
                 <div class="rst-content">
                     <div role="main" class="document">
-                        <h2 id="macros">Macros</h2>
+                        <h1 id="macros">Macros</h1>
+<p>Macro is a rule or pattern that specifies how a certain input sequence (often a sequence of characters) should be mapped to a replacement output sequence (also often a sequence of characters) according to a defined procedure. The mapping process that instantiates (transforms) a macro use into a specific sequence is known as macro expansion.</p>
+<p>Macros are used to make a sequence of computing instructions available to the programmer as a single program statement, making the programming task less tedious and less error-prone. (Thus, they are called &quot;macros&quot; because a &quot;big&quot; block of code can be expanded from a &quot;small&quot; sequence of characters.) Macros often allow positional or keyword parameters that dictate what the conditional assembler program generates and have been used to create entire programs or program suites according to such variables as operating system, platform or other factors. The term derives from &quot;macro instruction&quot;, and such expansions were originally used in generating assembly language code.</p>
+<p>We would recommended the usage of the following macros, as they are easy to use and they link up with Frontender controls.</p>
 <h3 id="container-class">Container class</h3>
 <p>Process any class variables from the config and return class attribute.</p>
 <pre><code class="language-twig">{% macro class_attribute(config, class) %}
@@ -201,6 +209,28 @@
 {% endmacro %}</code></pre>
 <h3 id="template-macro">Template macro</h3>
 <p>The template macro can be found on the <a href="/helpers.html">helpers page</a>.</p>
+<h3 id="pagination">Pagination</h3>
+<h5 id="paginationpages">pagination.pages</h5>
+<p>This will show the first, previous, next, last and all the pages between.</p>
+<pre><code class="language-twig">{{ pagination.pages(articles, articles_total, model) }}</code></pre>
+<h5 id="paginationbrowse">pagination.browse</h5>
+<p>This macro will only show a previous and next, also just as mentioned above a layout and target is required.</p>
+<pre><code class="language-twig">{{ pagination.browse(articles, articles_total, model) }}</code></pre>
+<h5 id="paginationextend">pagination.extend</h5>
+<p>This will only show a &quot;load more&quot; button. This macro however needs a little more configuration, namely a layout( twig file ) it needs to load and a target ( preferably an ID ).</p>
+<p>Also it is possible to supply an optional config object for the options that the loaded template will need.</p>
+<p><strong>Note</strong>: This is the only method currently that is able to append to content.<br />
+<strong>Note</strong>: Currently the model_name is a reserved namespace, this functionality will change in the future.</p>
+<pre><code class="language-twig">{{ pagination.extend(articles, articles_total, model, {
+    model_name: 'Channel\Articles',
+    layout: 'path/to/file.twig',
+    target: 'jquery_selector',
+    config: {
+        labels: {
+            next: 'Volgende'
+        }
+    }
+}) }}</code></pre>
                     </div>
 
                     <footer>

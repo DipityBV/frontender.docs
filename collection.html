@@ -40,7 +40,7 @@
                                     </li>
                                                                     <li class="">
                                         <a href="/installation.html">
-                                            Installation
+                                            Creating your first project
                                         </a>
                                     </li>
                                                                     <li class="">
@@ -121,6 +121,11 @@
                                             Proxy domains
                                         </a>
                                     </li>
+                                                                    <li class="">
+                                        <a href="/import.html">
+                                            Import
+                                        </a>
+                                    </li>
                                                             </ul>
                         </div>
                                             <div class="section">
@@ -137,6 +142,11 @@
                                                                     <li class="">
                                         <a href="/faq/misc.html">
                                             Miscellaneous
+                                        </a>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="/faq/content.html">
+                                            Content
                                         </a>
                                     </li>
                                                                     <li class="">
@@ -165,13 +175,8 @@
                                         </a>
                                     </li>
                                                                     <li class="">
-                                        <a href="/faq/controls.html">
-                                            Controls
-                                        </a>
-                                    </li>
-                                                                    <li class="">
-                                        <a href="/faq/content.html">
-                                            Content
+                                        <a href="/faq/control.html">
+                                            Control
                                         </a>
                                     </li>
                                                             </ul>
@@ -193,16 +198,17 @@
                     <div role="main" class="document">
                         <h1 id="collections">Collections</h1>
 <p>Page, blueprint and control definitions are stored in MongoDB collections.</p>
-<p>MongoDB stores data records as BSON documents. BSON is a binary representation of JSON documents, though it contains more data types than JSON.</p>
-<p>Both Frontender Desktop and Frontender Platform have access to these collections:</p>
+<p>MongoDB stores data records as <a href="https://docs.mongodb.com/manual/core/document/#bson-document-format" target="&#95;blank" rel="nofollow">BSON documents</a>. BSON is a binary representation of JSON documents, though it contains more data types than JSON.</p>
+<p>Collections are always named in <a href="https://stackoverflow.com/questions/9868323/is-there-a-convention-to-name-collection-in-mongodb/ 28619919" target="&#95;blank" rel="nofollow">plural form</a>.</p>
+<p>Both Frontender Desktop and Frontender Platform have access to the following collections:</p>
 <ul>
-<li>lots</li>
 <li>blueprints</li>
-<li>containers</li>
+<li>controls</li>
+<li>lots</li>
 <li>pages</li>
 <li>pages.public</li>
 <li>pages.trash</li>
-<li>controls</li>
+<li>routes</li>
 <li>settings</li>
 <li>teams</li>
 </ul>
@@ -212,6 +218,7 @@
 <ul>
 <li>container</li>
 <li>page</li>
+<li>control</li>
 </ul>
 <pre><code class="language-JSON">{
     "_id": "ea6b893c-de10-47d6-9370-1ecddf011e58",
@@ -232,32 +239,6 @@
     },
     "identifier": "container/blueprint_name"
 }</code></pre>
-<h3 id="pages">Pages</h3>
-<p>Pages are similar to a blueprint, but contain containers (that may reference blueprints). They also contain a <code>template_config.route.path</code> object that is used by the frontend router. When the path object is empty, the lot id will be used as a default.</p>
-<pre><code class="language-JSON">{
-    "_id": "ea6b839c-de10-47d6-9730-1ecddf101e58",
-    "revision": {
-        "lot": "07465154-f83b-4f8e-ba8f-46417564f409",
-        "date": "2018-04-20 00:00:00",
-        "hash": "71e052198689b9f29ba26a3d8db5aac9",
-        "thumbnail": {},
-        "user": {}
-    },
-    "definition": {
-        "route": {},
-        "frontender": "1234567890",
-        "template": "path/to/template.html.twig",
-        "name": {},
-        "description": {},
-        "page_config": {},
-        "template_config": {},
-        "containers": []
-    }
-}</code></pre>
-<h3 id="pagespublic">Pages.public</h3>
-<p>Identical to <code>pages</code> collection. Each page is an identical copy of a revision. When a page is published, the page definition is copied from the <code>pages</code> collection to the <code>pages.public</code> collection. When requesting a revision list in Frontender, page definitions from the <code>pages</code> collections are sanitised to exclude pages with identical hashes, only the version with the earliest revision date is included. When the a revision has an identical lot and hash as a page in the <code>pages.public</code> collection, it is marked in the UI as the currently published revision.</p>
-<h3 id="pagesthrash">Pages.thrash</h3>
-<p>Pages that have been removed. The published page is permanently deleted, all its revisions are moved to the <code>trash</code> collection.</p>
 <h3 id="controls">Controls</h3>
 <p>A special kind of blueprint, only for controls. A control can reference another control.</p>
 <pre><code class="language-JSON">{
@@ -288,6 +269,76 @@
         }
     }
 }</code></pre>
+<h3 id="lots">Lots</h3>
+<!-- @TODO: Verify -->
+<p>Permissions are saved in the lots collection. All pages are linked to teams in this collection, you won't be able to edit a page if you're not linked to it by team.</p>
+<h3 id="pages">Pages</h3>
+<p>Pages are similar to a blueprint, but contain containers (that may reference blueprints). They also contain a <code>template_config.route.path</code> object that is used by the frontend router. When the path object is empty, the lot id will be used as a default.</p>
+<p>The <code>template_config.route.path</code> object is required for each page object, without it the router cannot access it. Frontender Desktop will be implement a UI that enforces that the path object is not empty. When the path object is empty, the lot id will be used as a default.</p>
+<pre><code class="language-JSON">{
+    "_id": "ea6b839c-de10-47d6-9730-1ecddf101e58",
+    "revision": {
+        "lot": "07465154-f83b-4f8e-ba8f-46417564f409",
+        "date": "2018-04-20 00:00:00",
+        "hash": "71e052198689b9f29ba26a3d8db5aac9",
+        "thumbnail": {},
+        "user": {}
+    },
+    "definition": {
+        "route": {},
+        "frontender": "1234567890",
+        "template": "path/to/template.html.twig",
+        "name": {},
+        "description": {},
+        "page_config": {},
+        "template_config": {},
+        "containers": []
+    }
+}</code></pre>
+<h3 id="pagespublic">Pages.public</h3>
+<p>Identical to <code>pages</code> collection. Each page is an identical copy of a revision. When a page is published, the page definition is copied from the <code>pages</code> collection to the <code>pages.public</code> collection. When requesting a revision list in Frontender, page definitions from the <code>pages</code> collections are sanitised to exclude pages with identical hashes, only the version with the earliest revision date is included. When the a revision has an identical lot and hash as a page in the <code>pages.public</code> collection, it is marked in the UI as the currently published revision.</p>
+<h3 id="pagestrash">Pages.trash</h3>
+<p>Pages that have been removed. The published page is permanently deleted, all its revisions are moved to the <code>trash</code> collection.</p>
+<h3 id="controls-1">Controls</h3>
+<p>A special kind of blueprint, only for controls. A control can reference another control.
+Frontender comes with a couple of core controls out of the box, these may be used alongside custom project controls. See the <a href="/controls.html">controls page</a> for more information.</p>
+<pre><code class="language-JSON">{
+    "value": "",
+    "label": {
+        "en-GB": "Allow overlap"
+    },
+    "control": "core/list",
+    "options": [
+        {
+            "value": "",
+            "label": {
+                "en-GB": "none"
+            }
+        },
+        {
+            "value": "overlap-top",
+            "label": {
+                "en-GB": "Top overlap"
+            }
+        },
+        {
+            "value": "overlap-bottom",
+            "label": {
+                "en-GB": "Bottom overlap"
+            }
+        }
+    ]
+}</code></pre>
+<h3 id="routes">Routes</h3>
+<p>All redirects are stored in the routes collection. Both permanent and temporary redirects.<br />
+Each redirect is saved with a status of <code>301</code> or <code>302</code>.</p>
+<p>A page is identified by its route. When a route changes, it will trigger the storage of a new version. This implies that the previous route is part of the previous revision but since the route defines the page the revisions can no longer be related to the same route.</p>
+<h3 id="settings">Settings</h3>
+<p>Site settings are saved in this collection. This includes a randomly generated <code>site_id</code> used to identify the website.<br />
+Proxy domains, scopes, locales, root page and preview settings.</p>
+<h3 id="teams">Teams</h3>
+<p>An array list of user ids.<br />
+Teams are used to set the permissions of user groups.</p>
                     </div>
 
                     <footer>

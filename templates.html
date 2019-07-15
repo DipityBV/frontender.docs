@@ -40,7 +40,7 @@
                                     </li>
                                                                     <li class="">
                                         <a href="/installation.html">
-                                            Installation
+                                            Creating your first project
                                         </a>
                                     </li>
                                                                     <li class="">
@@ -121,6 +121,11 @@
                                             Proxy domains
                                         </a>
                                     </li>
+                                                                    <li class="">
+                                        <a href="/import.html">
+                                            Import
+                                        </a>
+                                    </li>
                                                             </ul>
                         </div>
                                             <div class="section">
@@ -137,6 +142,11 @@
                                                                     <li class="">
                                         <a href="/faq/misc.html">
                                             Miscellaneous
+                                        </a>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="/faq/content.html">
+                                            Content
                                         </a>
                                     </li>
                                                                     <li class="">
@@ -165,13 +175,8 @@
                                         </a>
                                     </li>
                                                                     <li class="">
-                                        <a href="/faq/controls.html">
-                                            Controls
-                                        </a>
-                                    </li>
-                                                                    <li class="">
-                                        <a href="/faq/content.html">
-                                            Content
+                                        <a href="/faq/control.html">
+                                            Control
                                         </a>
                                     </li>
                                                             </ul>
@@ -191,7 +196,15 @@
                         <div class="wy-nav-content">
                 <div class="rst-content">
                     <div role="main" class="document">
-                        <h2 id="templates">Templates</h2>
+                        <h1 id="templates">Templates</h1>
+<p>Templates are HTML instructions and may include other assets like CSS, JavaScript and Images. Templates are currently Twig files. Templates are stored in the space, but overrides on a site level may be supported in a future version.</p>
+<h3 id="template-structure">Template structure</h3>
+<p>All <em>templates</em> (Twig files), <em>blueprints</em> (JSON files) and pages are located in folders in <code>/source/projects/main/templates</code>.</p>
+<p>Templates and blueprints are stored in subfolders that indicate their content types or their intended use.<br />
+For example, Twig files intended to be used with Event content are stored inside a <code>/templates/containers/events</code> folder.<br />
+Each template needs to have an data-frontender attribute declared on it:</p>
+<pre><code class="language-twig">{{ helper.container_id_attribute(container, 'frontender')|raw }}</code></pre>
+<p>Frontender will use this if to identify a container and its configuration.</p>
 <h3 id="hiding-functionality-in-frontender">Hiding functionality in Frontender</h3>
 <p>In some cases it is required to disable certain functionality in the site, that isn't required in Frontender. (eg: cookie policy notice)</p>
 <p>Inside of every twig file a query is available, this allows you to check what is in the request.
@@ -199,6 +212,10 @@ When a page is called by Frontender, it will send a query variable called <code>
 <p>In the following example we make sure the Google analytics code is not used inside of the Frontender application.
 The code will run if the page is previewed in the browser.</p>
 <pre><code class="language-twig">{% if not query.fromFrontender %}
+    /*
+     * Google Analytics is of no use inside of the Frontender application.
+     * Prevent the script from loading.
+     */
     window.addEventListener("load", function(){
 
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -212,7 +229,7 @@ The code will run if the page is previewed in the browser.</p>
 {% endif %}</code></pre>
 <h3 id="localisation">Localisation</h3>
 <p>Localisation is done through translation files written in YAML. These files are generally located in the <code>project/translations</code> folder.</p>
-<h3 id="internationalisation-i18n-and-localisation-l10n">Internationalisation (i18n) and localisation (l10n)</h3>
+<h3 id="internationalisationi18n-and-localisationl10n">Internationalisation(i18n) and localisation(l10n)</h3>
 <p>We need to keep in mind the different versions of a language and the support for them in either routes or domains. These are all potential possibilities:</p>
 <table>
 <thead>

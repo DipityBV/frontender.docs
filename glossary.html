@@ -40,7 +40,7 @@
                                     </li>
                                                                     <li class="">
                                         <a href="/installation.html">
-                                            Installation
+                                            Creating your first project
                                         </a>
                                     </li>
                                                                     <li class="active">
@@ -121,6 +121,11 @@
                                             Proxy domains
                                         </a>
                                     </li>
+                                                                    <li class="">
+                                        <a href="/import.html">
+                                            Import
+                                        </a>
+                                    </li>
                                                             </ul>
                         </div>
                                             <div class="section">
@@ -137,6 +142,11 @@
                                                                     <li class="">
                                         <a href="/faq/misc.html">
                                             Miscellaneous
+                                        </a>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="/faq/content.html">
+                                            Content
                                         </a>
                                     </li>
                                                                     <li class="">
@@ -165,13 +175,8 @@
                                         </a>
                                     </li>
                                                                     <li class="">
-                                        <a href="/faq/controls.html">
-                                            Controls
-                                        </a>
-                                    </li>
-                                                                    <li class="">
-                                        <a href="/faq/content.html">
-                                            Content
+                                        <a href="/faq/control.html">
+                                            Control
                                         </a>
                                     </li>
                                                             </ul>
@@ -207,7 +212,7 @@
 <td>An adapter is the gateway to the content.</td>
 </tr>
 <tr>
-<td>API</td>
+<td><a href="#api">API</a></td>
 <td>An API enables data access from an external client.</td>
 </tr>
 <tr>
@@ -239,7 +244,7 @@
 <td>The frontend application.</td>
 </tr>
 <tr>
-<td><a href="#frontender-desktop">Frontender desktop</a></td>
+<td>Frontender desktop</td>
 <td>Frontender, the Electron desktop application (FED)</td>
 </tr>
 <tr>
@@ -296,6 +301,10 @@
 <li>Control blueprints, which are used inside container blueprints and are used to set the model states
 Adapters have one or more models, any website can have multiple adapters.</li>
 </ul>
+<h6 id="api">API</h6>
+<p>In computer programming, an application programming interface (API) is a set of subroutine definitions, communication protocols, and tools for building software. In general terms, it is a set of clearly defined methods of communication among various components. A good API makes it easier to develop a computer program by providing all the building blocks, which are then put together by the programmer.</p>
+<p>An API may be for a web-based system, operating system, database system, computer hardware, or software library.</p>
+<p>An API specification can take many forms, but often includes specifications for routines, data structures, object classes, variables, or remote calls. POSIX, Windows API and ASPI are examples of different forms of APIs. Documentation for the API usually is provided to facilitate usage and implementation.</p>
 <h6 id="blueprints">Blueprints</h6>
 <p>Blueprints are (JSON) definitions. These definitions contain instructions for the templates and the adapters.</p>
 <p>When blueprints are imported (uploaded into Frontender Platform) any referenced blueprints and/or assets (templates, CSS, JavaScript, media) may also be included in the extension package.</p>
@@ -305,8 +314,6 @@ Adapters have one or more models, any website can have multiple adapters.</li>
 <p>A special kind of blueprint that contains instructions on how to render a field to edit the attributes (values) of a container.</p>
 <p>Controls are only used inside Frontender Desktop and are not included in the page.<br />
 A list of basic Frontender Desktop controls can be found on the <a href="/controls.html">controls page</a>.</p>
-<h6 id="frontender-desktop">Frontender Desktop</h6>
-<p>Frontender Desktop is the Frontend Management System. It is a desktop application (OSX, Windows and Linux) to create, edit and manage web pages from a <a href="https://en.wikipedia.org/wiki/WYSIWYG" target="&#95;blank" rel="nofollow" title="What You See Is What You Get">WYSIWYG</a> User Interface.</p>
 <h6 id="extensions">Extensions</h6>
 <p>Extensions are installable components. Components may be developed by Frontender or third parties.
 We distinguish between three types of extensions:</p>

@@ -39,7 +39,8 @@ pre {
     background-color: #F7F7F7;
     box-shadow: 0 0 10px 0 #E3E3E3;
 }
-.wy-menu-vertical a {
+.wy-menu-vertical a,
+.wy-menu-vertical a:visited {
     font-family: 'Lato', sans-serif;
     font-size: 12px;
     color: #424242;
@@ -78,11 +79,17 @@ pre {
     background: left repeat-y #E3E3E3;
 }
 
-.document ul,ol,dl {
+.document ul,
+.document ol,
+.document dl {
     list-style-position: inside;
 }
-.document h4,h5,h6,
-.document table,ul,ol {
+.document h4,
+.document h5,
+.document h6,
+.document table,
+.document ul,
+.document ol {
     margin-bottom: 24px;
 }
 .document ul li,

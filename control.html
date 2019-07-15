@@ -61,7 +61,7 @@
                                             Pages
                                         </a>
                                     </li>
-                                                                    <li class="active">
+                                                                    <li class="">
                                         <a href="/landingpage.html">
                                             Landing page
                                         </a>
@@ -174,7 +174,7 @@
                                             Sites
                                         </a>
                                     </li>
-                                                                    <li class="">
+                                                                    <li class="active">
                                         <a href="/faq/control.html">
                                             Control
                                         </a>
@@ -196,26 +196,19 @@
                         <div class="wy-nav-content">
                 <div class="rst-content">
                     <div role="main" class="document">
-                        <h2 id="landing-page">Landing page</h2>
-<p>The root page is the default landing page of the entire site. It is accessed by the root URL, e.g. <a href="https://example.com/">https://example.com/</a> The route page is stored in the site configuration settings.</p>
-<p><strong><em>A root page is also a route page, and may also only be removed or unpublished under certain conditions.</em></strong></p>
-<p>A landing page is a dynamic page with a fixed resource id (with the exception of the root page, where a resource id is not required). It’s function is to be able to expose, for instance, a popular article on its own URL.</p>
-<p>A landing page is defined in Frontender Desktop by saving a page with a model configuration including resource id in the top-level container (page definition):</p>
-<pre><code class="language-JSON">{
-    "definition": {
-        "template": "path/to/template.html.twig",
-        "template_config": {
-            "model": {
-                "controls": {
-                    "name": "article",
-                    "id": "811cfa64-e6a3-4c79-b115-50e3dc7016c4"
-                }
-            }
-        },
-        "containers": []
-    }
-}</code></pre>
-<p>Landing page routes are stored in a routes.json file.</p>
+                        <h1 id="controls">Controls</h1>
+<h5 id="what-are-controls">What are controls?</h5>
+<!-- @TODO Add clear definition of 'control'. -->
+<p>A special kind of blueprint, only for controls. A control can reference another control.
+Frontender comes with a couple of core controls out of the box, these may be used alongside custom project controls. Additional information about controls can be found <a href="/controls.html">here</a>.</p>
+<h5 id="how-do-i-add-controls">How do I add controls?</h5>
+<p>Controls are stored in the MongoDB table <code>controls</code>. Frontender delivers a set of core controls, these can be found on the <a href="/controls.html">controls page</a>.<br />
+Custom project controls can be added to this table using the importer.</p>
+<h5 id="how-do-i-manage-my-controls">How do I manage my controls?</h5>
+<p>Controls can be added/adjusted/removed directly from the mongoDB. It's highly recommended to keep the core controls, removing them can result in unexpected issues.</p>
+<h5 id="why-should-i-use-controls">Why should I use controls?</h5>
+<!-- @TODO Verify -->
+<p>Keep your pages <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" target="&#95;blank" rel="nofollow">DRY</a>. Instead of repeating the same content over and over you can use a control to reduce the size of your page.</p>
                     </div>
 
                     <footer>

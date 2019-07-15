@@ -40,7 +40,7 @@
                                     </li>
                                                                     <li class="">
                                         <a href="/installation.html">
-                                            Installation
+                                            Creating your first project
                                         </a>
                                     </li>
                                                                     <li class="">
@@ -96,7 +96,7 @@
                                             Filters
                                         </a>
                                     </li>
-                                                                    <li class="">
+                                                                    <li class="active">
                                         <a href="/controls.html">
                                             Controls
                                         </a>
@@ -121,6 +121,11 @@
                                             Proxy domains
                                         </a>
                                     </li>
+                                                                    <li class="">
+                                        <a href="/import.html">
+                                            Import
+                                        </a>
+                                    </li>
                                                             </ul>
                         </div>
                                             <div class="section">
@@ -137,6 +142,11 @@
                                                                     <li class="">
                                         <a href="/faq/misc.html">
                                             Miscellaneous
+                                        </a>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="/faq/content.html">
+                                            Content
                                         </a>
                                     </li>
                                                                     <li class="">
@@ -164,14 +174,9 @@
                                             Sites
                                         </a>
                                     </li>
-                                                                    <li class="active">
-                                        <a href="/faq/controls.html">
-                                            Controls
-                                        </a>
-                                    </li>
                                                                     <li class="">
-                                        <a href="/faq/content.html">
-                                            Content
+                                        <a href="/faq/control.html">
+                                            Control
                                         </a>
                                     </li>
                                                             </ul>
@@ -192,14 +197,303 @@
                 <div class="rst-content">
                     <div role="main" class="document">
                         <h1 id="controls">Controls</h1>
-<h5 id="what-are-controls">What are controls?</h5>
-<p>t.b.d.</p>
-<h5 id="how-do-i-add-controls">How do I add controls?</h5>
-<p>t.b.d.</p>
-<h5 id="how-do-i-manage-my-controls">How do I manage my controls?</h5>
-<p>t.b.d.</p>
-<h5 id="why-should-i-use-controls">Why should I use controls?</h5>
-<p>t.b.d.</p>
+<p>A special kind of blueprint, only for controls. A control can reference another control.
+Frontender comes with a couple of core controls out of the box, these may be used alongside custom project controls.
+The following controls are part of the into Frontender core:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Control</th>
+<th style="text-align: center;">Information</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">core/boolean</td>
+<td style="text-align: center;"><a href="#boolean">Boolean</a></td>
+</tr>
+<tr>
+<td style="text-align: center;">core/hidden</td>
+<td style="text-align: center;"><a href="#hidden">Hidden</a></td>
+</tr>
+<tr>
+<td style="text-align: center;">core/markdown</td>
+<td style="text-align: center;"><a href="#markdown">Markdown</a></td>
+</tr>
+<tr>
+<td style="text-align: center;">core/number</td>
+<td style="text-align: center;"><a href="#number">Number</a></td>
+</tr>
+<tr>
+<td style="text-align: center;">core/url</td>
+<td style="text-align: center;"><a href="#url">URL</a></td>
+</tr>
+<tr>
+<td style="text-align: center;">core/route</td>
+<td style="text-align: center;"><a href="#route">Route</a></td>
+</tr>
+<tr>
+<td style="text-align: center;">core/list</td>
+<td style="text-align: center;"><a href="#list">List</a></td>
+</tr>
+<tr>
+<td style="text-align: center;">core/textarea</td>
+<td style="text-align: center;"><a href="#textarea">Textarea</a></td>
+</tr>
+<tr>
+<td style="text-align: center;">core/json</td>
+<td style="text-align: center;"><a href="#json">JSON</a></td>
+</tr>
+<tr>
+<td style="text-align: center;">core/abstract</td>
+<td style="text-align: center;"><a href="#abstract">Abstract</a></td>
+</tr>
+<tr>
+<td style="text-align: center;">core/text</td>
+<td style="text-align: center;"><a href="#text">Text</a></td>
+</tr>
+<tr>
+<td style="text-align: center;">core/robots</td>
+<td style="text-align: center;"><a href="#robots">Robots</a></td>
+</tr>
+</tbody>
+</table>
+<p>Additional core controls will be added in the near future.</p>
+<h3 id="boolean">Boolean</h3>
+<p>Options list with two values: &quot;True&quot;(1) and &quot;False&quot;(0).<br />
+The default value is &quot;False&quot;.</p>
+<p>Example config:</p>
+<pre><code class="language-JSON">{
+    "boolean": {
+        "label": {
+            "en-GB": "Boolean example"
+        },
+        "value": 0,
+        "control": "core/boolean"
+    }
+}</code></pre>
+<h3 id="hidden">Hidden</h3>
+<p>Hidden input field (not rendered in Frontender).</p>
+<pre><code class="language-JSON">{
+    "hidden": {
+        "label": {
+            "en-GB": "Hidden example"
+        },
+        "value": {
+            "en-GB": "I'm not visible in Frontender!"
+        },
+        "control": "core/hidden"
+    }    
+}</code></pre>
+<h3 id="markdown">Markdown</h3>
+<p>Allows user to use <a href="https://daringfireball.net/projects/markdown/" target="&#95;blank" rel="nofollow">Markdown</a> inside of a text area.</p>
+<pre><code class="language-JSON">{
+    "body": {
+        "value": {
+            "en-GB": "## Topping cotton candy jelly beans biscuit cake. \nToffee sweet cupcake sweet lemon drops pie. Tart jujubes sweet biscuit dragée fruitcake dessert liquorice cotton candy. Chocolate cake carrot cake gingerbread soufflé tootsie roll cake marshmallow. Cake jelly cake jelly-o croissant. Jelly brownie tootsie roll toffee danish lollipop topping. Caramels chocolate fruitcake cotton candy jelly-o topping macaroon. Cotton candy sweet roll gummies. Dessert candy brownie tootsie roll. Oat cake cheesecake gummi bears. Bear claw liquorice fruitcake cake icing sugar plum cotton candy macaroon. Dessert cheesecake lollipop bear claw croissant. Marshmallow cookie cotton candy gingerbread icing jelly beans bonbon chocolate cake.\n\nCake chupa chups apple pie candy canes. Jujubes sugar plum cookie. Caramels gingerbread lemon drops brownie soufflé tart. Brownie chocolate cake topping cake. Gummies muffin gingerbread icing dragée. Tart gummies cake. Bear claw dragée halvah. Chupa chups tootsie roll gummi bears tootsie roll cotton candy chocolate bar wafer. Donut jelly pie jelly-o halvah. Sesame snaps candy croissant danish. Brownie pudding oat cake gummi bears candy. Soufflé chocolate bar fruitcake soufflé. Croissant marzipan sweet. Sesame snaps icing oat cake sweet icing cookie cookie soufflé chocolate cake."
+        },
+        "label": {
+            "en-GB": "Post body"
+        },
+        "control": "core/markdown"
+    }
+}</code></pre>
+<h3 id="number">Number</h3>
+<p>Number input field, only numbers are allowed inside this control.</p>
+<pre><code class="language-JSON">{
+    "number": {
+        "label": {
+            "en-GB": "Only numbers are allowed in this input"
+        },
+        "value": 4,
+        "control": "core/number"
+    }
+}</code></pre>
+<h3 id="url">URL</h3>
+<p>URL field</p>
+<pre><code class="language-JSON">{
+    "url": {
+        "label": {
+            "en-GB": "URL"
+        },
+        "value": {
+            "en-GB": "https://getfrontender.com"
+        },
+        "control": "core/url"
+    }
+}</code></pre>
+<h3 id="route">Route</h3>
+<p>Route field. Up to 3 values can be added.</p>
+<ul>
+<li>Link label (Optional) - The text that is shown instead of the URI.</li>
+<li>Link destination - The target destination of the link.</li>
+<li>Model ID (Optional) - When the target is a page that requires a model ID.</li>
+</ul>
+<pre><code class="language-JSON">{
+    "route": {
+        "value": {
+            "label": {
+                "en-GB": "Link description"
+            },
+            "page": "destination_route.html",
+            "id": ""
+        },
+        "label": {
+            "en-GB": "Route field"
+        },
+        "control": "core/route"
+    }
+}</code></pre>
+<h3 id="list">List</h3>
+<p>This control allows the user to pick a value from a pre-configured list of options.</p>
+<p>Example config:</p>
+<pre><code class="language-JSON">{
+    "list": {
+        "value": "",
+        "label": {
+            "en-GB": "List example"
+        },
+        "control": "core/list",
+        "options": [
+            {
+                "value": "One",
+                "label": {
+                    "en-GB": "One",
+                    "fr-FR": "Un"
+                }
+            },
+            {
+                "value": "Two",
+                "label": {
+                    "en-GB": "Two",
+                    "fr-FR": "Deux"
+                }
+            },
+            {
+                "value": "Three",
+                "label": {
+                    "en-GB": "Three",
+                    "fr-FR": "Trois"
+                }
+            }
+        ]
+    }
+}</code></pre>
+<h3 id="textarea">Textarea</h3>
+<p>Normal textarea</p>
+<pre><code class="language-JSON">{
+    "textarea": {
+        "label": {
+            "en-GB": "Textarea"
+        },
+        "value": {
+            "en-GB": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        "control": "core/textarea"
+    }
+}</code></pre>
+<h3 id="json">JSON</h3>
+<p>JSON textarea</p>
+<pre><code class="language-JSON">???</code></pre>
+<h3 id="abstract">Abstract</h3>
+<pre><code class="language-JSON">???</code></pre>
+<h3 id="text">Text</h3>
+<p>Text input field</p>
+<pre><code class="language-JSON">{
+    "text": {
+        "label": {
+            "en-GB": "Text"
+        },
+        "value": {
+            "en-GB": "Value goes here..."
+        },
+        "control": "core/text"
+    }
+}</code></pre>
+<h3 id="robots">Robots</h3>
+<p>Robots text field</p>
+<pre><code class="language-JSON">{
+    "meta_robots": {
+        "value": "index, follow",
+        "label": {
+            "en-GB": "Indexing"
+        },
+        "control": "core/robots",
+        "type": "text"
+    }
+}</code></pre>
+<hr />
+<h2 id="control-settings">Control settings</h2>
+<h3 id="repeatable">Repeatable</h3>
+<p>Controls can be extended with an option to make them repeatable.
+This will add a menu next to the item that allows repetition.</p>
+<p>To allow for this functionality add the following line to your control object.</p>
+<pre><code class="language-JSON">"repeatable": true,
+"at_least": 3 // This is optional, but ensures that you can only delete repetitions until the set amount remains.
+"at_most": 7  // Also optional, it's used to enforce the maximum amount of repetitions.</code></pre>
+<p>Example config:</p>
+<pre><code class="language-JSON">{
+    "item": {
+        "value": [
+            {
+                "en-GB": "One",
+                "fr-FR": "Un"
+            },
+            {
+                "en-GB": "Two",
+                "fr-FR": "Deux"
+            },
+            {
+                "en-GB": "Three",
+                "fr-FR": "Trois"
+            }
+        ],
+        "label": {
+            "en-GB": "List item"
+        },
+        "control": "core/text",
+        "repeatable": true,
+        "at_least": 2
+    }
+}</code></pre>
+<h3 id="compound">Compound</h3>
+<p>This control allows you to include multiple controls and form them to one.<br />
+A compound may also be <a href="#repeatable">repeatable</a>.</p>
+<p>Here is an example for the compound control. A compound control may only contain non-compounded fields.</p>
+<pre><code class="language-JSON">{
+    "value": {
+        "title": {
+            "en-GB": ""
+        },
+        "link": {
+            "en-GB": ""
+        }
+    },
+    "label": {
+        "en-GB": "My Compound",
+        "fr-FR": "My Compound"
+    },
+    "type": "compound",
+    "controls": {
+        "title": {
+            "value": "",
+            "label": {
+                "en-GB": "Title"
+            },
+            "control": "core/text"
+        },
+        "link": {
+            "value": "",
+            "label": {
+                "en-GB": "Link"
+            },
+            "control": "core/text"
+        }
+    }
+}</code></pre>
+<p>In this example we have added two text controls, each with their own label.
+This will also become the keys to the values.</p>
+<p><strong>Protip</strong>: Compound controls are also repeatable.</p>
                     </div>
 
                     <footer>

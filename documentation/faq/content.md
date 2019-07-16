@@ -13,7 +13,7 @@ Keep them notoriously simple, or make them gloriously customisable. Whatever flo
 ##### How is Frontender different from a conventional CMS?
 No more need to hire an agency just to publish a new website or campaign.
 
-Creating a website is as easy as pointing your cursor, there is no technical skill required to create powerful and professional online communication.
+Creating a website with Frontender is as easy as pointing your cursor, there is no technical skill required to create powerful and professional online communication.
 
 Because you have all your websites in a single environment, keeping your brand identity in sync across all your websites becomes a breeze.
 

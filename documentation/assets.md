@@ -2,11 +2,18 @@
 currentMenu: assets
 ---
 
-# Asset loading snippet
+# Assets
+A catch-all term referring to all materials needed to successfully complete a project. In terms of web design and development, `assets` typically refer to the text content, graphics, photographs, videos, audio files, scripts and styles.
 
+<!-- @TODO Verify -->
+Site assets have a fallback to the space’s assets. A template may have its own assets, so the file structure is somewhat loose. The fallback scenario will assume an identical file structure and will look for its files in the space’s file structure in such cases where it does not have its files itself.
+
+### Asset loading snippet
 There are two alias method for loading code or other library files.
+* [Script loading](#script-loading)
+* [Style loading](#style-loading)
 
-### Script loading
+##### Script loading
 First we will explain the script loading function.
 This can handle normal `.js` and `.js.twig` files.
 
@@ -29,7 +36,7 @@ It's recommended to use multiple positions, i.e. in the head and before the end 
 {{ renderAssets('position')|raw }}
 ```
 
-### Style loading
+##### Style loading
 Just as described with the scripts above, it is also possible to load stylesheets.
 
 Below an example

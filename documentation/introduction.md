@@ -2,7 +2,7 @@
 currentMenu: technical_introduction
 ---
 
-# Frontender introduction
+# Basic concept
 
 For more clarity regarding the following definitions visit the "Main documentation" section of the menu.
 

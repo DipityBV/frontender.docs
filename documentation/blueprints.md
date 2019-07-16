@@ -3,8 +3,20 @@ currentMenu: blueprints
 ---
 
 # Blueprints
+Blueprints are (JSON) definitions. These definitions contain instructions for the templates and the adapters.
 
-Blueprints are small snippets of template instructions in JSON format. Blueprints can be nested by adding them to the container array.
+When blueprints are imported (uploaded into Frontender Platform) any referenced blueprints and/or assets (templates, css, js, media) may also be included in the extension package.
+
+##### Container blueprints
+Instructions for a single container.
+
+##### Page blueprints
+Instructions for a page. Technically, they are identical to a container blueprint definition as a page is in fact also a container. A page blueprint contains a collection of other containers.
+
+##### Control blueprints
+A special kind of blueprint that contains instructions on how to render a field to edit the attributes (values) of a container.
+
+Controls are only used inside Frontender Desktop and are not included in the page
 
 ### Syntax
 Example of a very basic bilingual blueprint. The `frontender` value will be automatically filled by Frontender when the page is saved.

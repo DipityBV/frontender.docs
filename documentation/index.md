@@ -2,6 +2,8 @@
 currentMenu: introduction
 ---
 
+![](https://development.getfrontender.brickson.kitchen/assets/images/brand/frontender-light-bg.png)
+
 # Introduction
 Content, design and technology are the cornerstones of online publishing. A successful combination of each of these results in a better user experience, which leads to happier visitors and higher conversions. And yet, the way in which we publish content to the web is compromised by one of those very cornerstones – technology.
 

@@ -10,10 +10,10 @@ Sites are not installed, they are created through the API in Frontender Manager 
 
 ### Demo installation:
 
-0. Signup for an account on <a href="https://mygetfrontender.com" target="&#95;blank" rel="nofollow">getFrontender.com</a>.
-0. Download Frontender desktop <a href="https://getfrontender.com/download" target="&#95;blank" rel="nofollow">here</a>.
-0. Download the base Frontender project from <a href="https://github.com/DipityBV/frontender.project.stark" target="&#95;blank" rel="nofollow">Github</a>.
-0. Fork Frontender platform from <a href="https://github.com/getfrontender/frontender.platform" target="&#95;blank" rel="nofollow">Github</a> into your project.
-0. Add your website to your designated space on <a href="https://my.getfrontender.com" target="&#95;blank" rel="nofollow">my Frontender</a>.
-0. Create your first pages in your new site space. Learn more about creating pages on the [pages section](/pages.html)
-0. T.B.D.
+1. Signup for an account on <a href="https://mygetfrontender.com" target="&#95;blank" rel="nofollow">getFrontender.com</a>.
+1. Download Frontender desktop <a href="https://getfrontender.com/download" target="&#95;blank" rel="nofollow">here</a>.
+1. Download the base Frontender project from <a href="https://github.com/DipityBV/frontender.project.stark" target="&#95;blank" rel="nofollow">Github</a>.
+1. Fork Frontender platform from <a href="https://github.com/getfrontender/frontender.platform" target="&#95;blank" rel="nofollow">Github</a> into your project.
+1. Add your website to your designated space on <a href="https://my.getfrontender.com" target="&#95;blank" rel="nofollow">my Frontender</a>.
+1. Create your first pages in your new site space. Learn more about creating pages on the [pages section](/pages.html)
+1. T.B.D.

@@ -33,14 +33,14 @@ If you have developed a neat feature that you would like to have added to the co
 ##### What does Frontender bring to the table?
 No more need to hire an agency, just to publish a new website or campaign.
 
-Creating a website is as easy as pointing your cursor, there is no technical skill required to create powerful and professional online communication.   
+Creating a website with Frontender is as easy as pointing your cursor, there is no technical skill required to create powerful and professional online communication.   
 Because you have all your websites in a single environment, keeping your brand identity in sync across all your websites becomes a breeze.
 
 You decide how your backend works. There are as many teams as there are ways to work. Frontender gives you the tools to customise your backend so it fits snuggly into your workflow.   
 Your team will love it.
 
 ##### What are scopes?
-A scope can be either a [proxy domain](/proxy-domain.html) or a <a href="https://en.wikipedia.org/wiki/Locale_(computer_software)" target="&#95;blank" rel="nofollow">locale</a>.
+A [scope](/scopes.html) or a <a href="https://en.wikipedia.org/wiki/Locale_(computer_software)" target="&#95;blank" rel="nofollow">locale</a>.
 
 ##### What APIs are supported by Frontender?
 All of em. _(If Frontender is granted access to the API)_

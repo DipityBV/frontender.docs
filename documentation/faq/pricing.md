@@ -17,13 +17,15 @@ Absolutely, see <a href="https://getfrontender.com/for-agencies" target="&#95;bl
 
 ##### What are my payment options?
 <!-- @TODO Verify -->
-Credit card. Stripe. t.b.d.
+Credit card. <a href="https://stripe.com/gb" target="&#95;blank" rel="nofollow">Stripe</a>. t.b.d.
+
 
 ##### Is there a free version of Frontender available?
 <!-- @TODO Verify -->
-You're allowed to try a single website with a single scope for free.
+You get access to a free site with a single scope when you register an account with Frontender.
 
 ##### My current plan is not sufficient, how can I upgrade to a larger plan?
-You can upgrade/downgrade your plan whenever you want, update your plan in the <a href="https://mygetfrontender.com" target="&#95;blank" rel="nofollow">Space Dashboard</a>.
+You can upgrade your plan whenever you want, update your plan in the <a href="https://mygetfrontender.com" target="&#95;blank" rel="nofollow">Space Dashboard</a>.  
+It's also possible to purchase a secondary plan alongside your main plan.
 
 Please <a href="https://getfrontender.com/for-agencies" target="&#95;blank" rel="nofollow">visit the "for agencies" page</a> if you'd like to upgrade to an enterprise level plan.

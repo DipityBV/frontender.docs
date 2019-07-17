@@ -50,6 +50,31 @@ output: Red
 ```
 
 ### Markdown
-Display content, respecting it's original markdown syntax.
+Display content while respecting it's original markdown syntax.
 * `|markdown`
 * `|md`
+
+```JSON
+{
+    "example": {
+        "value": "####Heading level 4",
+        "label": {
+            "en-GB": "Markdown example"
+        },
+        "control": "core/markdown"
+    }
+}
+```
+
+```twig
+{{ example|md }}
+
+or
+
+{{ example|markdown }}
+```
+
+Output:
+```html
+<h4>Heading level 4</h4>
+```

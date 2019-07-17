@@ -3,4 +3,21 @@ currentMenu: desktop_teams
 ---
 
 # Teams
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+<!-- @TODO verify -->
+Teams are used to set the permissions of one or multiple users.
+
+Every space must have 1 group, as group is a required value on a page.
+
+Groups can be assigned to pages. If you want a group of users to control your `Blog` pages you can create a group that only has access to `Blog` pages. The users in this group will not be able to see/edit any other pages.
+
+Groups are always nested recursively.  
+In the following example `Group A` is the main group. `Group C` is a child of `Group B`.
+If I assign `Group C` to a page, all parent groups(`Group B` & `Group A`) will also have access to said page.
+
+```bash
+.
+└── Group A
+    ├── Group B
+    │   └── Group C
+    └── Group D
+```

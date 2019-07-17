@@ -16,10 +16,12 @@ The following controls are part of the into Frontender core:
 | core/url | [URL](#url) |
 | core/route | [Route](#route) |
 | core/list | [List](#list) |
+| core/locale | [Locale](#locale)
 | core/textarea | [Textarea](#textarea) |
 | core/json | [JSON](#json) |
 | core/abstract | [Abstract](#abstract) |
 | core/text | [Text](#text) |
+| core/page | [Page](#page)
 | core/robots | [Robots](#robots) |
 
 Additional core controls will be added in the near future.
@@ -166,6 +168,15 @@ Example config:
 }
 ```
 
+### Locale
+<!-- @TODO ??? -->
+???
+```JSON
+{
+    "???"
+}
+```
+
 ### Textarea
 Normal textarea
 ```JSON
@@ -183,12 +194,14 @@ Normal textarea
 ```
 
 ### JSON
+<!-- @TODO ??? -->
 JSON textarea
 ```JSON
 ???
 ```
 
 ### Abstract
+<!-- @TODO ??? -->
 ```JSON
 ???
 ```
@@ -206,6 +219,15 @@ Text input field
         },
         "control": "core/text"
     }
+}
+```
+
+### Page
+Page control
+<!-- @TODO ??? -->
+```JSON
+{
+    "???"
 }
 ```
 

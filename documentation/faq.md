@@ -3,7 +3,6 @@ currentMenu: faq_index
 ---
 
 # Frequently Asked Questions
-
 Questions are split up in the following sections:
 
 1. [Implementation](/faq/implementation.html)

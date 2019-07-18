@@ -22,7 +22,7 @@ Frontender is a collection of systems that in combination are referred to as Fro
 ![](https://lh6.googleusercontent.com/tKsC09ZJSapku1TOeyrm4AnHkJZq1fO6UUsl2Ynr5wsJwqFTx1rmcurFpcNxf1V_JOFeQdHCryJntrOmNrzFHU2jgAOZqcHnRiYxpjnI2mdq9_ObXNPGxH7Kdh7cytXWxg)
 
 ## Frontender Desktop
-Frontender Desktop is the Frontend Management System. It is a desktop application (OSX, Windows and Linux) to create, edit and manage web pages from a <a href="https://en.wikipedia.org/wiki/WYSIWYG" target="&#95;blank" rel="nofollow" title="What You See Is What You Get">WYSIWYG</a> User Interface.
+Frontender Desktop is the Frontend Management System. It is a desktop application (macOS, Windows and Linux) to create, edit and manage web pages from a <a href="https://en.wikipedia.org/wiki/WYSIWYG" target="&#95;blank" rel="nofollow" title="What You See Is What You Get">WYSIWYG</a> User Interface.
 
 Frontender Desktop ‘talks’ to Frontender Platform and Frontender Manager.
 

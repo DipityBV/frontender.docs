@@ -22,7 +22,7 @@ The main features of Frontender are:
 * Timed publication - Defer publication of revisions to a specific date.
 
 ##### What are the requirements to use Frontender?
-A working desktop with Windows, OS X or linux.
+A working desktop with Windows, macOS or linux.
 
 ##### Is Frontender open source?
 Yes, Frontender is partly open source. The Frontender Platform repository can be found on <a href="https://github.com/getfrontender/frontender.platform" target="&#95;blank" rel="nofollow">Github</a>.

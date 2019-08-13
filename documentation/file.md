@@ -83,7 +83,7 @@ Collection of all your template files; containers, layouts and macros.
 Translation files. A separate file for every language you choose the support.
 
 ##### Database imports
-Database imports are entirely optional, they are JSON files used to implement pre-written data directly into the Mongo database.
+Database imports are entirely optional, they are JSON files used to implement pre-written data directly into the MongoDB database.
 Blueprints, controls and pages.
 ___
 

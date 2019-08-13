@@ -32,7 +32,8 @@ pre {
 .wy-side-nav-search {
     margin-bottom: 0;
     background-color: #FFE550;
-    border-bottom: 1px solid #424242;
+    /* background-color: #424242; */
+    border-bottom: 1px solid #FFF;
     color: #424242;
 }
 .wy-nav-side {
@@ -58,6 +59,22 @@ pre {
 .wy-side-nav-search>a,
 .wy-side-nav-search>a:visited {
     color: #424242;
+}
+.wy-side-nav-search>a:hover {
+    background: none;
+}
+img.wy-side-nav-search-img {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    padding: 0;
+    background-color: #424242;
+    border-radius: 0;
+}
+.wy-side-nav-search>a,
+img.wy-side-nav-search-img {
+    vertical-align: middle;
 }
 .wy-menu-vertical a:hover {
     background-color: #E3E3E3;
@@ -110,11 +127,20 @@ pre {
 .document thead th:nth-child(1)  {
     width: 25%;
 }
-.document p + ul {
+.document p + ul,
+.document h4 + ul,
+.document h5 + ul,
+.document h6 + ul {
     margin-top: -24px;
 }
 .document ol li {
     list-style-type: decimal;
+}
+.document img + img {
+    margin-top: 24px;
+}
+.document img.small {
+    width: 50%;
 }
 
 a,
@@ -138,5 +164,49 @@ a:visited {
     }
     .section:hover .nav.nav-stacked {
         transition: max-height 0.5s ease-in;
+    }
+}
+
+.document h1 {
+    font-size: 2em;
+}
+.document h2 {
+    font-size: 1.75em;
+}
+.document h3 {
+    font-size: 1.5em;
+}
+.document h4 {
+    font-size: 1.25em;
+}
+.document h5 {
+    font-size: 1.125em;
+}
+.document h6 {
+    font-size: 1em;
+}
+.attribution__brand.attribution__brand.attribution__brand {
+    height: 1em !important;
+    width: auto;
+    padding-right: .5em;
+}
+.attribution__brand, .attribution__body {
+    display: inline;
+    vertical-align: middle;
+}
+@media only screen and (min-width: 30em) {
+    .accreditation__copyright, .accreditation__attribution {
+        position: relative;
+        display: inline-block;
+        width: 49%;
+    }
+    .accreditation__attribution {
+        text-align: right;
+        float: right;
+    }
+    .accreditation:after {
+        content: "";
+        display: table;
+        clear: both;
     }
 }

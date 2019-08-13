@@ -82,7 +82,7 @@
                                             Blueprints
                                         </a>
                                     </li>
-                                                                    <li class="active">
+                                                                    <li class="">
                                         <a href="/templates.html">
                                             Templates
                                         </a>
@@ -165,7 +165,7 @@
                                             Blueprints
                                         </a>
                                     </li>
-                                                                    <li class="">
+                                                                    <li class="active">
                                         <a href="/desktop/scopes.html">
                                             Scopes
                                         </a>
@@ -245,100 +245,18 @@
                         <div class="wy-nav-content">
                 <div class="rst-content">
                     <div role="main" class="document">
-                        <h1 id="templates">Templates</h1>
-<p>Templates are HTML instructions and may include other assets like CSS, JavaScript and Images. Templates are currently Twig files. Templates are stored in the space, but overrides on a site level may be supported in a future version.</p>
-<h3 id="template-structure">Template structure</h3>
-<p>All <em>templates</em> (Twig files), <em>blueprints</em> (JSON files) and pages are located in folders in <code>/source/projects/main/templates</code>.</p>
-<p>Templates and blueprints are stored in subfolders that indicate their content types or their intended use.<br />
-For example, Twig files intended to be used with Event content are stored inside a <code>/templates/containers/events</code> folder.<br />
-Each template needs to have an data-frontender attribute declared on it:</p>
-<pre><code class="language-twig">{{ helper.container_id_attribute(container, 'frontender')|raw }}</code></pre>
-<p>Frontender will use this if to identify a container and its configuration.</p>
-<h3 id="hiding-functionality-in-frontender">Hiding functionality in Frontender</h3>
-<p>In some cases it is required to disable certain functionality in the site, that isn't required in Frontender. (eg: cookie policy notice)</p>
-<p>Inside of every twig file a query is available, this allows you to check what is in the request.
-When a page is called by Frontender, it will send a query variable called <code>fromFrontender</code>, using this variable you can hide functionality that you don't want to show in Frontender.</p>
-<p>In the following example we make sure the Google analytics code is not used inside of the Frontender application.
-The code will run if the page is previewed in the browser.</p>
-<pre><code class="language-twig">{% if not query.fromFrontender %}
-    /*
-     * Google Analytics is of no use inside of the Frontender application.
-     * Prevent the script from loading.
-     */
-    window.addEventListener("load", function(){
-
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-XXXXXXXX-1', 'auto');
-        ga('send', 'pageview');
-    });
-{% endif %}</code></pre>
-<h3 id="localisation">Localisation</h3>
-<p>Localisation is done through translation files written in YAML. These files are generally located in the <code>project/translations</code> folder.</p>
-<h3 id="internationalisationi18n-and-localisationl10n">Internationalisation(i18n) and localisation(l10n)</h3>
-<p>We need to keep in mind the different versions of a language and the support for them in either routes or domains. These are all potential possibilities:</p>
-<table>
-<thead>
-<tr>
-<th>Domain</th>
-<th style="text-align: center;">Language</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>domain.com/en/</td>
-<td style="text-align: center;">English content</td>
-</tr>
-<tr>
-<td>domain.co.uk</td>
-<td style="text-align: center;">English content</td>
-</tr>
-<tr>
-<td>domain.au</td>
-<td style="text-align: center;">Australian English content</td>
-</tr>
-<tr>
-<td>domain.com/en/gb/</td>
-<td style="text-align: center;">British English content</td>
-</tr>
-<tr>
-<td>domain.com/en/us/</td>
-<td style="text-align: center;">American English content</td>
-</tr>
-<tr>
-<td>domain.com/en/au/</td>
-<td style="text-align: center;">Australian English content</td>
-</tr>
-<tr>
-<td>en.domain.com</td>
-<td style="text-align: center;">English content</td>
-</tr>
-<tr>
-<td>en.domain.com/us/</td>
-<td style="text-align: center;">American English content</td>
-</tr>
-<tr>
-<td>au.en.domain.com</td>
-<td style="text-align: center;">Australian English content</td>
-</tr>
-<tr>
-<td>us.domain.com</td>
-<td style="text-align: center;">American English content</td>
-</tr>
-</tbody>
-</table>
-<p>A solution is to use the full locale ISO (<code>"en-GB"</code>) and then have rules on how to parse these to a route. We could also assume that each part of the ISO is a path component, so <code>"en"</code> would parse as <code>en/</code> and <code>"en-GB"</code> would parse as <code>en/gb/</code>.</p>
-<p>This is a suggestion on how to define a language/domain combination (totally arbitrary examples):</p>
-<pre><code class="language-JSON">{
-    "nl-NL": "getfrontender.com",
-    "nl-BE": "getfrontender.be",
-    "en-EN": "en.getfrontender.com",
-    "en-US": "getfrontender.com/en/us",
-    "en-AU": "en.getfrontender.com/au"
-}</code></pre>
+                        <h1 id="scopes">Scopes</h1>
+<p>Pages may be configured as a scope.</p>
+<p>In computer networks, a proxy server is a server (a computer system or an application) that acts as an intermediary for requests from clients seeking resources from other servers. A client connects to the proxy server, requesting some service, such as a file, connection, web page, or other resource available from a different server and the proxy server evaluates the request as a way to simplify and control its complexity. Proxies were invented to add structure and encapsulation to distributed systems.</p>
+<p>A rewrite engine is a software component that performs rewriting on Uniform Resource Locators, modifying their appearance. This modification is called URL rewriting. It is a way of implementing URL mapping or routing within a web application. The engine is typically a component of a web server or web application framework. Rewritten URLs (sometimes known as short, pretty or fancy URLs, search engine friendly - SEF URLs, or slugs) are used to provide shorter and more relevant-looking links to web pages. The technique adds a layer of abstraction between the files used to generate a web page and the URL that is presented to the outside world.</p>
+<p>For example:</p>
+<pre><code>getfrontender.com/proxy-domain</code></pre>
+<p>Can be turned into:</p>
+<pre><code>proxy-domain.getfrontender.com</code></pre>
+<h3 id="dns">DNS</h3>
+<!-- @TODO add DNS explanation -->
+<p>The Domain Name System (DNS) is a hierarchical and decentralized naming system for computers, services, or other resources connected to the Internet or a private network. It associates various information with domain names assigned to each of the participating entities. Most prominently, it translates more readily memorized domain names to the numerical IP addresses needed for locating and identifying computer services and devices with the underlying network protocols.</p>
+<p>Proxy domains require a DNS record in your webhost.</p>
                     </div>
 
                     <footer>

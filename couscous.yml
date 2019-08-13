@@ -87,6 +87,9 @@ menu:
                 file:
                     text: File structure
                     relativeUrl: file.html
+                install-json:
+                    text: install file
+                    relativeUrl: install-json.html
         desktop:
             name: Frontender Desktop
             items:

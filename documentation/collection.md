@@ -89,7 +89,7 @@ A special kind of blueprint, only for controls. A control can reference another 
 Permissions are saved in the lots collection. All pages are linked to teams in this collection, you won't be able to edit a page if you're not linked to it by team.
 
 ### Pages
-Pages are similar to a blueprint, but contain containers (that may reference blueprints). They also contain a `template_config.route.path` object that is used by the frontend router. When the path object is empty, the lot id will be used as a default.
+Pages are similar to a blueprint, but contain containers (that may reference blueprints). They also contain a `template_config.route.path` object that is used by the front-end router. When the path object is empty, the lot id will be used as a default.
 
 The `template_config.route.path` object is required for each page object, without it the router cannot access it. Frontender Desktop will be implement a UI that enforces that the path object is not empty. When the path object is empty, the lot id will be used as a default.
 

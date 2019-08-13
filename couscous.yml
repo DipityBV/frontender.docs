@@ -54,6 +54,9 @@ menu:
                 blueprints:
                     text: Blueprints
                     relativeUrl: blueprints.html
+                models:
+                    text: Models
+                    relativeUrl: models.html
                 templates:
                     text: Templates
                     relativeUrl: templates.html

@@ -19,8 +19,8 @@ An overview of terms used throughout the documentation.
 | [Extension Package](#extensions) | A collection of files needed for the import of an extension (blueprint, adapter or template). |
 | Frontend | The frontend application. |
 | Frontender desktop | Frontender, the Electron desktop application (FED) |
-| Frontender Platform | The frontend application, a (collection of) site(s). |
-| JSON | JavaScript Object Notation https://www.json.org/ |
+| Frontender Platform | The front-end application, a (collection of) site(s). |
+| JSON | <a href="https://www.json.org/" target="&#95;blank" rel="nofollow">JavaScript Object Notation</a> |
 | Locale | A language scope, includes time, date and currency in the locale’s format. |
 | Lot revisions | A collection of page, collection, blueprint or control definitions that have the same lot id. |
 | Modules | A modules is a nested in container. |
@@ -30,6 +30,7 @@ An overview of terms used throughout the documentation.
 | Route | The path to a resource as displayed in the browser's address bar. |
 | Space | A collection of sites and resources. Usually, a Space represents a (paying) client. There is also a global Space (frontendermanager.com?) that is used for smaller clients, comparable to wordpress.com. |
 | [Template](#templates) | Templates render the containers in the browser. Templates contain layout and styling instructions. |
+| Twig | <a href="https://twig.symfony.com/doc/2.x/" target="&#95;blank" rel="nofollow">Twig is a modern template engine for PHP</a> |
 
 ## Terms
 

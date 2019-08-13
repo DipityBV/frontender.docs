@@ -5,7 +5,7 @@ currentMenu: assets
 # Assets
 A catch-all term referring to all materials needed to successfully complete a project. In terms of web design and development, `assets` typically refer to the text content, graphics, photographs, videos, audio files, scripts and styles.
 
-<!-- @TODO Verify -->
+<!-- @TODO Verify: Space assets(?) -->
 Site assets have a fallback to the space’s assets. A template may have its own assets, so the file structure is somewhat loose. The fallback scenario will assume an identical file structure and will look for its files in the space’s file structure in such cases where it does not have its files itself.
 
 ### Asset loading snippet

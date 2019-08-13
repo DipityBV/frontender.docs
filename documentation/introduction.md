@@ -247,7 +247,7 @@ Although template_config is not required, it's highly advised to use it.
 
 Settings are grouped into different sections (one level). Each group will be rendered as a tab in the Frontender Desktop UI.
 
-_Examples below are for a frontend in Dutch and English_
+_Examples below are for a front-end in Dutch and English_
 
 ```JSON
 {
@@ -288,7 +288,7 @@ _Examples below are for a frontend in Dutch and English_
 #### Blueprint
 Blueprint is the reference to a blueprint that is to be used to render a container’s UI in Frontender Desktop.
 
-A blueprint holds the controls for the value(s) in a container. (see: [Blueprint::controls](/blueprints.html)).
+A blueprint holds the controls for the value(s) in a container. (see: [Blueprint controls](/blueprints.html)).
 
 
 #### Route

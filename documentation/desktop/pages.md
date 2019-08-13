@@ -39,9 +39,8 @@ A version of a page, defined by a date and time. It is stored in the Pages Colle
 The page configuration menu contains several settings.
 * Name *
 * Description
-* Route **
 * Team *
-* SEO (Page title, description, keywords and robots)
+* Route **
 
 _Settings marked with `*` are required._  
 _Settings marked with `**` are required when publishing._

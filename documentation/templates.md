@@ -3,7 +3,7 @@ currentMenu: templates
 ---
 
 # Templates
-Templates are HTML instructions and may include other assets like CSS, JavaScript and Images. Templates are currently Twig files. Templates are stored in the space, but overrides on a site level may be supported in a future version.
+Templates are HTML instructions and may include other assets like CSS, JavaScript and Images. Templates are currently Twig files. Templates are stored in the space, but overrides on a site level may be supported in a future version. Read more about Twig in their <a href="https://twig.symfony.com/doc/2.x/" target="&#95;blank" rel="nofollow">documentation</a>.
 
 ### Template structure
 All _templates_ (Twig files), _blueprints_ (JSON files) and pages are located in folders in `/source/projects/main/templates`.

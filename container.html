@@ -83,6 +83,11 @@
                                         </a>
                                     </li>
                                                                     <li class="">
+                                        <a href="/models.html">
+                                            Models
+                                        </a>
+                                    </li>
+                                                                    <li class="">
                                         <a href="/templates.html">
                                             Templates
                                         </a>
@@ -130,6 +135,11 @@
                                                                     <li class="">
                                         <a href="/file.html">
                                             File structure
+                                        </a>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="/install-json.html">
+                                            install file
                                         </a>
                                     </li>
                                                             </ul>
@@ -247,6 +257,9 @@
                     <div role="main" class="document">
                         <h1 id="container">Container</h1>
 <p>Twig container with data from its JSON configuration.</p>
+<p>Templates are HTML instructions and may include other assets like CSS, JavaScript and Images. Templates are currently Twig files. JSON is used to configure these templates.<br />
+More information about twig templates can be found on the <a href="/templates.html">templates page</a>.</p>
+<p>Twig container example:</p>
 <pre><code class="language-twig">&lt;{{ config.container_tag|default('section') }} {{ helper.container_id_attribute(frontender, 'frontender')|raw }}&gt;
     {% if content.title|t %}
         &lt;h1&gt;{{ content.title|t }}&lt;/h1&gt;
@@ -255,7 +268,7 @@
         &lt;p&gt;{{ content.body|t }}&lt;/p&gt;
     {% endif %}
 &lt;/{{ config.container_tag|default('section') }}&gt;</code></pre>
-<p>JSON configuration:</p>
+<p>JSON configuration example:</p>
 <pre><code class="language-JSON">{
     "frontender": "1558425992",
     "template": "containers/[content-type]/[container-name].html.twig",

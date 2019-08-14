@@ -102,7 +102,7 @@
                                             Macros
                                         </a>
                                     </li>
-                                                                    <li class="active">
+                                                                    <li class="">
                                         <a href="/helpers.html">
                                             Helpers
                                         </a>
@@ -137,7 +137,7 @@
                                             File structure
                                         </a>
                                     </li>
-                                                                    <li class="">
+                                                                    <li class="active">
                                         <a href="/install-json.html">
                                             install file
                                         </a>
@@ -255,33 +255,24 @@
                         <div class="wy-nav-content">
                 <div class="rst-content">
                     <div role="main" class="document">
-                        <h1 id="helpers">Helpers</h1>
-<h3 id="template-helper">Template helper</h3>
-<p>Process any class variables from the config and return a single class string</p>
-<pre><code class="language-twig">{% macro class_string(config) %}
-    {{ [
-        config.body_class ? config.body_class,
-        config.container_class ? config.container_class,
-        config.divider ? config.divider,
-        config.colour_theme ? config.colour_theme,
-        config.colour_background ? config.colour_background
-    ]|join(' ')|trim }}
-{% endmacro %}</code></pre>
-<p>Process any class variables from the config and return class attribute</p>
-<pre><code class="language-twig">{% macro class_attribute(config, class) %}
-    {% import _self as helper %}
-    {% set class = [helper.class_string(config)|trim, class|trim]|join(' ')|trim %}
-    {% if class %} class="{{ class }}"{% endif %}
-{% endmacro %}</code></pre>
-<p>Alias for class_string, for backward compatibility</p>
-<pre><code class="language-twig">{% macro class(config) %}
-    {% import _self as helper %}
-    {{ helper.class_string(config) }}
-{% endmacro %}</code></pre>
-<p>Build container id attribute</p>
-<pre><code class="language-twig">{% macro container_id_attribute(value, namespace) %}
-    {% if value %} data-{{namespace}}="{{ value|raw }}"{% endif %}
-{% endmacro %}</code></pre>
+                        <h1 id="install-definition">Install definition</h1>
+<p>The install.json holds the initial installation configuration.</p>
+<p>This file includes things like the MongoDB host (mongo_host) and MongoDB database name (mongo_dbname)
+as well as the token retrieved from the site registration from the manager (token).</p>
+<p>After these values are added to the file, the command <code>composer install-frontender</code> can be issued.</p>
+<pre><code class="language-json">{
+    "mongo_host": "mongodb://user:pass@host",
+    "mongo_dbname": "frontender_platform",
+    "token": "abcdefg123456789"
+}</code></pre>
+<p>This will do the following:</p>
+<ol>
+<li>Create the .env file (if already present the install will be canceled as this might override existent data);</li>
+<li>Verify if the site configuration correctly;</li>
+<li>Create a default site team;</li>
+<li>Add all managers to the default site team;</li>
+<li>Download and install core controls.</li>
+</ol>
                     </div>
 
                     <footer>

@@ -4,4 +4,4 @@ currentMenu: models
 
 # Models
 
-<!-- @TODO Jasper -->
+<!-- @TODO Jasper, please update the models page with all information regarding models. -->

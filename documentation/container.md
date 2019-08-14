@@ -4,6 +4,11 @@ currentMenu: container
 
 # Container
 Twig container with data from its JSON configuration.
+
+Templates are HTML instructions and may include other assets like CSS, JavaScript and Images. Templates are currently Twig files. JSON is used to configure these templates.   
+More information about twig templates can be found on the [templates page](/templates.html).
+
+Twig container example:
 ```twig
 <{{ config.container_tag|default('section') }} {{ helper.container_id_attribute(frontender, 'frontender')|raw }}>
     {% if content.title|t %}
@@ -15,7 +20,7 @@ Twig container with data from its JSON configuration.
 </{{ config.container_tag|default('section') }}>
 ```
 
-JSON configuration:
+JSON configuration example:
 ```JSON
 {
     "frontender": "1558425992",

@@ -3,13 +3,15 @@ currentMenu: desktop_blueprints
 ---
 
 # Blueprints
-<!-- @TODO Verify -->
+
 A blueprint (definition) is like a container. Blueprints have controls that allow Frontender Desktop to render the configuration UI used to edit the container instructions (config). Blueprints are used as a template to create containers. They are preformatted to container useful default settings that can be overridden once they have been included onto a page.
 
-Blueprints are saved by clicking the <i class="fa fa-files-o"></i> icon in the right click menu of a page.  
+Blueprints are created by clicking the <i class="fa fa-files-o"></i> icon in the right click menu of a page.  
 You can update blueprints by clicking the `update blueprint` checkbox in the container settings menu.
 
 ![](https://development.getfrontender.brickson.kitchen/assets/images/product-shots/30.00.png)
+
+<!-- @TODO Jeroen: is the following text still needed? -->
 
 Blueprints are (JSON) definitions. These definitions contain instructions for the templates.
 

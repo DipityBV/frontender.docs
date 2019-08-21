@@ -2,32 +2,30 @@
 currentMenu: models
 ---
 
-# Adapters
-
-An adapter is basically a collection (directory) of models that belong together.
-This only has impact on the namespace of a model.
-
 # Models
 
 ### What
-
-The models are the part of the platform that will communicate with the datastore.
+Models are the part of the platform that will communicate directly with the datastore.
 The models also hold all the information required to connect an retrieve data from the datastore.
 
-### Basics
+### Adapters
+An adapter is a connection to an API.
+An adapter is a collection (directory) of models that belong together.
+This only has impact on the namespace of a model.
 
+### Basics
 After we have created an adapter directory we will place the models in there.
 The naming convention is as follows: `<AdapteName>/<ModelName>Model.php`. eg: `Contentful\EntityModel.php`.
 
-The first thing we need to define in a odel is the namespace.
-The namespases are based on [PSR-4 autoloading standard](https://www.php-fig.org/psr/psr-4/) with a base namespace of `Frontender\Platform`. eg: `Frontender\Platform\Contentful\EntityModel`.
+The first thing we need to define in a model is the namespace.
+The namespaces are based on [PSR-4 autoloading standard](https://www.php-fig.org/psr/psr-4/) with a base namespace of `Frontender\Platform`. eg: `Frontender\Platform\Contentful\EntityModel`.
 
 <!-- Due to the fact that FEP will most likely be encrypted I have added the class names -->
 
 Each model must extend from `Frontender\Core\Model\AbstractModel`,
 this model will add all variables that we use in the rest of the core and which other users can also use.
 
-Also each model must have a fetch method that will retrieve the data from the datastore of their chosing.
+Also each model must have a fetch method that will retrieve the data from the datastore of their choosing.
 
 Example:
 

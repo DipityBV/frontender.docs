@@ -2,6 +2,8 @@
 currentMenu: desktop_scopes
 ---
 
+<!-- @TODO Verify -->
+
 # Scopes
 Pages may be configured as a scope.
 
@@ -11,17 +13,17 @@ A rewrite engine is a software component that performs rewriting on Uniform Reso
 
 For example:
 ```
-getfrontender.com/proxy-domain
+getfrontender.com/scope
 ```
 
 Can be turned into:
 
 ```
-proxy-domain.getfrontender.com
+scope.getfrontender.com
 ```
 
 ### DNS
-<!-- @TODO add DNS explanation -->
+<!-- @TODO add proper DNS explanation -->
 The Domain Name System (DNS) is a hierarchical and decentralized naming system for computers, services, or other resources connected to the Internet or a private network. It associates various information with domain names assigned to each of the participating entities. Most prominently, it translates more readily memorized domain names to the numerical IP addresses needed for locating and identifying computer services and devices with the underlying network protocols.
 
-Proxy domains require a DNS record in your webhost.
+Proxy domains require a DNS record in your web host.

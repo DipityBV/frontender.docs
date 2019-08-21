@@ -64,11 +64,11 @@ JSON configuration example:
 
 ### Frontender ID
 Frontender ID is a required field. The page/container will not work properly if it is omitted.  
-It's perfectly fine to add `"frontender": null`, the Frontender application will change it to a valid ID after the page has been saved.
+It's perfectly fine to add `"frontender": null`, the Frontender application will automatically change it to a valid ID after the page has been saved.
 
 ### Multilingual
 ##### Project locale
-The language(s) of the website itself. Can be configured to contain multiple languages.
+The locale(s) of the website itself. Can be configured to contain multiple languages.
 
 ```JSON
 {

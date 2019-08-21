@@ -256,13 +256,13 @@
                 <div class="rst-content">
                     <div role="main" class="document">
                         <h1 id="teams">Teams</h1>
-<!-- @TODO verify -->
 <p>Teams are used to set the permissions of one or multiple users.</p>
-<p>Every space must have 1 group, as group is a required value on a page.</p>
-<p>Groups can be assigned to pages. If you want a group of users to control your <code>Blog</code> pages you can create a group that only has access to <code>Blog</code> pages. The users in this group will not be able to see/edit any other pages.</p>
-<p>Groups are always nested recursively.<br />
+<p>Every space will have 1 default team called &quot;Site&quot;.
+Every space must have 1 team, as team is a required value on a page.</p>
+<p>Teams can be assigned to pages. If you want a team of users to control your <code>Blog</code> pages you can create a team that only has access to <code>Blog</code> pages. The users in this group will not be able to see/edit any other pages.</p>
+<p>Teams are always nested recursively.<br />
 In the following example <code>Group A</code> is the main group. <code>Group C</code> is a child of <code>Group B</code>.
-If I assign <code>Group C</code> to a page, all parent groups(<code>Group B</code> &amp; <code>Group A</code>) will also have access to said page.</p>
+If I assign <code>Group C</code> to a page, all parent teams(<code>Group B</code> &amp; <code>Group A</code>) will also have access to said page.</p>
 <pre><code class="language-bash">.
 └── Group A
     ├── Group B

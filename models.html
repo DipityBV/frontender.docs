@@ -256,7 +256,60 @@
                 <div class="rst-content">
                     <div role="main" class="document">
                         <h1 id="models">Models</h1>
-<!-- @TODO Jasper -->
+<h3 id="what">What</h3>
+<p>Models are the part of the platform that will communicate directly with the datastore.
+The models also hold all the information required to connect an retrieve data from the datastore.</p>
+<h3 id="adapters">Adapters</h3>
+<p>An adapter is a connection to an API.
+An adapter is a collection (directory) of models that belong together.
+This only has impact on the namespace of a model.</p>
+<h3 id="basics">Basics</h3>
+<p>After we have created an adapter directory we will place the models in there.
+The naming convention is as follows: <code>&lt;AdapteName&gt;/&lt;ModelName&gt;Model.php</code>. eg: <code>Contentful\EntityModel.php</code>.</p>
+<p>The first thing we need to define in a model is the namespace.
+The namespaces are based on <a href="https://www.php-fig.org/psr/psr-4/">PSR-4 autoloading standard</a> with a base namespace of <code>Frontender\Platform</code>. eg: <code>Frontender\Platform\Contentful\EntityModel</code>.</p>
+<!-- Due to the fact that FEP will most likely be encrypted I have added the class names -->
+<p>Each model must extend from <code>Frontender\Core\Model\AbstractModel</code>,
+this model will add all variables that we use in the rest of the core and which other users can also use.</p>
+<p>Also each model must have a fetch method that will retrieve the data from the datastore of their choosing.</p>
+<p>Example:</p>
+<pre><code class="language-php">namespace Frontender\Platform\Contentful\EntityModel;
+
+use Frontender\Core\Model\AbstractModel;
+use Slim\Container;
+
+class EntityModel extends AbstractModel
+{
+    public function __construct(Container $container)
+    {
+        parent::__construct($container);
+
+        $this-&gt;getState()
+            -&gt;insert('id'); // Each model that also returns single items MUST have an id state.
+
+        $this-&gt;adapter = '&lt;connection to contentful&gt;';
+    }
+
+    public function fetch(): array // Each fetch method MUST return an array of model instances.
+    {
+        $id = $this-&gt;getState()-&gt;id ?? false;
+
+        if($id) {
+            return $this-&gt;adapter-&gt;fetchEntity($id);
+        }
+
+        return $this-&gt;adapter-&gt;fetchEntities();
+    }
+
+    /**
+     * This is a method that is called when using $model-&gt;headline.
+     * Once the value is found the data is cached for future use.
+     */
+    public function getPropertyHeadline(): string
+    {
+        return 'custom method to get the headline of an entity';
+    }
+}</code></pre>
                     </div>
 
                     <footer>

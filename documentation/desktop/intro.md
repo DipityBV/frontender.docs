@@ -8,4 +8,4 @@ Frontender Desktop is the Frontend Management System. It is a desktop applicatio
 
 Frontender Desktop communicates with Frontender Platform and Frontender Manager.
 
-![Frontender Desktop in action](https://development.getfrontender.brickson.kitchen/assets/images/product-shots/20.00.png)
+![Frontender Desktop in action](https://getfrontender.com/assets/images/product-shots/F-LookupUnsplash.png)

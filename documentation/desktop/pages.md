@@ -3,7 +3,7 @@ currentMenu: desktop_pages
 ---
 
 # Pages
-![Pages overview](https://development.getfrontender.brickson.kitchen/assets/images/product-shots/20.00.png)
+![Pages overview](https://getfrontender.com/assets/images/product-shots/F-PagesList.png)
 
 There are a couple types of pages:
 * [Draft](#draft)

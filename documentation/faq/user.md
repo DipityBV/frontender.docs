@@ -12,7 +12,7 @@ If your e-mail address is linked to an existing Frontender space you can directl
 If that's not the case you'll have to create a space in order to finish your registration with Frontender.
 
 ##### How can I change my password?
-Have you forgotten your password? Use the <a href="https://development.getfrontender.brickson.kitchen/password/reset" target="&#95;blank" rel="nofollow">Forgot password</a> button on the Frontender application login screen.
+Have you forgotten your password? Use the <a href="https://getfrontender.com/password/reset" target="&#95;blank" rel="nofollow">Forgot password</a> button on the Frontender application login screen.
 
 Visit <a href="https://mygetfrontender.com" target="&#95;blank" rel="nofollow">My Frontender</a> if you wish to change your existing password.
 

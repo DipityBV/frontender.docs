@@ -9,7 +9,7 @@ A blueprint (definition) is like a container. Blueprints have controls that allo
 Blueprints are created by clicking the <i class="fa fa-files-o"></i> icon in the right click menu of a page.  
 You can update blueprints by clicking the `update blueprint` checkbox in the container settings menu.
 
-![](https://development.getfrontender.brickson.kitchen/assets/images/product-shots/30.00.png)
+![](https://getfrontender.com/assets/images/product-shots/F-ProjectSettings.png)
 
 <!-- @TODO Jeroen: is the following text still needed? -->
 
